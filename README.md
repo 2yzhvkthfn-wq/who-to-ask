@@ -174,7 +174,7 @@ The demo scenarios were written together with the data, so they can look rigged.
 
 - **The first run, the official score: 14 of 20.** Nobody wrong was recommended, nobody who left or opted out appeared, and what had to be refused was refused. Four of the six misses were one kind of question, "X is broken, who do I talk to?": no ticket describes a new problem, so the answer was "nobody found", although people work on that system. The two others were strict calls of my guide.
 - **After two fixes: 19 of 20,** which can move by one from run to run (see the second limit). The fixes: when nothing is about the exact problem and the question names a system, the agent now shows the people who work on that system, under a clear label. And a question with no topic ("I need help. Who should I ask?") is no longer searched: the agent asks what I need.
-- **What Git can and can't prove.** Git shows my questions file as added after the runs, so it can't prove that I wrote it before the data. What it does show: on 2026-11-20, before the people, the tickets, and the pages were added, commit `115d6a8` put a file of that name in `.gitignore` and closed it for Claude Code.
+- **What Git can't prove.** This repository was published with a fresh history, so Git no longer shows the order of events: it can't prove that I wrote my questions before the data. The log files and the commit ids that the scoring files and the `run_info.json` files name are not in this repository.
 - **The record:** the questions and the guide (`honest_questions.md`), every answer of the first run with its scoring (`honest_run/`), and the three runs side by side (`honest_run_after_fixes/scoring.md`).
 
 ### The limits
