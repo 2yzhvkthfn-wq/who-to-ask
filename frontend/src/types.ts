@@ -1,5 +1,5 @@
 // The shapes of what the API sends and receives. They describe the dicts that the Python code builds
-// (agents/answer_builder.py and api/main.py): TypeScript then checks that the page reads them correctly.
+// (backend/agents/answer_builder.py and backend/api/main.py): TypeScript then checks that the page reads them correctly.
 
 /** The body of a request to POST /ask/stream. */
 export interface Question {

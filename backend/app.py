@@ -1,6 +1,6 @@
 """Terminal entry point: ask a question, and see who can help, or what the directory says about a colleague.
 
-Run it from the project folder, with one question:
+Run it from the backend folder, with one question:
     python app.py "Who can help me get access to the Claims API?"
     python app.py "Who decided to move the policy database to the cloud?"
     python app.py "Qui peut m'aider avec la traduction du portail client ?"

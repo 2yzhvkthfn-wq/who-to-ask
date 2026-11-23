@@ -3,7 +3,7 @@ from typing import Dict, List
 
 from agents.hr_checker import HrChecker
 from agents.ranker import FIRST_KINDS, ONLY_FIRST_KINDS_COUNT, Ranker
-from config.settings import PROJECT_ROOT, settings
+from config.settings import BACKEND_DIR, settings
 from sources import CompanySource, EvidenceSource, HrSource, PageSource, PeopleSource, TicketSource
 from utils.logging import logger
 
@@ -632,7 +632,7 @@ class ScenarioChecker:
 
     def _read_cases(self) -> List[Dict]:
         """Read scenarios.json from the data folder."""
-        path = PROJECT_ROOT / settings.DATA_DIR / "scenarios.json"
+        path = BACKEND_DIR / settings.DATA_DIR / "scenarios.json"
         try:
             return json.loads(path.read_text(encoding="utf-8"))
         except (OSError, ValueError) as e:

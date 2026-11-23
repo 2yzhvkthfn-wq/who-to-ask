@@ -5,8 +5,11 @@ from typing import Literal, Optional
 from pydantic import Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-# The project folder (one level above config/), so .env is found from any folder
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+# The backend folder (one level above config/): the code and data/ are in it, and the Python commands run from it
+BACKEND_DIR = Path(__file__).resolve().parent.parent
+
+# The project folder (one level above backend/): .env is there, next to .env.example, so it is found from any folder
+PROJECT_ROOT = BACKEND_DIR.parent
 
 
 class Settings(BaseSettings):

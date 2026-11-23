@@ -13,7 +13,7 @@ from config.constants import (
     TICKET_TYPES,
     WORK_LANGUAGES,
 )
-from config.settings import PROJECT_ROOT, settings
+from config.settings import BACKEND_DIR, settings
 from sources import CompanySource, HrSource, PageSource, PeopleSource, TicketSource
 
 # The fields each kind of record must have: no more, no fewer
@@ -119,7 +119,7 @@ class DataChecker:
     def _check_summary(self) -> None:
         """The one-page summary says the same thing as teams.json and systems.json."""
         try:
-            text = (PROJECT_ROOT / settings.DATA_DIR / "company_summary.md").read_text(encoding="utf-8")
+            text = (BACKEND_DIR / settings.DATA_DIR / "company_summary.md").read_text(encoding="utf-8")
         except OSError as e:
             self._problem("company_summary.md", f"could not be read: {e}")
             return

@@ -2,7 +2,7 @@
 
 MCP (Model Context Protocol) is a standard way to plug tools into an AI assistant. An MCP client (Claude Code,
 Cursor, Claude Desktop, the MCP Inspector) starts this program itself, and talks to it through the program's input
-and output, which is called "stdio". Its command, from the project folder:
+and output, which is called "stdio". Its command, from the backend folder:
     python -m mcp_server.server
 
 So nothing here may print(): the output of this program is the channel. The log goes to the error output and to app.log.
@@ -28,7 +28,7 @@ from utils.logging import logger
 from .answer_writer import AnswerWriter
 
 # What the assistant reads when the agent fails. The details stay in the log: an error's own text can hold an address
-ERROR_TEXT = "Sorry, something went wrong and I could not answer. The details are in app.log, in the project folder."
+ERROR_TEXT = "Sorry, something went wrong and I could not answer. The details are in app.log, in the backend folder."
 
 # What a client is told about the server as a whole, when it connects. Each tool then has its own description
 INSTRUCTIONS = (

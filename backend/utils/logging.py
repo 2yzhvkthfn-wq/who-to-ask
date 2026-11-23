@@ -3,7 +3,7 @@ from pathlib import Path
 
 from loguru import logger
 
-# The log file sits in the project folder (one level above utils/)
+# The log file sits in the backend folder (one level above utils/)
 LOG_FILE = Path(__file__).resolve().parent.parent / "app.log"
 
 # Start clean: remove loguru's default output

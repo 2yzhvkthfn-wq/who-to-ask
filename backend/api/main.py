@@ -1,6 +1,6 @@
 """API entry point: the same agent as app.py, behind two HTTP endpoints.
 
-Start the server from the project folder, then open its /docs page in a browser:
+Start the server from the backend folder, then open its /docs page in a browser:
     python -m uvicorn api.main:app
     http://127.0.0.1:8000/docs
 

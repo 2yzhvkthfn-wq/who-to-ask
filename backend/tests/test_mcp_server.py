@@ -17,7 +17,7 @@ from mcp import Client
 from mcp.client.stdio import StdioServerParameters, stdio_client
 
 from config.constants import MAX_QUESTION_LENGTH
-from config.settings import PROJECT_ROOT
+from config.settings import BACKEND_DIR
 from config.texts import ASK_USER_TEXTS, FAILSAFE_TEXTS, NOBODY_FOUND_TEXTS, TOOL_TEXTS
 from mcp_server import server
 from mcp_server.answer_writer import AnswerWriter
@@ -647,10 +647,10 @@ def test_the_real_server_as_a_program_of_its_own(scenarios, people, tmp_path, op
         command=sys.executable,
         args=["-m", "mcp_server.server"],
         # A client starts the server from its own folder, not from the project's: here, a folder of this test.
-        # PYTHONPATH tells Python where the project is
+        # PYTHONPATH tells Python where the code is: the backend folder
         cwd=str(tmp_path),
         env={
-            "PYTHONPATH": str(PROJECT_ROOT),
+            "PYTHONPATH": str(BACKEND_DIR),
             # A variable of the program wins over the same line of my settings file. A space switches Postgres
             # and LangSmith off for this program: its conversations stay in its own memory, and nothing is traced
             "POSTGRES_URI": " ",

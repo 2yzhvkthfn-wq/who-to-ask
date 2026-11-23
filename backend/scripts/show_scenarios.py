@@ -3,7 +3,7 @@
 import sys
 
 from checks import ScenarioChecker
-from config.settings import PROJECT_ROOT, settings
+from config.settings import BACKEND_DIR, settings
 from utils.logging import logger
 
 REPORT_NAME = "scenario_evidence.md"
@@ -20,7 +20,7 @@ def main() -> None:
         sys.exit(1)
 
     # 2) Save it
-    path = PROJECT_ROOT / settings.DATA_DIR / REPORT_NAME
+    path = BACKEND_DIR / settings.DATA_DIR / REPORT_NAME
     try:
         path.write_text(result["report"], encoding="utf-8", newline="\n")
     except OSError as e:

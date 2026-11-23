@@ -4,7 +4,7 @@ import pytest
 
 from checks import DatabaseChecker, DataChecker, ScenarioChecker
 from config.constants import SEED_COMMAND
-from config.settings import PROJECT_ROOT, settings
+from config.settings import BACKEND_DIR, settings
 
 
 def test_mongodb_holds_what_the_files_hold():
@@ -57,5 +57,5 @@ def test_every_scenario_exists_in_the_data():
 
 def test_scenario_report_is_up_to_date():
     """The saved report matches the data. If this fails, run: python -m scripts.show_scenarios"""
-    saved = (PROJECT_ROOT / settings.DATA_DIR / "scenario_evidence.md").read_text(encoding="utf-8")
+    saved = (BACKEND_DIR / settings.DATA_DIR / "scenario_evidence.md").read_text(encoding="utf-8")
     assert saved == ScenarioChecker().check()["report"]

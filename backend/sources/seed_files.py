@@ -3,7 +3,7 @@ from typing import Dict, List
 
 import yaml
 
-from config.settings import PROJECT_ROOT, settings
+from config.settings import BACKEND_DIR, settings
 from utils.logging import logger
 
 # The JSON files of the data folder. Each one fills the MongoDB collection of the same name: people.json -> people
@@ -15,7 +15,7 @@ class SeedFiles:
 
     def __init__(self):
         # The data folder, from the settings
-        self.folder = PROJECT_ROOT / settings.DATA_DIR
+        self.folder = BACKEND_DIR / settings.DATA_DIR
 
     def read(self) -> Dict[str, List[Dict]]:
         """Return every record of every file, by collection name. Each list keeps the order of its file."""

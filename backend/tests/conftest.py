@@ -13,7 +13,7 @@ from agents.evidence_searcher import EvidenceSearcher
 from agents.hr_checker import HrChecker
 from agents.ranker import Ranker
 from checks import DatabaseChecker
-from config.settings import PROJECT_ROOT, settings
+from config.settings import BACKEND_DIR, settings
 from sources import EvidenceSource, MongoStore, PeopleSource
 from utils.logging import logger
 
@@ -205,7 +205,7 @@ def agent(build_agent) -> Tuple[AgentWorkflow, Fakes]:
 @pytest.fixture(scope="session")
 def scenarios() -> Dict:
     """The demo scenarios of data/scenarios.json, by case id (like "s01"). Read once for all the tests."""
-    cases = json.loads((PROJECT_ROOT / settings.DATA_DIR / "scenarios.json").read_text(encoding="utf-8"))
+    cases = json.loads((BACKEND_DIR / settings.DATA_DIR / "scenarios.json").read_text(encoding="utf-8"))
     return {case["id"]: case for case in cases}
 
 

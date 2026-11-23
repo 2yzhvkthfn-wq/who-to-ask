@@ -1,6 +1,6 @@
 """Copy the fake company files of the data folder into MongoDB. Free: no OpenAI calls.
 
-Run it from the project folder, once at the start and after every change to a file of the data folder:
+Run it from the backend folder, once at the start and after every change to a file of the data folder:
     python -m scripts.seed_mongodb
 """
 
