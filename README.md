@@ -4,6 +4,8 @@ An internal "who should I ask?" assistant. You describe what you need help with,
 
 It is a portfolio prototype that I built to learn LangGraph. **All the data is fake:** the company, Tamberly Insurance, does not exist, and its email addresses end in `.example`, so no message can reach a real person.
 
+**Demo video:** https://youtu.be/lIEKEShEyoE
+
 ## What it does
 
 - **Find an expert.** "Who can help me with X?", "Who fixed X?", "Who decided X?". The answer is up to 3 people, best first. Each one has a card: why this person can help, the tickets and pages behind it, a suggested message, and two buttons.
@@ -96,6 +98,9 @@ python -c "from agents import AgentWorkflow; agent = AgentWorkflow(); print(agen
 - **The LLM decides three things:** what the request is, when to ask me, and whether a ticket or a page is really about the question. It also writes the search words of the retry and the short texts of a card. Everything else is plain code: cheap, predictable, and easy to explain.
 - **The LLM works with ids.** Names, emails, links, and evidence come from the data, never from the LLM.
 - **The ranking fits in one sentence:** the type of question decides which source counts first. "Who can help?": Confluence, then Jira. "Who fixed it?": Jira, then Confluence. "Who decided?": only the owner of a recorded decision.
+- **Speed and cost:** a usual expert answer takes 5 to 7 seconds and costs about a fifth of a cent.
+
+### What it is built with
 
 | Part | What I used |
 |---|---|
@@ -109,7 +114,30 @@ python -c "from agents import AgentWorkflow; agent = AgentWorkflow(); print(agen
 | For AI assistants | An MCP server with two tools |
 | Tracing | LangSmith (optional) |
 
-A usual expert answer takes 5 to 7 seconds and costs about a fifth of a cent.
+## The folders
+
+The main files and folders:
+
+```text
+app.py                    # the agent in the terminal
+agents/                   # the graph (workflow.py) and the classes it uses
+sources/                  # the classes that read the company data
+config/                   # the settings, the constants, and the fixed texts
+data/                     # the fake company, as JSON and Markdown files
+scripts/                  # the seed, the two checks, and the scenario report
+checks/                   # the classes behind the data check
+api/                      # the API
+frontend/                 # the page
+mcp_server/               # the MCP server
+tests/                    # the free tests and the paid tests
+utils/                    # the logger
+design/                   # my drawing of the page
+honest_questions.md       # my 20 questions and their scoring guide
+honest_run/               # the first run of the 20 questions: every answer, with its scoring
+honest_run_after_fix/     # the same, for the run after the first fix
+honest_run_after_fixes/   # the same, for the run after the two fixes
+check_questions_run/      # my 11 more questions, five tries each
+```
 
 ## Run it
 
