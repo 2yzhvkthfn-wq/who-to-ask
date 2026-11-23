@@ -18,8 +18,8 @@ frontend/dist/
 *.log
 chroma_db/
 
-# Claude Code: personal settings for this machine
-.claude/settings.local.json
+# Claude Code: its settings stay on this machine
+.claude/
 
-honest_run*/answers/*_log.txt
-check_questions_run/answers/*_log.txt
+evaluation/honest_run*/answers/*_log.txt
+evaluation/check_questions_run/answers/*_log.txt

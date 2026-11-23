@@ -114,31 +114,6 @@ python -c "from agents import AgentWorkflow; agent = AgentWorkflow(); print(agen
 | For AI assistants | An MCP server with two tools |
 | Tracing | LangSmith (optional) |
 
-## The folders
-
-The main files and folders:
-
-```text
-app.py                    # the agent in the terminal
-agents/                   # the graph (workflow.py) and the classes it uses
-sources/                  # the classes that read the company data
-config/                   # the settings, the constants, and the fixed texts
-data/                     # the fake company, as JSON and Markdown files
-scripts/                  # the seed, the two checks, and the scenario report
-checks/                   # the classes behind the data check
-api/                      # the API
-frontend/                 # the page
-mcp_server/               # the MCP server
-tests/                    # the free tests and the paid tests
-utils/                    # the logger
-design/                   # my drawing of the page
-honest_questions.md       # my 20 questions and their scoring guide
-honest_run/               # the first run of the 20 questions: every answer, with its scoring
-honest_run_after_fix/     # the same, for the run after the first fix
-honest_run_after_fixes/   # the same, for the run after the two fixes
-check_questions_run/      # my 11 more questions, five tries each
-```
-
 ## Run it
 
 I built and ran it on Windows 11, so the commands are for PowerShell. It is not tried on another system.
@@ -203,11 +178,11 @@ The demo scenarios were written together with the data, so they can look rigged.
 - **The first run, the official score: 14 of 20.** Nobody wrong was recommended, nobody who left or opted out appeared, and what had to be refused was refused. Four of the six misses were one kind of question, "X is broken, who do I talk to?": no ticket describes a new problem, so the answer was "nobody found", although people work on that system. The two others were strict calls of my guide.
 - **After two fixes: 19 of 20,** which can move by one from run to run (see the second limit). The fixes: when nothing is about the exact problem and the question names a system, the agent now shows the people who work on that system, under a clear label. And a question with no topic ("I need help. Who should I ask?") is no longer searched: the agent asks what I need.
 - **What Git can't prove.** This repository was published with a fresh history, so Git no longer shows the order of events: it can't prove that I wrote my questions before the data. The log files and the commit ids that the scoring files and the `run_info.json` files name are not in this repository.
-- **The record:** the questions and the guide (`honest_questions.md`), every answer of the first run with its scoring (`honest_run/`), and the three runs side by side (`honest_run_after_fixes/scoring.md`).
+- **The record:** the questions and the guide (`evaluation/honest_questions.md`), every answer of the first run with its scoring (`evaluation/honest_run/`), and the three runs side by side (`evaluation/honest_run_after_fixes/scoring.md`).
 
 ### The limits
 
-- **The second level needs the name of the system, written right.** With a spelling mistake ("Policy Admn") or a description in place of the name, the answer can still be "nobody found". I checked the fix with 11 more questions of my own, five tries each: 45 of 55 answers pass (`check_questions_run/`). I prefer "nobody found" to a wrong name: in 135 tries on nine trap questions, about things that are none of the 16 systems, no system was named.
+- **The second level needs the name of the system, written right.** With a spelling mistake ("Policy Admn") or a description in place of the name, the answer can still be "nobody found". I checked the fix with 11 more questions of my own, five tries each: 45 of 55 answers pass (`evaluation/check_questions_run/`). I prefer "nobody found" to a wrong name: in 135 tries on nine trap questions, about things that are none of the 16 systems, no system was named.
 - **`verify` does not always give the same verdict on the same ticket,** so an answer that depends on one borderline ticket can change from one run to the next.
 - **A request with one empty word can still get people.** "Something is broken. Who should I call?" got three people in 3 tries of 3: a wrong answer.
 - **It is a prototype.** No login and no limit on the number of questions: the API only listens on the computer that runs it. Old conversations are never deleted, whoever has the id of a conversation can continue it, and the memory keeps the text of the questions.
@@ -226,4 +201,4 @@ The demo scenarios were written together with the data, so they can look rigged.
 ## More to read
 
 - `data/scenario_evidence.md`: for each demo scenario, who has which evidence, and why they rank where they do.
-- `design/page_mockup.html`: my drawing of the page.
+- `docs/page_mockup.html`: my drawing of the page.

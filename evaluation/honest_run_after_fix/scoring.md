@@ -2,7 +2,7 @@
 
 Run on 2026-11-22, from 19:16:21 to 19:18:26. Scored by Claude with the guide of my honest questions file, with the same strict rule as the first run. **I checked the scoring the same day, and I agree with it.**
 
-**After the fix: 18 of 20. The official score stays 14 of 20:** it is the score of the first run, in `honest_run/`, and nothing here changes it.
+**After the fix: 18 of 20. The official score stays 14 of 20:** it is the score of the first run, in `evaluation/honest_run/`, and nothing here changes it.
 
 ## How this run was made
 

@@ -2,7 +2,7 @@
 
 Run on 2026-11-22, from 20:48:30 to 20:50:23. Scored by Claude with the guide of my honest questions file, with the same strict rule as the first run. **I checked the scoring the same day, and I agree with it: question 18 is a pass now.** Only that judgement was new: every other answer is the same as an answer that I had already checked.
 
-**After the fixes: 19 of 20. The official score stays 14 of 20:** it is the score of the first run, in `honest_run/`.
+**After the fixes: 19 of 20. The official score stays 14 of 20:** it is the score of the first run, in `evaluation/honest_run/`.
 
 **The number after the fixes can move by one from run to run.** Question 15 depends on one verdict of `verify` that is close to a coin flip, and it passed in the run before this one. So the same code can give 19 or 20, and more rarely 18: question 2 also depends on one verdict, which is usually a yes.
 
@@ -52,14 +52,14 @@ Run on 2026-11-22, from 20:48:30 to 20:50:23. Scored by Claude with the guide of
 - **2, through a verdict of `verify`.** `PRC-91` got a yes again, as in the first run. It had got a no in the run before.
 - **15, through a verdict of `verify`.** `POL-181` got a no again ("a renewal-batch bug in Policy Admin, not ownership of the renewal process"), as in the first run. It had got a yes in the run before, which put Lucas Pelletier first.
 
-The prompt of `verify` is the same text in the three runs. Asked 20 times in a row, the verdict on `POL-181` was a yes 14 times, and the verdict on `PRC-91` was a yes 20 times (see `honest_run_after_fix/verdict_checks.json`).
+The prompt of `verify` is the same text in the three runs. Asked 20 times in a row, the verdict on `POL-181` was a yes 14 times, and the verdict on `PRC-91` was a yes 20 times (see `evaluation/honest_run_after_fix/verdict_checks.json`).
 
 ## How to read the three numbers
 
 - **14 of 20 is the honest score.** Nothing was known about the questions when it was measured.
 - **The two fixes are worth five questions:** 1, 3, 5, and 6 (the second level), and 18 (a question with no topic).
 - **Question 15 is the one that moves.** The right two people come out each time, and their order depends on one ticket. My decision of 2026-11-22: no change now, and "ask `verify` three times and keep the majority" is a next step.
-- **What the 20 questions do not show.** My own check questions found two more limits of the second level: a name with a spelling mistake, and a system that is described and not named (see `check_questions_run/`). And a request with one empty word ("Something is broken. Who should I call?") can still get people.
+- **What the 20 questions do not show.** My own check questions found two more limits of the second level: a name with a spelling mistake, and a system that is described and not named (see `evaluation/check_questions_run/`). And a request with one empty word ("Something is broken. Who should I call?") can still get people.
 
 ## What is saved
 

@@ -9,7 +9,7 @@ Run on 2026-11-22, from 19:57:56 to 20:06:26. I wrote these 11 questions after t
 - Each question was asked five times through the real agent (`full_pipeline`), each time in a new conversation, with my real setup: 55 runs.
 - The questions were asked in five rounds (every question once, then every question again), so the five tries of one question are spread over the eight and a half minutes of the run.
 - Nothing changed before or during the run: commit `1ef4f4c`, and the same `git status` at the start and at the end (`run_info.json`).
-- The runner is `runner.py.txt`. It uses the runner of the honest test (`honest_run/runner.py.txt`) to ask a question and to save its answer.
+- The runner is `runner.py.txt`. It uses the runner of the honest test (`evaluation/honest_run/runner.py.txt`) to ask a question and to save its answer.
 
 ## My rules
 
