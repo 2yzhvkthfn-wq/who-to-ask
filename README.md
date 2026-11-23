@@ -160,7 +160,7 @@ The same agent has four doors:
 | Kind of test | What it checks |
 |---|---|
 | 597 free tests: `python -m pytest` | The plain code, with no OpenAI call: the ranking, the HR check, the links, the roads of the graph with a fake LLM, the API, the MCP server, and the data |
-| 106 paid tests: `python -m pytest -m openai` | The real model, for a few cents: the 15 demo scenarios of `PROJECT.md`, from the question to the answer. They check names, not wording |
+| 106 paid tests: `python -m pytest -m openai` | The real model, for a few cents: the 15 demo scenarios, from the question to the answer. They check names, not wording |
 | A data check: `python -m scripts.check_data` | Every id points to a real record, and every demo scenario exists in the data |
 | Twenty tries | The model does not always decide the same way, so a borderline case is asked 20 times before a prompt is kept |
 | A test of the tests | For the two fixes below, 29 lines of new code were broken on purpose, one at a time. The free tests noticed 28, and the last one led to a corrected test |
@@ -197,8 +197,5 @@ The demo scenarios were written together with the data, so they can look rigged.
 
 ## More to read
 
-- `PROJECT.md`: the spec. The requirements, the agreed design, and the 15 demo scenarios.
-- `PROGRESS.md`: the log. What each milestone built, every decision with its reason, and every measurement.
-- `CLAUDE.md`: my instructions to Claude Code, which I built this project with.
 - `data/scenario_evidence.md`: for each demo scenario, who has which evidence, and why they rank where they do.
 - `design/page_mockup.html`: my drawing of the page.
