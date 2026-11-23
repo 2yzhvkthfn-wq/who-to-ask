@@ -1,0 +1,43 @@
+{
+  "n": 10,
+  "kind": "question",
+  "sent": "Our CRM stopped syncing new leads this morning. Who can help?",
+  "asked_at": "2026-11-22T20:04:31",
+  "seconds": 10.3,
+  "answer": {
+    "status": "nobody_found",
+    "reason": "",
+    "language": "en",
+    "message": "I found nobody to recommend for this question. You can try again with more details: the name of the system, the project, or what exactly you need.",
+    "cards": [],
+    "level": "",
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets for \"CRM\", \"syncing\", \"new leads\", \"this morning\": 22 results",
+      "Checked 22 results: none is really about your question",
+      "Nothing was about your question: picked other search words",
+      "Searched again: 21 results",
+      "Checked 15 results: none is really about your question",
+      "Found nobody to recommend"
+    ],
+    "thread_id": "a28f888edc494e96b82d9f74992f0f26"
+  }
+}

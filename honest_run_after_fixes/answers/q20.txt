@@ -1,0 +1,13 @@
+
+Question: Who maintains the mobile app?
+
+Steps:
+   Read your question: you are looking for someone who did the work
+   Searched pages and tickets for "mobile app", "maintains": 13 results
+   Checked 13 results: none is really about your question
+   Nothing was about your question: picked other search words
+   Searched again: 17 results
+   Checked 13 results: none is really about your question
+   Found nobody to recommend
+
+I found nobody to recommend for this question. You can try again with more details: the name of the system, the project, or what exactly you need.

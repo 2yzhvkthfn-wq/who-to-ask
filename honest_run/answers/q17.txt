@@ -1,0 +1,8 @@
+
+Question: Can you recommend a good poutine place near the office?
+
+Steps:
+   Read your question: it is not about work
+   Declined the question
+
+Sorry, I can't help with that. I only answer questions about work: tell me what you need help with, and I'll look for the right colleague to ask.

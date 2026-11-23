@@ -1,0 +1,56 @@
+{
+  "n": 12,
+  "kind": "question",
+  "sent": "Which tickets did Nadia Benali work on?",
+  "asked_at": "2026-11-22T17:37:12",
+  "seconds": 1.4,
+  "answer": {
+    "status": "person",
+    "reason": "",
+    "language": "en",
+    "message": "I have no tickets or pages to show for Nadia Benali.",
+    "cards": [],
+    "person_card": {
+      "id": "p018",
+      "name": "Nadia Benali",
+      "left": false,
+      "job_title": "Developer",
+      "team": "Claims Platform",
+      "manager": "Hélène Dubois",
+      "email": "nadia.benali@tamberly.example",
+      "languages": [
+        "French",
+        "English"
+      ],
+      "work_phone": "",
+      "out_of_office_until": "",
+      "out_of_office_text": "",
+      "work": [],
+      "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=nadia.benali@tamberly.example",
+      "email_link": "mailto:nadia.benali@tamberly.example"
+    },
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: it is about a colleague",
+      "Looked in the directory: 1 person has that name",
+      "Prepared the card from the directory"
+    ],
+    "thread_id": "130a325981c240a49e522f6c511e3813"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "n": 4,
+  "kind": "question",
+  "sent": "Who decided to retire the Legacy Policy System?",
+  "asked_at": "2026-11-22T19:16:54",
+  "seconds": 4.6,
+  "answer": {
+    "status": "answered",
+    "reason": "",
+    "language": "en",
+    "message": "",
+    "cards": [
+      {
+        "id": "p003",
+        "name": "Daniel Morin",
+        "job_title": "Team Lead",
+        "team": "Policy Systems",
+        "email": "daniel.morin@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Made the decision to retire the Legacy Policy System.",
+        "evidence": [
+          {
+            "id": "pg016",
+            "title": "Legacy Policy System: minutes of the decision meeting, 12 February 2026",
+            "source": "Confluence",
+            "kind": "decided",
+            "text": "made the decision recorded in \"Legacy Policy System: minutes of the decision meeting, 12 February 2026\"",
+            "date_text": "meeting of 12 February 2026"
+          }
+        ],
+        "subject": "Legacy system retirement",
+        "message": "Hi Daniel, I'm [your name] from [your team]. I have a question about the decision to retire the Legacy Policy System. I saw you made the decision recorded in the meeting minutes. What does the decision mean for the retirement plan? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=daniel.morin@tamberly.example&message=Hi%20Daniel%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%20have%20a%20question%20about%20the%20decision%20to%20retire%20the%20Legacy%20Policy%20System.%20I%20saw%20you%20made%20the%20decision%20recorded%20in%20the%20meeting%20minutes.%20What%20does%20the%20decision%20mean%20for%20the%20retirement%20plan%3F%20Thank%20you%21",
+        "email_link": "mailto:daniel.morin@tamberly.example?subject=Legacy%20system%20retirement&body=Hi%20Daniel%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%20have%20a%20question%20about%20the%20decision%20to%20retire%20the%20Legacy%20Policy%20System.%20I%20saw%20you%20made%20the%20decision%20recorded%20in%20the%20meeting%20minutes.%20What%20does%20the%20decision%20mean%20for%20the%20retirement%20plan%3F%20Thank%20you%21"
+      }
+    ],
+    "level": "exact",
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for the person who decided",
+      "Searched pages and tickets for \"Legacy Policy System\", \"retire\": 6 results",
+      "Checked 6 results: 1 is really about your question",
+      "Found 1 person behind these pages and tickets",
+      "Removed: nobody",
+      "Wrote the card of 1 person"
+    ],
+    "thread_id": "e8d92b6ef65348e2b18702d49cb6f773"
+  }
+}

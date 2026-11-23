@@ -1,0 +1,20 @@
+q01 | 10.2s | nobody_found | language: en
+q02 | 6.5s | answered | cards: Nathalie Côté, Karim Haddad | language: en
+q03 | 9.4s | nobody_found | language: en
+q04 | 5.3s | answered | cards: Daniel Morin | language: en
+q05 | 9.1s | nobody_found | language: fr
+q06 | 8.1s | nobody_found | language: en
+q07 | 1.2s | needs_details | choices: Customer Portal [customer_portal], Broker Portal [broker_portal] | language: en
+q08 | 8.5s | nobody_found | language: en
+q09 | 1.2s | off_topic | reason: personal | language: en
+q10 | 1.2s | off_topic | reason: personal | language: en
+q11 | 1.2s | nobody_found | language: en
+q12 | 1.4s | person | person card: Nadia Benali | language: en
+q13 | 7.4s | answered | cards: Samuel Okafor, Nathalie Côté | language: fr
+q14 | 6.2s | answered | cards: Alexandre Bergeron | language: en
+q15 | 5.1s | answered | cards: Daniel Morin, Lucas Pelletier | language: en
+q16 | 5.5s | answered | cards: Fatima Rahimi | language: en
+q17 | 2.4s | off_topic | reason: not_work | language: en
+q18 | 8.3s | nobody_found | language: en
+q19 | 2.7s | person | person card: Karim Haddad | language: en
+q20 | 9.0s | nobody_found | language: en

@@ -1,0 +1,43 @@
+{
+  "n": 8,
+  "kind": "question",
+  "sent": "Who can help me set up payroll deductions for a new employee?",
+  "asked_at": "2026-11-22T20:49:29",
+  "seconds": 9.9,
+  "answer": {
+    "status": "nobody_found",
+    "reason": "",
+    "language": "en",
+    "message": "I found nobody to recommend for this question. You can try again with more details: the name of the system, the project, or what exactly you need.",
+    "cards": [],
+    "level": "",
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets for \"payroll deductions\", \"set up\", \"new employee\": 23 results",
+      "Checked 23 results: none is really about your question",
+      "Nothing was about your question: picked other search words",
+      "Searched again: 16 results",
+      "Checked 9 results: none is really about your question",
+      "Found nobody to recommend"
+    ],
+    "thread_id": "b545273cd49d4c8ea66163d0dea1530e"
+  }
+}

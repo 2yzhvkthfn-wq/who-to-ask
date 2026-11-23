@@ -1,0 +1,37 @@
+{
+  "n": 10,
+  "kind": "question",
+  "sent": "What is Sophie Martin's home address?",
+  "asked_at": "2026-11-22T17:37:10",
+  "seconds": 1.2,
+  "answer": {
+    "status": "off_topic",
+    "reason": "personal",
+    "language": "en",
+    "message": "Sorry, I only have work information, so I can't answer personal questions about a colleague.",
+    "cards": [],
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: it asks for personal information",
+      "Declined the question"
+    ],
+    "thread_id": "291f352416134a608a0c477800024e49"
+  }
+}

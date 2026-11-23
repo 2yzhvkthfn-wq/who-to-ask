@@ -1,0 +1,73 @@
+{
+  "n": 5,
+  "kind": "question",
+  "sent": "legacy policy system won't open any policy from 2017, it just shows a blank page. need someone to look at it",
+  "asked_at": "2026-11-22T19:58:35",
+  "seconds": 8.6,
+  "answer": {
+    "status": "answered",
+    "reason": "",
+    "language": "en",
+    "message": "",
+    "cards": [
+      {
+        "id": "p003",
+        "name": "Daniel Morin",
+        "job_title": "Team Lead",
+        "team": "Policy Systems",
+        "email": "daniel.morin@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Made the decision recorded in the legacy policy system meeting minutes.",
+        "evidence": [
+          {
+            "id": "pg016",
+            "title": "Legacy Policy System: minutes of the decision meeting, 12 February 2026",
+            "source": "Confluence",
+            "kind": "decided",
+            "text": "made the decision recorded in \"Legacy Policy System: minutes of the decision meeting, 12 February 2026\"",
+            "date_text": "meeting of 12 February 2026"
+          }
+        ],
+        "subject": "Help with blank policy pages",
+        "message": "Hi Daniel, I'm [your name] from [your team]. I'm trying to find out why policies from 2017 open to a blank page in the legacy policy system. I saw you made a decision recorded in the system's meeting minutes. Have you seen this issue before, or know who I should ask? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=daniel.morin@tamberly.example&message=Hi%20Daniel%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20why%20policies%20from%202017%20open%20to%20a%20blank%20page%20in%20the%20legacy%20policy%20system.%20I%20saw%20you%20made%20a%20decision%20recorded%20in%20the%20system%27s%20meeting%20minutes.%20Have%20you%20seen%20this%20issue%20before%2C%20or%20know%20who%20I%20should%20ask%3F%20Thank%20you%21",
+        "email_link": "mailto:daniel.morin@tamberly.example?subject=Help%20with%20blank%20policy%20pages&body=Hi%20Daniel%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20why%20policies%20from%202017%20open%20to%20a%20blank%20page%20in%20the%20legacy%20policy%20system.%20I%20saw%20you%20made%20a%20decision%20recorded%20in%20the%20system%27s%20meeting%20minutes.%20Have%20you%20seen%20this%20issue%20before%2C%20or%20know%20who%20I%20should%20ask%3F%20Thank%20you%21"
+      }
+    ],
+    "level": "system",
+    "person_card": {},
+    "choices": [],
+    "note": "I found no ticket or page about this exact question. Here is who works on Legacy Policy System: a good place to start. Gérald Fontaine wrote \"Système patrimonial des polices : notes d'exploitation\" and handled POL-118, but no longer works at the company.",
+    "removed_left": [
+      "p001"
+    ],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets for \"legacy policy system\", \"open\", \"policy\", \"2017\", \"blank page\": 14 results",
+      "Checked 14 results: none is really about your question",
+      "Nothing was about your question: picked other search words",
+      "Searched again: 15 results",
+      "Checked 4 results: none is really about your question",
+      "Nothing matched your exact question: took the 3 pages and tickets about Legacy Policy System instead",
+      "Found 2 people behind these pages and tickets",
+      "Removed: 1 person who left the company",
+      "Wrote the card of 1 person"
+    ],
+    "thread_id": "d3eea61e50624f97a6db599f70077c14"
+  }
+}

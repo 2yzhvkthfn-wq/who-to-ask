@@ -1,0 +1,13 @@
+
+Question: Who can help me set up payroll deductions for a new employee?
+
+Steps:
+   Read your question: you are looking for someone who can help
+   Searched pages and tickets for "payroll deductions", "set up", "new employee": 23 results
+   Checked 23 results: none is really about your question
+   Nothing was about your question: picked other search words
+   Searched again: 16 results
+   Checked 9 results: none is really about your question
+   Found nobody to recommend
+
+I found nobody to recommend for this question. You can try again with more details: the name of the system, the project, or what exactly you need.

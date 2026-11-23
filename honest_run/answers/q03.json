@@ -1,0 +1,42 @@
+{
+  "n": 3,
+  "kind": "question",
+  "sent": "Who set up multi-factor authentication on our Single Sign-On?",
+  "asked_at": "2026-11-22T17:36:27",
+  "seconds": 9.4,
+  "answer": {
+    "status": "nobody_found",
+    "reason": "",
+    "language": "en",
+    "message": "I found nobody to recommend for this question. You can try again with more details: the name of the system, the project, or what exactly you need.",
+    "cards": [],
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who did the work",
+      "Searched pages and tickets for \"multi-factor authentication\", \"set up\", \"Single Sign-On\": 18 results",
+      "Checked 18 results: none is really about your question",
+      "Nothing was about your question: picked other search words",
+      "Searched again for \"MFA\", \"two-factor authentication\", \"2FA\", \"SSO\", \"identity provider\": 22 results",
+      "Checked 11 results: none is really about your question",
+      "Found nobody to recommend"
+    ],
+    "thread_id": "19714c66c77f44bf86dfb732e54232e1"
+  }
+}

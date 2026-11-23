@@ -1,0 +1,79 @@
+{
+  "n": 5,
+  "kind": "question",
+  "sent": "Salut, qui s'occupe du Broker Portal ? J'ai un courtier qui can't log in depuis ce matin.",
+  "asked_at": "2026-11-22T20:49:06",
+  "seconds": 10.2,
+  "answer": {
+    "status": "answered",
+    "reason": "",
+    "language": "fr",
+    "message": "",
+    "cards": [
+      {
+        "id": "p008",
+        "name": "Catherine Leblanc",
+        "job_title": "Team Lead",
+        "team": "Digital Channels",
+        "email": "catherine.leblanc@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "A rédigé la page d'intégration des courtiers et a traité un billet sur le changement de langue après connexion.",
+        "evidence": [
+          {
+            "id": "pg025",
+            "title": "Broker Portal: onboarding a new brokerage",
+            "source": "Confluence",
+            "kind": "wrote",
+            "text": "a rédigé « Broker Portal: onboarding a new brokerage »",
+            "date_text": "mise à jour le 10 août 2026"
+          },
+          {
+            "id": "DIG-170",
+            "title": "The language switch goes back to English after login",
+            "source": "Jira",
+            "kind": "assigned",
+            "text": "a traité DIG-170 : The language switch goes back to English after login",
+            "date_text": "résolu le 7 août 2026"
+          }
+        ],
+        "subject": "Aide pour le Broker Portal",
+        "message": "Bonjour Catherine, je suis [votre nom], de l'équipe [votre équipe]. Je cherche qui s'occupe du Broker Portal, car un courtier n'arrive pas à se connecter depuis ce matin. J'ai vu que vous avez rédigé la page d'intégration des courtiers. Savez-vous qui pourrait m'aider ? Merci !",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=catherine.leblanc@tamberly.example&message=Bonjour%20Catherine%2C%20je%20suis%20%5Bvotre%20nom%5D%2C%20de%20l%27%C3%A9quipe%20%5Bvotre%20%C3%A9quipe%5D.%20Je%20cherche%20qui%20s%27occupe%20du%20Broker%20Portal%2C%20car%20un%20courtier%20n%27arrive%20pas%20%C3%A0%20se%20connecter%20depuis%20ce%20matin.%20J%27ai%20vu%20que%20vous%20avez%20r%C3%A9dig%C3%A9%20la%20page%20d%27int%C3%A9gration%20des%20courtiers.%20Savez-vous%20qui%20pourrait%20m%27aider%20%3F%20Merci%20%21",
+        "email_link": "mailto:catherine.leblanc@tamberly.example?subject=Aide%20pour%20le%20Broker%20Portal&body=Bonjour%20Catherine%2C%20je%20suis%20%5Bvotre%20nom%5D%2C%20de%20l%27%C3%A9quipe%20%5Bvotre%20%C3%A9quipe%5D.%20Je%20cherche%20qui%20s%27occupe%20du%20Broker%20Portal%2C%20car%20un%20courtier%20n%27arrive%20pas%20%C3%A0%20se%20connecter%20depuis%20ce%20matin.%20J%27ai%20vu%20que%20vous%20avez%20r%C3%A9dig%C3%A9%20la%20page%20d%27int%C3%A9gration%20des%20courtiers.%20Savez-vous%20qui%20pourrait%20m%27aider%20%3F%20Merci%20%21"
+      }
+    ],
+    "level": "system",
+    "person_card": {},
+    "choices": [],
+    "note": "Je n'ai trouvé aucun billet ni aucune page sur cette question précise. Voici qui travaille sur Broker Portal : c'est un bon point de départ.",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Courriel",
+      "why": "Pourquoi",
+      "evidence": "Références",
+      "message": "Message suggéré",
+      "teams": "Envoyer sur Teams",
+      "send_email": "Envoyer par courriel",
+      "manager": "Gestionnaire",
+      "languages": "Langues",
+      "work_phone": "Téléphone au travail",
+      "open_teams": "Ouvrir une conversation Teams",
+      "write_email": "Écrire un courriel"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets for \"Broker Portal\", \"can't log in\", \"depuis ce matin\": 21 results",
+      "Checked 21 results: none is really about your question",
+      "Nothing was about your question: picked other search words",
+      "Searched again: 14 results",
+      "Checked 1 result: none is really about your question",
+      "Nothing matched your exact question: took the 2 pages and tickets about Broker Portal instead",
+      "Found 1 person behind these pages and tickets",
+      "Removed: nobody",
+      "Wrote the card of 1 person"
+    ],
+    "thread_id": "6944a77b0b774e48b0793980b57701db"
+  }
+}

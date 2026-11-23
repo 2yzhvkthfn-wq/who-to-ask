@@ -1,0 +1,13 @@
+
+Question: Le système de réservation des salles de réunion ne fonctionne plus. À qui dois-je parler ?
+
+Steps:
+   Read your question: you are looking for someone who can help
+   Searched pages and tickets for "système de réservation des salles de réunion", "ne fonctionne plus": 16 results
+   Checked 16 results: none is really about your question
+   Nothing was about your question: picked other search words
+   Searched again: 18 results
+   Checked 4 results: none is really about your question
+   Found nobody to recommend
+
+Je n'ai trouvé personne à vous recommander pour cette question. Vous pouvez réessayer avec plus de précisions : le nom du système, le projet, ou ce dont vous avez besoin exactement.

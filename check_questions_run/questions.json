@@ -1,0 +1,13 @@
+[
+  {"n": 1, "system": "policy_database", "language": "en", "question": "The Policy Database is very slow since last night, and saving a policy change takes minutes. Who should I talk to?"},
+  {"n": 2, "system": "fraud_scoring_model", "language": "en", "question": "The fraud model is flagging almost every claim as high risk today. Who can look at it?"},
+  {"n": 3, "system": "pricing_engine", "language": "fr", "question": "Le moteur de tarification renvoie une erreur chaque fois qu'un courtier demande une soumission auto. Qui peut m'aider ?"},
+  {"n": 4, "system": "policy_admin", "language": "en", "question": "Policy Admn keeps logging me out when I try to cancel a policy. Who do I ask?"},
+  {"n": 5, "system": "legacy_policy_system", "language": "en", "question": "legacy policy system won't open any policy from 2017, it just shows a blank page. need someone to look at it"},
+  {"n": 6, "system": "policy_api", "language": "en", "question": "The Policy API has been timing out all morning. Who should I contact?"},
+  {"n": 7, "system": "cloud_platform", "language": "en", "question": "I can't reach any server in our test network on the cloud platform since the weekend. Who looks after that?"},
+  {"n": 8, "system": "underwriting_rules", "language": "en", "question": "The automatic underwriting keeps sending every home policy request to manual review. Who can check the rules?"},
+  {"n": 9, "system": "", "language": "en", "question": "The time-off request tool rejects my vacation dates. Who should I talk to?"},
+  {"n": 10, "system": "", "language": "en", "question": "Our CRM stopped syncing new leads this morning. Who can help?"},
+  {"n": 11, "system": "", "language": "fr", "question": "Le système de réservation des salles de réunion ne fonctionne plus. À qui dois-je parler ?"}
+]

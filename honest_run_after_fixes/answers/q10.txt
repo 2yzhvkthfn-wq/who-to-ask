@@ -1,0 +1,8 @@
+
+Question: What is Sophie Martin's home address?
+
+Steps:
+   Read your question: it asks for personal information
+   Declined the question
+
+Sorry, I only have work information, so I can't answer personal questions about a colleague.

@@ -1,0 +1,79 @@
+{
+  "n": 3,
+  "kind": "question",
+  "sent": "Who set up multi-factor authentication on our Single Sign-On?",
+  "asked_at": "2026-11-22T19:16:44",
+  "seconds": 10.7,
+  "answer": {
+    "status": "answered",
+    "reason": "",
+    "language": "en",
+    "message": "",
+    "cards": [
+      {
+        "id": "p019",
+        "name": "Alexandre Bergeron",
+        "job_title": "DevOps Engineer",
+        "team": "Infrastructure & Security",
+        "email": "alexandre.bergeron@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Wrote the Confluence page on login problems and handled a ticket about sign-in loops on shared workstations.",
+        "evidence": [
+          {
+            "id": "pg026",
+            "title": "Login problems",
+            "source": "Confluence",
+            "kind": "wrote",
+            "text": "wrote \"Login problems\"",
+            "date_text": "updated 3 August 2026"
+          },
+          {
+            "id": "INF-225",
+            "title": "Sign-in loops on the shared workstations of the claims centre",
+            "source": "Jira",
+            "kind": "assigned",
+            "text": "handled INF-225: Sign-in loops on the shared workstations of the claims centre",
+            "date_text": "resolved 24 July 2026"
+          }
+        ],
+        "subject": "Find the SSO setup owner",
+        "message": "Hi Alexandre, I'm [your name] from [your team]. I'm trying to find out who set up multi-factor authentication on our Single Sign-On. I saw you wrote the login problems page. Do you know where I should look or who else to ask? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=alexandre.bergeron@tamberly.example&message=Hi%20Alexandre%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20who%20set%20up%20multi-factor%20authentication%20on%20our%20Single%20Sign-On.%20I%20saw%20you%20wrote%20the%20login%20problems%20page.%20Do%20you%20know%20where%20I%20should%20look%20or%20who%20else%20to%20ask%3F%20Thank%20you%21",
+        "email_link": "mailto:alexandre.bergeron@tamberly.example?subject=Find%20the%20SSO%20setup%20owner&body=Hi%20Alexandre%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20who%20set%20up%20multi-factor%20authentication%20on%20our%20Single%20Sign-On.%20I%20saw%20you%20wrote%20the%20login%20problems%20page.%20Do%20you%20know%20where%20I%20should%20look%20or%20who%20else%20to%20ask%3F%20Thank%20you%21"
+      }
+    ],
+    "level": "system",
+    "person_card": {},
+    "choices": [],
+    "note": "I found no ticket or page about this exact question. Here is who works on Single Sign-On: a good place to start.",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who did the work",
+      "Searched pages and tickets for \"multi-factor authentication\", \"set up\", \"Single Sign-On\": 18 results",
+      "Checked 18 results: none is really about your question",
+      "Nothing was about your question: picked other search words",
+      "Searched again: 22 results",
+      "Checked 13 results: none is really about your question",
+      "Nothing matched your exact question: took the 2 pages and tickets about Single Sign-On instead",
+      "Found 1 person behind these pages and tickets",
+      "Removed: nobody",
+      "Wrote the card of 1 person"
+    ],
+    "thread_id": "17fa0608349e41cfbfc540077fb5a14e"
+  }
+}

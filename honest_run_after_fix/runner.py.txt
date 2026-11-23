@@ -1,0 +1,225 @@
+"""M9 runner. It lives outside the project, and it changes no project file.
+
+It asks each question once through the real agent (AgentWorkflow.full_pipeline), each in a new conversation,
+and saves every answer as it came out: the raw answer (JSON), the text that the terminal app shows for it,
+and the log lines of that question.
+
+Run it from the project folder:
+    python m9_runner.py run  QUESTIONS_JSON OUT_DIR [--start N]
+    python m9_runner.py pick OUT_DIR N CHOICE_ID
+
+run:  QUESTIONS_JSON is a list of {"n": 1, "question": "..."}. An entry can also have "pick": the id of the
+      choice to take if the agent asks a question back and offers that choice.
+pick: continues the paused run of question N with one of the choices that the agent offered. The paused run
+      waits in Postgres, so this only works when the memory of the agent is Postgres.
+
+A question that already has a saved answer is never asked again: the program stops before it asks anything.
+"""
+
+import contextlib
+import io
+import json
+import os
+import subprocess
+import sys
+import time
+from datetime import datetime
+from pathlib import Path
+from typing import Dict, List, Optional
+
+# The project folder is the folder this program is started from
+PROJECT = Path.cwd()
+if not (PROJECT / "agents" / "workflow.py").exists():
+    sys.exit("Start this program from the project folder.")
+sys.path.insert(0, str(PROJECT))
+
+from langchain_core.tracers.langchain import wait_for_all_tracers  # noqa: E402
+
+import app as terminal_app  # noqa: E402  (the project's app.py: only its show_answer is used, to write the text)
+from agents import AgentWorkflow  # noqa: E402
+from config.settings import settings  # noqa: E402
+from utils.logging import logger  # noqa: E402
+
+# The same line format as app.log
+LOG_FORMAT = "{time:YYYY-MM-DD HH:mm:ss} | {level: <7} | {name}:{function}:{line} | {message}"
+
+
+def git(*args: str) -> str:
+    """The output of one read-only git command, run in the project folder."""
+    return subprocess.run(["git", *args], capture_output=True, text=True, cwd=PROJECT).stdout.strip()
+
+
+def terminal_text(label: str, answer: Dict, is_pick: bool = False) -> str:
+    """The answer as the terminal app prints it, captured as text."""
+    buffer = io.StringIO()
+    try:
+        with contextlib.redirect_stdout(buffer):
+            terminal_app.show_answer(label, answer, is_pick=is_pick)
+    except Exception as e:
+        buffer.write(f"\n[The runner could not write this answer as text ({type(e).__name__}: {e}). The JSON file is complete.]\n")
+    return buffer.getvalue()
+
+
+def one_line(answer: Dict) -> str:
+    """A short summary of one answer, for the summary file."""
+    parts = [answer.get("status", "?")]
+    if answer.get("reason"):
+        parts.append(f"reason: {answer['reason']}")
+    if answer.get("cards"):
+        parts.append("cards: " + ", ".join(card["name"] for card in answer["cards"]))
+    if answer.get("person_card"):
+        parts.append("person card: " + str(answer["person_card"].get("name", "?")))
+    if answer.get("choices"):
+        parts.append("choices: " + ", ".join(f"{choice['name']} [{choice['id']}]" for choice in answer["choices"]))
+    parts.append(f"language: {answer.get('language', '?')}")
+    return " | ".join(parts)
+
+
+def note_line(out_dir: Path, text: str) -> None:
+    """Add one line to the summary file, and show it."""
+    with open(out_dir / "summary.txt", "a", encoding="utf-8") as summary:
+        summary.write(text + "\n")
+    print(text, flush=True)
+
+
+def ask(
+    workflow: AgentWorkflow,
+    out_dir: Path,
+    stem: str,
+    number: int,
+    question: str,
+    thread_id: Optional[str] = None,
+    is_answer: bool = False,
+    label: str = "",
+) -> Dict:
+    """Send one question (or one pick) to the agent, once. Save what came out, then return the answer."""
+    # The log lines of this question only, in a file of their own
+    sink = logger.add(out_dir / f"{stem}.log", level="DEBUG", format=LOG_FORMAT, encoding="utf-8", diagnose=False)
+    record: Dict = {
+        "n": number,
+        "kind": "pick" if is_answer else "question",
+        "sent": question,
+        "asked_at": datetime.now().isoformat(timespec="seconds"),
+    }
+    started = time.perf_counter()
+    try:
+        answer = workflow.full_pipeline(question, thread_id, is_answer=is_answer)
+    except Exception as e:
+        # The agent failed: this is saved too, and the run stops. Nothing is asked again
+        record["seconds"] = round(time.perf_counter() - started, 1)
+        record["error"] = f"{type(e).__name__}: {e}"
+        (out_dir / f"{stem}.json").write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8")
+        (out_dir / f"{stem}.txt").write_text(f"The agent failed: {record['error']}\n", encoding="utf-8")
+        note_line(out_dir, f"{stem} | {record['seconds']}s | ERROR | {record['error']}")
+        raise
+    finally:
+        logger.remove(sink)
+
+    record["seconds"] = round(time.perf_counter() - started, 1)
+    record["answer"] = answer
+    # The raw answer first: it is the record. Then the text of the terminal
+    (out_dir / f"{stem}.json").write_text(json.dumps(record, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+    (out_dir / f"{stem}.txt").write_text(terminal_text(label or question, answer, is_pick=is_answer), encoding="utf-8")
+    note_line(out_dir, f"{stem} | {record['seconds']}s | {one_line(answer)}")
+    return answer
+
+
+def build_agent(out_dir: Path) -> AgentWorkflow:
+    """Build the agent once, and write down how it is set up (no secret: only names and yes or no)."""
+    workflow = AgentWorkflow()
+    info = {
+        "started_at": datetime.now().isoformat(timespec="seconds"),
+        "command": sys.argv[1:],
+        "git_head": git("rev-parse", "HEAD"),
+        "git_status_at_start": git("status", "--porcelain"),
+        "model": settings.OPENAI_MODEL,
+        "embedding_model": settings.OPENAI_EMBEDDING_MODEL,
+        "reasoning_effort": settings.OPENAI_REASONING_EFFORT,
+        "today_setting": settings.TODAY.isoformat(),
+        "memory": "Postgres" if workflow.pool is not None else "in this program only",
+        "langsmith_tracing": os.environ.get("LANGSMITH_TRACING") == "true",
+        "python": sys.version.split()[0],
+    }
+    workflow.run_info = info  # kept on the object only until the end of this program
+    return workflow
+
+
+def finish(workflow: AgentWorkflow, out_dir: Path) -> None:
+    """Wait for the traces, close the memory, and save how the run was set up and how the project folder looks now."""
+    wait_for_all_tracers()
+    info = workflow.run_info
+    workflow.close()
+    info["finished_at"] = datetime.now().isoformat(timespec="seconds")
+    info["git_head_at_end"] = git("rev-parse", "HEAD")
+    info["git_status_at_end"] = git("status", "--porcelain")
+    name = f"run_info_{info['started_at'].replace(':', '-')}.json"
+    (out_dir / name).write_text(json.dumps(info, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def run(questions_path: Path, out_dir: Path, start: int) -> None:
+    """Ask every question of the file once, from the question number start on."""
+    entries: List[Dict] = json.loads(questions_path.read_text(encoding="utf-8"))
+    entries = [entry for entry in entries if entry["n"] >= start]
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    # 1) Never ask a question twice: if one of them already has a saved answer, stop before asking anything
+    already = [entry["n"] for entry in entries if (out_dir / f"q{entry['n']:02d}.json").exists()]
+    if already:
+        sys.exit(f"Already asked: {already}. Nothing was asked.")
+
+    # 2) Build the agent once, as the terminal app and the API do
+    workflow = build_agent(out_dir)
+    try:
+        # A try of the runner itself (M9_SMOKE=1) must never use the real stores: stop before asking anything
+        info = workflow.run_info
+        if os.environ.get("M9_SMOKE") == "1" and (info["memory"] == "Postgres" or info["langsmith_tracing"]):
+            sys.exit("Smoke test: Postgres or LangSmith is on. Nothing was asked.")
+        for entry in entries:
+            number, question = entry["n"], entry["question"]
+            stem = f"q{number:02d}"
+            # 3) One question, in a new conversation (no thread_id: the agent makes up a new one)
+            answer = ask(workflow, out_dir, stem, number, question)
+
+            # 4) The agent asked a question back, and the file says what the user picks: the same run goes on
+            choices = {choice["id"]: choice for choice in answer.get("choices", [])}
+            if answer["status"] == "needs_details" and entry.get("pick") in choices:
+                picked = choices[entry["pick"]]
+                ask(workflow, out_dir, f"{stem}_pick", number, picked["id"], answer["thread_id"], True, picked["name"])
+    finally:
+        finish(workflow, out_dir)
+
+
+def pick(out_dir: Path, number: int, choice_id: str) -> None:
+    """Continue the paused run of one question with one of the choices that the agent offered."""
+    stem = f"q{number:02d}"
+    first = json.loads((out_dir / f"{stem}.json").read_text(encoding="utf-8"))["answer"]
+    choices = {choice["id"]: choice for choice in first.get("choices", [])}
+    if first["status"] != "needs_details" or choice_id not in choices:
+        sys.exit(f"Question {number} did not offer the choice {choice_id}. Nothing was sent.")
+    if (out_dir / f"{stem}_pick.json").exists():
+        sys.exit(f"Question {number} already has a pick. Nothing was sent.")
+
+    workflow = build_agent(out_dir)
+    try:
+        # The paused run waits in Postgres. With the other memory it is gone, and a pick would answer nothing
+        if workflow.pool is None:
+            sys.exit("The memory is not Postgres, so the paused run is gone. Nothing was sent.")
+        ask(workflow, out_dir, f"{stem}_pick", number, choice_id, first["thread_id"], True, choices[choice_id]["name"])
+    finally:
+        finish(workflow, out_dir)
+
+
+def main() -> None:
+    sys.stdout.reconfigure(encoding="utf-8")
+    arguments = sys.argv[1:]
+    if len(arguments) >= 3 and arguments[0] == "run":
+        start = int(arguments[4]) if len(arguments) == 5 and arguments[3] == "--start" else 1
+        run(Path(arguments[1]), Path(arguments[2]), start)
+    elif len(arguments) == 4 and arguments[0] == "pick":
+        pick(Path(arguments[1]), int(arguments[2]), arguments[3])
+    else:
+        sys.exit(__doc__)
+
+
+if __name__ == "__main__":
+    main()

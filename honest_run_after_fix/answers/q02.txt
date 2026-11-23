@@ -1,0 +1,13 @@
+
+Question: Our quotes for customers in Gatineau have come out far too expensive since Monday. Who looks after the rating tables?
+
+Steps:
+   Read your question: you are looking for someone who did the work
+   Searched pages and tickets for "quotes", "Gatineau", "far too expensive", "since Monday", "rating tables": 19 results
+   Checked 19 results: none is really about your question
+   Nothing was about your question: picked other search words
+   Searched again for "pricing", "premium calculation", "tariff tables", "grilles tarifaires": 19 results
+   Checked 8 results: none is really about your question
+   Found nobody to recommend
+
+I found nobody to recommend for this question. You can try again with more details: the name of the system, the project, or what exactly you need.

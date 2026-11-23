@@ -1,0 +1,23 @@
+
+Question: The Policy API has been timing out all morning. Who should I contact?
+
+Steps:
+   Read your question: you are looking for someone who can help
+   Searched pages and tickets for "Policy API", "timing out", "all morning": 19 results
+   Checked 19 results: 1 is really about your question
+   Found 1 person behind these pages and tickets
+   Removed: nobody
+   Wrote the card of 1 person
+
+1. Amira Khalil, Senior Developer, Policy Systems
+   Email: amira.khalil@tamberly.example
+   Why: Handled a ticket about Policy search timing out for brokers with large policy lists.
+   Evidence: POL-152 (Jira)
+
+   Suggested message:
+   "Hi Amira, I'm [your name] from [your team]. I'm trying to work out why the Policy API has been
+    timing out this morning. I saw you handled a ticket about Policy search timing out for brokers
+    with large policy lists. How did you solve it? Thank you!"
+
+   [Send on Teams] https://teams.microsoft.com/l/chat/0/0?users=amira.khalil@tamberly.example&message=Hi%20Amira%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20work%20out%20why%20the%20Policy%20API%20has%20been%20timing%20out%20this%20morning.%20I%20saw%20you%20handled%20a%20ticket%20about%20Policy%20search%20timing%20out%20for%20brokers%20with%20large%20policy%20lists.%20How%20did%20you%20solve%20it%3F%20Thank%20you%21
+   [Send by email] mailto:amira.khalil@tamberly.example?subject=Help%20with%20Policy%20API%20timeouts&body=Hi%20Amira%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20work%20out%20why%20the%20Policy%20API%20has%20been%20timing%20out%20this%20morning.%20I%20saw%20you%20handled%20a%20ticket%20about%20Policy%20search%20timing%20out%20for%20brokers%20with%20large%20policy%20lists.%20How%20did%20you%20solve%20it%3F%20Thank%20you%21

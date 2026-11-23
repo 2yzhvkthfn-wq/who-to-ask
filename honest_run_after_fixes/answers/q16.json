@@ -1,0 +1,67 @@
+{
+  "n": 16,
+  "kind": "question",
+  "sent": "I need a new cloud account for a test project. Who approves that?",
+  "asked_at": "2026-11-22T20:50:04",
+  "seconds": 6.1,
+  "answer": {
+    "status": "answered",
+    "reason": "",
+    "language": "en",
+    "message": "",
+    "cards": [
+      {
+        "id": "p022",
+        "name": "Fatima Rahimi",
+        "job_title": "Cloud Engineer",
+        "team": "Infrastructure & Security",
+        "email": "fatima.rahimi@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Wrote the guide on cloud landing zones and naming rules.",
+        "evidence": [
+          {
+            "id": "pg007",
+            "title": "Cloud Platform: landing zone and naming rules",
+            "source": "Confluence",
+            "kind": "wrote",
+            "text": "wrote \"Cloud Platform: landing zone and naming rules\"",
+            "date_text": "updated 21 April 2026"
+          }
+        ],
+        "subject": "New cloud account approval",
+        "message": "Hi Fatima, I'm [your name] from [your team]. I need a new cloud account for a test project. I saw you wrote the guide on cloud landing zones and naming rules. Where should I start with the approval process? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=fatima.rahimi@tamberly.example&message=Hi%20Fatima%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%20need%20a%20new%20cloud%20account%20for%20a%20test%20project.%20I%20saw%20you%20wrote%20the%20guide%20on%20cloud%20landing%20zones%20and%20naming%20rules.%20Where%20should%20I%20start%20with%20the%20approval%20process%3F%20Thank%20you%21",
+        "email_link": "mailto:fatima.rahimi@tamberly.example?subject=New%20cloud%20account%20approval&body=Hi%20Fatima%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%20need%20a%20new%20cloud%20account%20for%20a%20test%20project.%20I%20saw%20you%20wrote%20the%20guide%20on%20cloud%20landing%20zones%20and%20naming%20rules.%20Where%20should%20I%20start%20with%20the%20approval%20process%3F%20Thank%20you%21"
+      }
+    ],
+    "level": "exact",
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who did the work",
+      "Searched pages and tickets for \"cloud account\", \"new\", \"test project\": 16 results",
+      "Checked 16 results: 1 is really about your question",
+      "Found 1 person behind these pages and tickets",
+      "Removed: nobody",
+      "Wrote the card of 1 person"
+    ],
+    "thread_id": "713fd8da5cfc44a492403199924a2a4f"
+  }
+}

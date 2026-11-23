@@ -1,0 +1,77 @@
+{
+  "n": 2,
+  "kind": "question",
+  "sent": "The fraud model is flagging almost every claim as high risk today. Who can look at it?",
+  "asked_at": "2026-11-22T19:58:10",
+  "seconds": 7.0,
+  "answer": {
+    "status": "answered",
+    "reason": "",
+    "language": "en",
+    "message": "",
+    "cards": [
+      {
+        "id": "p023",
+        "name": "Priya Patel",
+        "job_title": "Data Scientist",
+        "team": "Data & Analytics",
+        "email": "priya.patel@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Wrote the fraud scoring model runbook and handled a model retraining ticket.",
+        "evidence": [
+          {
+            "id": "pg020",
+            "title": "Fraud Scoring Model: overview and runbook",
+            "source": "Confluence",
+            "kind": "wrote",
+            "text": "wrote \"Fraud Scoring Model: overview and runbook\"",
+            "date_text": "updated 6 October 2026"
+          },
+          {
+            "id": "DAT-67",
+            "title": "Retrain the fraud scoring model with the claims up to 2025 (version 3)",
+            "source": "Jira",
+            "kind": "assigned",
+            "text": "handled DAT-67: Retrain the fraud scoring model with the claims up to 2025 (version 3)",
+            "date_text": "resolved 20 April 2026"
+          }
+        ],
+        "subject": "Fraud model risk flags",
+        "message": "Hi Priya, I'm [your name] from [your team]. The fraud model is flagging almost every claim as high risk today, and I'm trying to figure out what's going on. I saw you handled a retraining of the model. Could you help me check what might be causing this? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=priya.patel@tamberly.example&message=Hi%20Priya%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20The%20fraud%20model%20is%20flagging%20almost%20every%20claim%20as%20high%20risk%20today%2C%20and%20I%27m%20trying%20to%20figure%20out%20what%27s%20going%20on.%20I%20saw%20you%20handled%20a%20retraining%20of%20the%20model.%20Could%20you%20help%20me%20check%20what%20might%20be%20causing%20this%3F%20Thank%20you%21",
+        "email_link": "mailto:priya.patel@tamberly.example?subject=Fraud%20model%20risk%20flags&body=Hi%20Priya%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20The%20fraud%20model%20is%20flagging%20almost%20every%20claim%20as%20high%20risk%20today%2C%20and%20I%27m%20trying%20to%20figure%20out%20what%27s%20going%20on.%20I%20saw%20you%20handled%20a%20retraining%20of%20the%20model.%20Could%20you%20help%20me%20check%20what%20might%20be%20causing%20this%3F%20Thank%20you%21"
+      }
+    ],
+    "level": "exact",
+    "person_card": {},
+    "choices": [],
+    "note": "Tom Walsh wrote \"Fraud Scoring Model v2 - design notes\" and handled DAT-52, but no longer works at the company.",
+    "removed_left": [
+      "p011"
+    ],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets for \"fraud model\", \"flagging almost every claim as high risk\", \"today\": 16 results",
+      "Checked 16 results: 4 are really about your question",
+      "Found 2 people behind these pages and tickets",
+      "Removed: 1 person who left the company",
+      "Wrote the card of 1 person"
+    ],
+    "thread_id": "b0fcdba6871b479d8275ecf368719e0e"
+  }
+}

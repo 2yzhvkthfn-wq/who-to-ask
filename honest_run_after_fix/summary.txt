@@ -1,0 +1,20 @@
+q01 | 11.9s | answered | cards: Hélène Dubois, Olivia Tremblay | language: en
+q02 | 10.2s | nobody_found | language: en
+q03 | 10.7s | answered | cards: Alexandre Bergeron | language: en
+q04 | 4.6s | answered | cards: Daniel Morin | language: en
+q05 | 10.3s | answered | cards: Catherine Leblanc | language: fr
+q06 | 12.4s | answered | cards: Marc-André Gagnon, Hélène Dubois, Catherine Leblanc | language: en
+q07 | 1.3s | needs_details | choices: Customer Portal [customer_portal], Broker Portal [broker_portal] | language: en
+q08 | 10.1s | nobody_found | language: en
+q09 | 1.3s | off_topic | reason: personal | language: en
+q10 | 1.4s | off_topic | reason: personal | language: en
+q11 | 1.3s | nobody_found | language: en
+q12 | 1.5s | person | person card: Nadia Benali | language: en
+q13 | 8.4s | answered | cards: Samuel Okafor, Nathalie Côté | language: fr
+q14 | 6.6s | answered | cards: Alexandre Bergeron | language: en
+q15 | 6.1s | answered | cards: Lucas Pelletier, Daniel Morin | language: en
+q16 | 6.5s | answered | cards: Fatima Rahimi | language: en
+q17 | 1.3s | off_topic | reason: not_work | language: en
+q18 | 6.9s | answered | cards: David Chen, Olivia Tremblay | language: en
+q19 | 1.4s | person | person card: Karim Haddad | language: en
+q20 | 10.0s | nobody_found | language: en

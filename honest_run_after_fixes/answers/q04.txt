@@ -1,0 +1,23 @@
+
+Question: Who decided to retire the Legacy Policy System?
+
+Steps:
+   Read your question: you are looking for the person who decided
+   Searched pages and tickets for "Legacy Policy System", "retire": 6 results
+   Checked 6 results: 1 is really about your question
+   Found 1 person behind these pages and tickets
+   Removed: nobody
+   Wrote the card of 1 person
+
+1. Daniel Morin, Team Lead, Policy Systems
+   Email: daniel.morin@tamberly.example
+   Why: Made the decision to retire the Legacy Policy System.
+   Evidence: "Legacy Policy System: minutes of the decision meeting, 12 February 2026" (Confluence)
+
+   Suggested message:
+   "Hi Daniel, I'm [your name] from [your team]. I have a question about the decision to retire the
+    Legacy Policy System. I saw you made the decision recorded in the meeting minutes. What does the
+    decision mean for the retirement plan? Thank you!"
+
+   [Send on Teams] https://teams.microsoft.com/l/chat/0/0?users=daniel.morin@tamberly.example&message=Hi%20Daniel%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%20have%20a%20question%20about%20the%20decision%20to%20retire%20the%20Legacy%20Policy%20System.%20I%20saw%20you%20made%20the%20decision%20recorded%20in%20the%20meeting%20minutes.%20What%20does%20the%20decision%20mean%20for%20the%20retirement%20plan%3F%20Thank%20you%21
+   [Send by email] mailto:daniel.morin@tamberly.example?subject=Legacy%20system%20retirement&body=Hi%20Daniel%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%20have%20a%20question%20about%20the%20decision%20to%20retire%20the%20Legacy%20Policy%20System.%20I%20saw%20you%20made%20the%20decision%20recorded%20in%20the%20meeting%20minutes.%20What%20does%20the%20decision%20mean%20for%20the%20retirement%20plan%3F%20Thank%20you%21

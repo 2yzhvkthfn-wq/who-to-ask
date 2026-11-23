@@ -1,0 +1,31 @@
+
+Question: Who set up multi-factor authentication on our Single Sign-On?
+
+Steps:
+   Read your question: you are looking for someone who did the work
+   Searched pages and tickets for "multi-factor authentication", "set up": 21 results
+   Checked 21 results: none is really about your question
+   Nothing was about your question: picked other search words
+   Searched again: 22 results
+   Checked 16 results: none is really about your question
+   Nothing matched your exact question: took the 2 pages and tickets about Single Sign-On instead
+   Found 1 person behind these pages and tickets
+   Removed: nobody
+   Wrote the card of 1 person
+
+I found no ticket or page about this exact question. Here is who works on Single Sign-On: a good
+place to start.
+
+1. Alexandre Bergeron, DevOps Engineer, Infrastructure & Security
+   Email: alexandre.bergeron@tamberly.example
+   Why: Wrote the Confluence page on login problems and handled a ticket about sign-in loops on
+   shared workstations.
+   Evidence: "Login problems" (Confluence), INF-225 (Jira)
+
+   Suggested message:
+   "Hi Alexandre, I'm [your name] from [your team]. I'm trying to find out who set up multi-factor
+    authentication on our Single Sign-On. I saw you wrote the login problems page. Do you know where
+    I should look or who else to ask? Thank you!"
+
+   [Send on Teams] https://teams.microsoft.com/l/chat/0/0?users=alexandre.bergeron@tamberly.example&message=Hi%20Alexandre%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20who%20set%20up%20multi-factor%20authentication%20on%20our%20Single%20Sign-On.%20I%20saw%20you%20wrote%20the%20login%20problems%20page.%20Do%20you%20know%20where%20I%20should%20look%20or%20who%20else%20to%20ask%3F%20Thank%20you%21
+   [Send by email] mailto:alexandre.bergeron@tamberly.example?subject=Find%20the%20SSO%20setup%20owner&body=Hi%20Alexandre%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20who%20set%20up%20multi-factor%20authentication%20on%20our%20Single%20Sign-On.%20I%20saw%20you%20wrote%20the%20login%20problems%20page.%20Do%20you%20know%20where%20I%20should%20look%20or%20who%20else%20to%20ask%3F%20Thank%20you%21

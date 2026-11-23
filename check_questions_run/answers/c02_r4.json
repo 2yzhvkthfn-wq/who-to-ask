@@ -1,0 +1,69 @@
+{
+  "n": 2,
+  "kind": "question",
+  "sent": "The fraud model is flagging almost every claim as high risk today. Who can look at it?",
+  "asked_at": "2026-11-22T20:03:20",
+  "seconds": 6.7,
+  "answer": {
+    "status": "answered",
+    "reason": "",
+    "language": "en",
+    "message": "",
+    "cards": [
+      {
+        "id": "p023",
+        "name": "Priya Patel",
+        "job_title": "Data Scientist",
+        "team": "Data & Analytics",
+        "email": "priya.patel@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Wrote the fraud scoring model overview and runbook.",
+        "evidence": [
+          {
+            "id": "pg020",
+            "title": "Fraud Scoring Model: overview and runbook",
+            "source": "Confluence",
+            "kind": "wrote",
+            "text": "wrote \"Fraud Scoring Model: overview and runbook\"",
+            "date_text": "updated 6 October 2026"
+          }
+        ],
+        "subject": "Fraud model risk flags",
+        "message": "Hi Priya, I'm [your name] from [your team]. I'm trying to figure out why the fraud model is flagging almost every claim as high risk today. I saw you wrote the model runbook. Where should I start checking? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=priya.patel@tamberly.example&message=Hi%20Priya%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20figure%20out%20why%20the%20fraud%20model%20is%20flagging%20almost%20every%20claim%20as%20high%20risk%20today.%20I%20saw%20you%20wrote%20the%20model%20runbook.%20Where%20should%20I%20start%20checking%3F%20Thank%20you%21",
+        "email_link": "mailto:priya.patel@tamberly.example?subject=Fraud%20model%20risk%20flags&body=Hi%20Priya%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20figure%20out%20why%20the%20fraud%20model%20is%20flagging%20almost%20every%20claim%20as%20high%20risk%20today.%20I%20saw%20you%20wrote%20the%20model%20runbook.%20Where%20should%20I%20start%20checking%3F%20Thank%20you%21"
+      }
+    ],
+    "level": "exact",
+    "person_card": {},
+    "choices": [],
+    "note": "Tom Walsh handled DAT-52, but no longer works at the company.",
+    "removed_left": [
+      "p011"
+    ],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets for \"fraud model\", \"flagging almost every claim as high risk\", \"today\": 16 results",
+      "Checked 16 results: 2 are really about your question",
+      "Found 2 people behind these pages and tickets",
+      "Removed: 1 person who left the company",
+      "Wrote the card of 1 person"
+    ],
+    "thread_id": "42578406fd1645d0a085d781a0f2063d"
+  }
+}

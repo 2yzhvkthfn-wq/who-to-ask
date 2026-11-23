@@ -1,0 +1,23 @@
+
+Question: I need a new cloud account for a test project. Who approves that?
+
+Steps:
+   Read your question: you are looking for someone who did the work
+   Searched pages and tickets for "cloud account", "new", "test project": 16 results
+   Checked 16 results: 1 is really about your question
+   Found 1 person behind these pages and tickets
+   Removed: nobody
+   Wrote the card of 1 person
+
+1. Fatima Rahimi, Cloud Engineer, Infrastructure & Security
+   Email: fatima.rahimi@tamberly.example
+   Why: Wrote the guide on cloud landing zones and naming rules.
+   Evidence: "Cloud Platform: landing zone and naming rules" (Confluence)
+
+   Suggested message:
+   "Hi Fatima, I'm [your name] from [your team]. I need a new cloud account for a test project. I
+    saw you wrote the guide on cloud landing zones and naming rules. Where should I start with the
+    approval process? Thank you!"
+
+   [Send on Teams] https://teams.microsoft.com/l/chat/0/0?users=fatima.rahimi@tamberly.example&message=Hi%20Fatima%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%20need%20a%20new%20cloud%20account%20for%20a%20test%20project.%20I%20saw%20you%20wrote%20the%20guide%20on%20cloud%20landing%20zones%20and%20naming%20rules.%20Where%20should%20I%20start%20with%20the%20approval%20process%3F%20Thank%20you%21
+   [Send by email] mailto:fatima.rahimi@tamberly.example?subject=New%20cloud%20account%20approval&body=Hi%20Fatima%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%20need%20a%20new%20cloud%20account%20for%20a%20test%20project.%20I%20saw%20you%20wrote%20the%20guide%20on%20cloud%20landing%20zones%20and%20naming%20rules.%20Where%20should%20I%20start%20with%20the%20approval%20process%3F%20Thank%20you%21

@@ -1,0 +1,43 @@
+{
+  "n": 11,
+  "kind": "question",
+  "sent": "Le système de réservation des salles de réunion ne fonctionne plus. À qui dois-je parler ?",
+  "asked_at": "2026-11-22T20:01:16",
+  "seconds": 8.4,
+  "answer": {
+    "status": "nobody_found",
+    "reason": "",
+    "language": "fr",
+    "message": "Je n'ai trouvé personne à vous recommander pour cette question. Vous pouvez réessayer avec plus de précisions : le nom du système, le projet, ou ce dont vous avez besoin exactement.",
+    "cards": [],
+    "level": "",
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Courriel",
+      "why": "Pourquoi",
+      "evidence": "Références",
+      "message": "Message suggéré",
+      "teams": "Envoyer sur Teams",
+      "send_email": "Envoyer par courriel",
+      "manager": "Gestionnaire",
+      "languages": "Langues",
+      "work_phone": "Téléphone au travail",
+      "open_teams": "Ouvrir une conversation Teams",
+      "write_email": "Écrire un courriel"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets for \"système de réservation des salles de réunion\", \"ne fonctionne plus\": 16 results",
+      "Checked 16 results: none is really about your question",
+      "Nothing was about your question: picked other search words",
+      "Searched again: 17 results",
+      "Checked 4 results: none is really about your question",
+      "Found nobody to recommend"
+    ],
+    "thread_id": "9ddab409057c44f88fecc9101ea8619f"
+  }
+}

@@ -1,0 +1,1356 @@
+[
+  {
+    "id": "CLM-188",
+    "type": "Bug",
+    "summary": "Duplicate claims when a broker sends the same loss twice",
+    "description": "The claims centre found 23 pairs of identical claims last month. In each pair, both claims come from the same broker, for the same policy and the same loss date, a few seconds apart.\n\n- The broker's system sends the claim, gets no answer within 10 seconds, and sends it again\n- Intake creates two claim files\n- An adjuster has to merge them by hand\n\nPlease fix before the hail season.",
+    "team": "claims_platform",
+    "component": "claims_intake",
+    "status": "Closed",
+    "priority": "Medium",
+    "reporter": "p007",
+    "assignee": "p009",
+    "approver": "",
+    "created": "2025-05-12",
+    "updated": "2025-06-10",
+    "resolved": "2025-06-10",
+    "labels": [
+      "intake"
+    ],
+    "comments": [
+      {
+        "author": "p009",
+        "date": "2025-05-20",
+        "text": "intake has no idea it already saw the message. adding a check on broker id + policy + loss date + loss type, 24h window. the second one gets the first one's claim number back."
+      },
+      {
+        "author": "p009",
+        "date": "2025-06-10",
+        "text": "in prod since this morning. 0 duplicates in a staging replay of may. closing."
+      }
+    ]
+  },
+  {
+    "id": "CLM-212",
+    "type": "Access request",
+    "summary": "Access request: Pricing Engine needs read access to the Claims API",
+    "description": "System: Pricing Engine\nEnvironment: production\nScope requested: claims.read\n\nWhy: since rating tables 2026.1, the number of claims in the last 5 years is a rating factor. Today we take that number from a monthly file out of the Data Warehouse, so a claim opened this week is not counted until next month. We want to call GET /claims?policy_id=... at quote time instead.\n\nVolume: about 9,000 calls a day, with a peak of 40 a minute during broker hours.\nFields needed: claim id, loss date, loss type, status. No notes, no payment details.\n\nI followed the steps in \"Claims API: Access Guide\".",
+    "team": "claims_platform",
+    "component": "claims_api",
+    "status": "Closed",
+    "priority": "Medium",
+    "reporter": "p010",
+    "assignee": "p012",
+    "approver": "p006",
+    "created": "2026-02-09",
+    "updated": "2026-02-13",
+    "resolved": "2026-02-12",
+    "labels": [
+      "access-request",
+      "claims-api"
+    ],
+    "comments": [
+      {
+        "author": "p006",
+        "date": "2026-02-10",
+        "text": "Approved. Read scope only, production. The credentials expire after 12 months, like for every client."
+      },
+      {
+        "author": "p012",
+        "date": "2026-02-12",
+        "text": "Done. The client id is pricing-engine-prod, and the secret is in the vault under your team's path. The rate limit is 60 calls a minute. Please test in staging first: the v2 response has a few more fields than v1."
+      },
+      {
+        "author": "p010",
+        "date": "2026-02-13",
+        "text": "Works in staging and in production. Thanks Sophie."
+      }
+    ]
+  },
+  {
+    "id": "CLM-226",
+    "type": "Access request",
+    "summary": "Demande d'accès : le portail client doit lire et créer des réclamations (API Claims)",
+    "description": "Salut l'équipe Claims,\n\nPour Portail 2026, le client pourra déclarer une réclamation directement dans le portail et suivre son dossier. On a donc besoin d'un accès à l'API Claims v2 en production.\n\nSystème : Portail client\nScopes demandés : claims.read et claims.create\nVolume : environ 300 créations et 5 000 lectures par jour\n\nOn est déjà branchés en staging depuis janvier et tout fonctionne. Le lancement est prévu le 15 juin, mais on aimerait tester en production bien avant.\n\nMerci !",
+    "team": "claims_platform",
+    "component": "claims_api",
+    "status": "Closed",
+    "priority": "High",
+    "reporter": "p016",
+    "assignee": "p018",
+    "approver": "p006",
+    "created": "2026-03-16",
+    "updated": "2026-03-20",
+    "resolved": "2026-03-20",
+    "labels": [
+      "access-request",
+      "claims-api",
+      "portail-2026"
+    ],
+    "comments": [
+      {
+        "author": "p006",
+        "date": "2026-03-17",
+        "text": "Approved for claims.read and claims.create. Note for the Claims team: with the create scope, the portal must take the customer id from the session, never from the form."
+      },
+      {
+        "author": "p018",
+        "date": "2026-03-20",
+        "text": "C'est fait. Client id : customer-portal-prod. J'ai limité claims.create aux réclamations du client connecté, comme demandé par David. Le secret est dans le coffre de votre équipe."
+      }
+    ]
+  },
+  {
+    "id": "CLM-233",
+    "type": "Bug",
+    "summary": "Version 2 returns an error 500 for claims closed more than 7 years ago",
+    "description": "While testing in staging whether the Data Warehouse could load its claims from the Claims API instead of the nightly file, I get an error 500 from GET /v2/claims/{id} for some old claims.\n\n- All of them were closed before April 2019\n- The same ids worked with version 1\n- Example: claim 2018-QC-0045512\n\nIt is not blocking, because I can skip them. But the answer should be a clear message, not a 500.",
+    "team": "claims_platform",
+    "component": "claims_api",
+    "status": "Closed",
+    "priority": "Medium",
+    "reporter": "p020",
+    "assignee": "p024",
+    "approver": "",
+    "created": "2026-03-30",
+    "updated": "2026-04-08",
+    "resolved": "2026-04-08",
+    "labels": [
+      "claims-api"
+    ],
+    "comments": [
+      {
+        "author": "p024",
+        "date": "2026-04-01",
+        "text": "What I checked so far: the claim exists in the database, and the Workbench opens it without a problem. The error comes from the API only. Claims closed for more than 7 years are moved to the archive tables, and version 2 never reads the archive."
+      },
+      {
+        "author": "p024",
+        "date": "2026-04-08",
+        "text": "Fixed. Version 2 now reads the archive too, and marks those claims with archived: true. I also added a test with a 2018 claim, so that it cannot come back. Sophie reviewed the change."
+      }
+    ]
+  },
+  {
+    "id": "CLM-239",
+    "type": "Access request",
+    "summary": "Access request: service account for the Broker Portal on the Claims API",
+    "description": "Brokers keep calling the claims centre to ask where their client's claim is. We want to show the claim status in the Broker Portal.\n\nSystem: Broker Portal\nEnvironment: production\nScope: claims.read, limited to the claims of the broker's own clients\n\nThis is a service account, not a person: the portal calls the API for the broker who is logged in.\n\nTarget: live before the end of May.",
+    "team": "claims_platform",
+    "component": "claims_api",
+    "status": "Closed",
+    "priority": "Medium",
+    "reporter": "p008",
+    "assignee": "p018",
+    "approver": "p006",
+    "created": "2026-04-20",
+    "updated": "2026-04-24",
+    "resolved": "2026-04-24",
+    "labels": [
+      "access-request",
+      "claims-api"
+    ],
+    "comments": [
+      {
+        "author": "p006",
+        "date": "2026-04-21",
+        "text": "Approved, with one condition: the filter on the broker's own clients must be enforced by the API, not only by the portal."
+      },
+      {
+        "author": "p018",
+        "date": "2026-04-24",
+        "text": "Done. Client id broker-portal-prod, scope claims.read, with the broker filter enforced by the API. The scope set is saved as \"broker-read\" so we can reuse it."
+      }
+    ]
+  },
+  {
+    "id": "CLM-245",
+    "type": "Access request",
+    "summary": "Access request: fraud model batch job needs read access to claims",
+    "description": "System: Fraud Scoring Model (nightly scoring job)\nEnvironment: production\nScope requested: claims.read\n\nWhat we need\n- The new claims of the day, once a night at 01:30, to score them.\n- Fields: claim id, policy id, loss date, loss type, amount claimed, postal code of the loss.\n\nWhat we don't need\n- Adjuster notes, documents, payment details.\n\nToday the job reads a file export that is often late (see DAT-70). Reading the API directly would remove that problem.\n\nVolume: one batch a night, about 850 claims.",
+    "team": "claims_platform",
+    "component": "claims_api",
+    "status": "Closed",
+    "priority": "Medium",
+    "reporter": "p023",
+    "assignee": "p012",
+    "approver": "p006",
+    "created": "2026-05-11",
+    "updated": "2026-05-19",
+    "resolved": "2026-05-15",
+    "labels": [
+      "access-request",
+      "claims-api"
+    ],
+    "comments": [
+      {
+        "author": "p006",
+        "date": "2026-05-12",
+        "text": "Approved. Read only. Please keep the postal code out of any log file."
+      },
+      {
+        "author": "p012",
+        "date": "2026-05-15",
+        "text": "Created fraud-model-prod. I reused the scope set Nadia defined for the Broker Portal in CLM-239 and removed the broker filter, so you get only the six fields you listed. The secret is in your team's vault path."
+      },
+      {
+        "author": "p023",
+        "date": "2026-05-19",
+        "text": "Confirmed: the job ran against the API last night. Thank you."
+      }
+    ]
+  },
+  {
+    "id": "CLM-254",
+    "type": "Story",
+    "summary": "Show the fraud score on the claim summary screen",
+    "description": "Version 3 of the fraud scoring model writes a score for every new claim, but adjusters cannot see it. They only see a \"flagged\" label, with no reason.\n\nPlease show on the claim summary screen:\n- the score, as a number between 0 and 1\n- the three main reasons the model gives (for example \"reported 40 days after the loss\")\n- a link to the page that explains how to read the score\n\nImportant: the screen must say that the score is a hint, not a decision.",
+    "team": "claims_platform",
+    "component": "claims_workbench",
+    "status": "Closed",
+    "priority": "Medium",
+    "reporter": "p023",
+    "assignee": "p024",
+    "approver": "",
+    "created": "2026-05-25",
+    "updated": "2026-06-26",
+    "resolved": "2026-06-26",
+    "labels": [
+      "workbench",
+      "fraud-model"
+    ],
+    "comments": [
+      {
+        "author": "p024",
+        "date": "2026-06-12",
+        "text": "First version in staging. I tried three layouts with two adjusters. They preferred the reasons in plain words, without the number in big. So the number is small, and the reasons come first."
+      },
+      {
+        "author": "p024",
+        "date": "2026-06-26",
+        "text": "Released with the checklist on 23 June. The text \"This score is a hint. You decide.\" is under the score, in French and in English."
+      }
+    ]
+  },
+  {
+    "id": "CLM-262",
+    "type": "Bug",
+    "summary": "The Workbench freezes when a claim has more than 200 documents",
+    "description": "Adjusters report that the Workbench freezes for one to two minutes when they open some claims.\n\n- Only claims with many documents: photos, invoices, expert reports\n- Worst case so far: a fire claim with 380 documents\n- It started after the release of 9 June\n\nThree adjusters lost notes they were typing. Priority high.",
+    "team": "claims_platform",
+    "component": "claims_workbench",
+    "status": "Closed",
+    "priority": "High",
+    "reporter": "p007",
+    "assignee": "p024",
+    "approver": "",
+    "created": "2026-06-15",
+    "updated": "2026-09-15",
+    "resolved": "2026-09-15",
+    "labels": [
+      "workbench",
+      "reopened"
+    ],
+    "comments": [
+      {
+        "author": "p024",
+        "date": "2026-06-18",
+        "text": "Reproduced with a test claim of 250 documents. The summary screen loads a preview of every document before it shows anything. I am changing it to load the first 20, then the rest when the adjuster scrolls."
+      },
+      {
+        "author": "p024",
+        "date": "2026-06-25",
+        "text": "Released on 23 June. A claim with 380 documents now opens in 2 seconds. Closing."
+      },
+      {
+        "author": "p007",
+        "date": "2026-08-18",
+        "text": "Reopening. Same freeze again, on storm claims with more than 400 documents. The claims centre says it is not the summary screen this time, but the Documents tab."
+      },
+      {
+        "author": "p024",
+        "date": "2026-08-27",
+        "text": "Hélène is right: I fixed the summary screen and not the Documents tab, which had the same problem. I should have checked both, sorry. The fix is ready and tested with 450 documents. It goes out with the release of 15 September."
+      },
+      {
+        "author": "p024",
+        "date": "2026-09-15",
+        "text": "Released this morning. Both screens now load documents 20 at a time. Closing again."
+      }
+    ]
+  },
+  {
+    "id": "CLM-268",
+    "type": "Access request",
+    "summary": "Access request: Data Warehouse nightly load from the Claims API",
+    "description": "System: Data Warehouse (nightly load)\nEnvironment: production\nScope requested: claims.read\n\nWe load the claims every night from a file that Claims Platform exports at 23:00. We would like to read the Claims API instead, for two reasons:\n1. The file has no closed-date field, so the reports on closed claims are wrong.\n2. When the export is late, the whole load is late.\n\nVolume: one run a night, about 6,000 changed claims a day.\nWindow: 00:15 to 01:15, before the fraud job at 01:30.",
+    "team": "claims_platform",
+    "component": "claims_api",
+    "status": "Closed",
+    "priority": "Low",
+    "reporter": "p020",
+    "assignee": "p024",
+    "approver": "p006",
+    "created": "2026-07-06",
+    "updated": "2026-07-10",
+    "resolved": "2026-07-10",
+    "labels": [
+      "access-request",
+      "claims-api"
+    ],
+    "comments": [
+      {
+        "author": "p006",
+        "date": "2026-07-07",
+        "text": "Approved, read only."
+      },
+      {
+        "author": "p024",
+        "date": "2026-07-10",
+        "text": "Done, and thank you for your patience: this was my first access request. I followed the access guide step by step. Client id data-warehouse-prod, scope claims.read, 12-month expiry, rate limit of 60 calls a minute. One thing I had to ask about: for a nightly bulk read, please use the /claims/changes endpoint with a since= date instead of paging through /claims."
+      }
+    ]
+  },
+  {
+    "id": "CLM-279",
+    "type": "Task",
+    "summary": "Update the payment approval limits per adjuster level for the second half of 2026",
+    "description": "Claims operations sent the new limits on 24 July. They must be live in the Workbench before 1 September.\n\n- Level 1 adjusters: from $5,000 to $7,500\n- Level 2: from $25,000 to $30,000\n- Level 3 and managers: no change\n- Storm claims (event code set by the claims centre): one level higher than usual, until 31 December\n\nTo do\n- Update the limits table (me)\n- Test with the claims centre on 12 August (me, with two adjusters)\n- Release with the checklist",
+    "team": "claims_platform",
+    "component": "claims_workbench",
+    "status": "Closed",
+    "priority": "High",
+    "reporter": "p007",
+    "assignee": "p007",
+    "approver": "",
+    "created": "2026-07-27",
+    "updated": "2026-08-18",
+    "resolved": "2026-08-18",
+    "labels": [
+      "workbench"
+    ],
+    "comments": [
+      {
+        "author": "p007",
+        "date": "2026-08-12",
+        "text": "Tested with two adjusters in Laval. One finding: the storm exception also applied to glass claims. Fixed in the table."
+      },
+      {
+        "author": "p007",
+        "date": "2026-08-18",
+        "text": "Released this morning, with the Tuesday release. Closing."
+      }
+    ]
+  },
+  {
+    "id": "CLM-290",
+    "type": "Bug",
+    "summary": "Claims from the phone line arrive without a policy number",
+    "description": "Since the phone system update of 24 August, about one claim in three taken by phone arrives in Claims Intake with an empty policy number.\n\n- The agent types the policy number during the call, and it shows on their screen\n- The claim file is created, but the policy number field is empty\n- Someone in the claims centre then has to find the policy by name and address\n- Claims from the Customer Portal and from brokers are fine\n\nThe manual checks are piling up.",
+    "team": "claims_platform",
+    "component": "claims_intake",
+    "status": "In Progress",
+    "priority": "High",
+    "reporter": "p007",
+    "assignee": "p018",
+    "approver": "",
+    "created": "2026-08-31",
+    "updated": "2026-10-22",
+    "resolved": "",
+    "labels": [
+      "intake",
+      "phone-line"
+    ],
+    "comments": [
+      {
+        "author": "p018",
+        "date": "2026-09-03",
+        "text": "Found it. Calls taken on the new agent screen (about a third of them so far) send the policy number as policyNo, and intake still reads policy_number. Calls on the old screen, and portal and broker messages, are not affected.\n- Short term: accept both names (done in staging)\n- Long term: the phone vendor should send what the contract says"
+      },
+      {
+        "author": "p018",
+        "date": "2026-10-22",
+        "text": "The mapping has been in production since 9 September, and new phone claims are fine. Still open: 1,100 claim files created between 24 August and 9 September have an empty policy number. The claims centre has matched most of them to a policy by hand, but nobody can change that field in the Workbench once the file exists. I am writing a script to fill it in from the call records."
+      }
+    ]
+  },
+  {
+    "id": "CLM-296",
+    "type": "Task",
+    "summary": "Set up a weekly triage rota for the Claims Intake backlog",
+    "description": "Decided at the team meeting of 10 September.\n\n- Backlog on 14 September: 187 intake items waiting for a manual check, most of them from the phone line\n- One developer on triage each week, Monday to Friday, one hour a day\n- The rota starts on 21 September\n- Review at the end of October: keep, change, or stop\n\nThe root cause is tracked in CLM-290.",
+    "team": "claims_platform",
+    "component": "claims_intake",
+    "status": "In Progress",
+    "priority": "Medium",
+    "reporter": "p007",
+    "assignee": "p007",
+    "approver": "",
+    "created": "2026-09-14",
+    "updated": "2026-10-26",
+    "resolved": "",
+    "labels": [
+      "intake"
+    ],
+    "comments": [
+      {
+        "author": "p007",
+        "date": "2026-10-26",
+        "text": "After five weeks the backlog is down to 61. We keep the rota until CLM-290 is closed."
+      }
+    ]
+  },
+  {
+    "id": "CLM-301",
+    "type": "Access request",
+    "summary": "Access request: Policy Admin wants to show the claims history on the renewal screen",
+    "description": "Hi, not sure if I'm doing this right, it's the first time I ask for access.\n\nSystem: Policy Admin\nEnv: prod (staging already works)\nScope: claims.read\n\nUnderwriters want to see the claims of the last 3 years when they renew a policy. Right now they open the Claims Workbench in another window and copy the numbers by hand.\n\nDaniel said to follow the access guide, so here it is. Tell me if something is missing.",
+    "team": "claims_platform",
+    "component": "claims_api",
+    "status": "Closed",
+    "priority": "Medium",
+    "reporter": "p025",
+    "assignee": "p012",
+    "approver": "p006",
+    "created": "2026-09-21",
+    "updated": "2026-09-25",
+    "resolved": "2026-09-25",
+    "labels": [
+      "access-request",
+      "claims-api"
+    ],
+    "comments": [
+      {
+        "author": "p012",
+        "date": "2026-09-22",
+        "text": "Nothing is missing, this is exactly what we need. Two questions before David looks at it: how many calls a day, and do you need the amounts paid or only the number of claims?"
+      },
+      {
+        "author": "p025",
+        "date": "2026-09-22",
+        "text": "About 1,200 renewals a day go through this screen (the batch renews the rest with nobody looking). The number of claims and the loss dates are enough, no amounts."
+      },
+      {
+        "author": "p006",
+        "date": "2026-09-23",
+        "text": "Approved. Read only, no payment fields."
+      },
+      {
+        "author": "p012",
+        "date": "2026-09-25",
+        "text": "Done: policy-admin-prod, read scope without the payment fields. I'm away from 26 October to 10 November. If the credentials need a change while I'm out, open a ticket in CLM and the team will pick it up."
+      }
+    ]
+  },
+  {
+    "id": "CLM-318",
+    "type": "Access request",
+    "summary": "Access request: Underwriting Rules needs the number of claims per policy",
+    "description": "System: Underwriting Rules\nEnvironment: production\nScope requested: claims.read\n\nWe want a new rule: send a renewal to an underwriter when the policy has 3 or more claims in 24 months. On the 2025 data, that would have been 1.8% of renewals.\n\nWe only need a count per policy, nothing else.",
+    "team": "claims_platform",
+    "component": "claims_api",
+    "status": "Waiting for Approval",
+    "priority": "Low",
+    "reporter": "p021",
+    "assignee": "",
+    "approver": "",
+    "created": "2026-10-27",
+    "updated": "2026-10-29",
+    "resolved": "",
+    "labels": [
+      "access-request",
+      "claims-api"
+    ],
+    "comments": [
+      {
+        "author": "p021",
+        "date": "2026-10-29",
+        "text": "Sophie is out until 10 November and this has no assignee yet. Can someone else on the team take it? It is not urgent, but I am away myself from tomorrow."
+      }
+    ]
+  },
+  {
+    "id": "POL-118",
+    "type": "Bug",
+    "summary": "The legacy nightly export fails since the certificate renewal",
+    "description": "The nightly export from the Legacy Policy System to the Policy Database has failed 3 nights in a row (4, 5, and 6 April).\n\n- Error on our side: no file received at 02:00\n- The certificate of the file transfer server was renewed on 3 April\n- 1,870 policies issued before 2019 are waiting for their history, and the renewal batch cannot price them without it\n\nGérald, I think the legacy side still trusts the old certificate.",
+    "team": "policy_systems",
+    "component": "legacy_policy_system",
+    "status": "Closed",
+    "priority": "High",
+    "reporter": "p013",
+    "assignee": "p001",
+    "approver": "",
+    "created": "2025-04-07",
+    "updated": "2025-04-10",
+    "resolved": "2025-04-10",
+    "labels": [
+      "legacy",
+      "nightly-jobs"
+    ],
+    "comments": [
+      {
+        "author": "p001",
+        "date": "2025-04-08",
+        "text": "Bonjour Wei. Vous avez vu juste : le traitement de nuit du système patrimonial conserve sa propre liste de certificats, laquelle n'est pas mise à jour par l'équipe d'infrastructure, puisqu'elle ne se trouve pas sur ses serveurs. Il faut importer le nouveau certificat à la main sur le central, ce que je ferai ce soir, après la fermeture des traitements."
+      },
+      {
+        "author": "p001",
+        "date": "2025-04-10",
+        "text": "Le nouveau certificat est en place depuis mardi soir, et les deux exports suivants se sont déroulés normalement ; les 1 870 polices en attente ont été transmises. La marche à suivre tient en trois commandes, que je garde dans mon cahier, car la même chose se reproduira dans deux ans."
+      }
+    ]
+  },
+  {
+    "id": "POL-131",
+    "type": "Story",
+    "summary": "Add endorsements to the policy details response",
+    "description": "GET /policies/{id} returns the policy as it was issued. The changes made during the term (endorsements) are missing, so clients such as the Customer Portal show the wrong coverage after a change.\n\nAdd an endorsements array to the response:\n\n    \"endorsements\": [\n      {\"number\": 2, \"effective_date\": \"2025-03-01\", \"type\": \"vehicle_change\", \"premium_change\": 41.50}\n    ]\n\nRules\n- Ordered by effective date\n- Cancelled endorsements are not returned\n- Nothing changes for clients that ignore the new field",
+    "team": "policy_systems",
+    "component": "policy_api",
+    "status": "Closed",
+    "priority": "Medium",
+    "reporter": "p014",
+    "assignee": "p020",
+    "approver": "",
+    "created": "2025-06-16",
+    "updated": "2025-07-18",
+    "resolved": "2025-07-18",
+    "labels": [
+      "policy-api"
+    ],
+    "comments": [
+      {
+        "author": "p020",
+        "date": "2025-07-18",
+        "text": "Released in Policy API 3.4. Response time for a policy with 20 endorsements: 38 ms before, 44 ms after. The contract tests are updated."
+      }
+    ]
+  },
+  {
+    "id": "POL-152",
+    "type": "Bug",
+    "summary": "Policy search times out for brokers with more than 5,000 policies",
+    "description": "Our four biggest brokerages cannot open their client list in the Broker Portal. The page spins for 30 seconds, then shows an error.\n\nSmaller brokers are fine. The portal calls GET /policies?broker_id=... on the Policy API.\n\nIt started after the November release.",
+    "team": "policy_systems",
+    "component": "policy_api",
+    "status": "Closed",
+    "priority": "High",
+    "reporter": "p008",
+    "assignee": "p014",
+    "approver": "",
+    "created": "2025-11-17",
+    "updated": "2025-12-05",
+    "resolved": "2025-12-05",
+    "labels": [
+      "policy-api"
+    ],
+    "comments": [
+      {
+        "author": "p014",
+        "date": "2025-11-19",
+        "text": "Reproduced. The search loads every policy of the broker, then sorts them in memory. Since 3.5 it also loads the endorsements of each policy (my change, sorry). For a broker with 8,000 policies, that makes 8,001 queries."
+      },
+      {
+        "author": "p014",
+        "date": "2025-12-05",
+        "text": "Fixed in 3.5.2. The search is now paged (100 per page, sorted by the database), and endorsements are loaded only for the policy details. Worst broker: 31 s before, 0.4 s after. The paging rules are in the developer guide."
+      }
+    ]
+  },
+  {
+    "id": "POL-164",
+    "type": "Task",
+    "summary": "Clean up orphaned endorsement rows before the cloud migration",
+    "description": "The migration tool stops on rows that point to a policy that no longer exists. First count on the copy of production:\n\n    table                 orphan rows\n    endorsement           41,208\n    endorsement_coverage  97,655\n    policy_note            3,310\n\nAlmost all of them come from the 2019 import of the legacy system.\n\nPlan\n- [x] Export the orphan rows to the archive (kept 7 years)\n- [x] Delete in batches of 5,000, outside business hours\n- [x] Add the missing foreign keys, so that it cannot happen again\n- [x] Count again: must be 0",
+    "team": "policy_systems",
+    "component": "policy_database",
+    "status": "Closed",
+    "priority": "Medium",
+    "reporter": "p013",
+    "assignee": "p013",
+    "approver": "",
+    "created": "2026-01-19",
+    "updated": "2026-02-20",
+    "resolved": "2026-02-20",
+    "labels": [
+      "policy-db-migration"
+    ],
+    "comments": [
+      {
+        "author": "p013",
+        "date": "2026-02-20",
+        "text": "All three tables are at 0. Foreign keys added on 18 February. The deletes took 6 nights."
+      }
+    ]
+  },
+  {
+    "id": "POL-176",
+    "type": "Access request",
+    "summary": "Demande d'accès : le portail client a besoin des documents de police (API Policy)",
+    "description": "Bonjour,\n\nPour Portail 2026, le client pourra télécharger ses documents de police (contrat, avenants, preuve d'assurance) dans le portail.\n\nSystème : Portail client\nEnvironnement : production\nScope demandé : policies.documents.read\n\nOn a déjà policies.read depuis 2024. Il nous manque seulement les documents.\n\nMerci !",
+    "team": "policy_systems",
+    "component": "policy_api",
+    "status": "Closed",
+    "priority": "Medium",
+    "reporter": "p016",
+    "assignee": "p025",
+    "approver": "p006",
+    "created": "2026-03-23",
+    "updated": "2026-03-27",
+    "resolved": "2026-03-27",
+    "labels": [
+      "access-request",
+      "policy-api",
+      "portail-2026"
+    ],
+    "comments": [
+      {
+        "author": "p006",
+        "date": "2026-03-24",
+        "text": "Approved. Read only, and only the documents of the logged-in customer."
+      },
+      {
+        "author": "p025",
+        "date": "2026-03-27",
+        "text": "Done! The Customer Portal client now has policies.documents.read. Amira checked my change before I applied it."
+      }
+    ]
+  },
+  {
+    "id": "POL-181",
+    "type": "Bug",
+    "summary": "The renewal batch skips policies that were changed during the term",
+    "description": "About 300 policies were not renewed by the batch of Sunday 26 April. Underwriters renewed them by hand on Monday.\n\nWhat they have in common: an endorsement in the last 60 days of the term (a new car, a new address).\n\nThe batch log says \"skipped: pending change\", but these changes were completed weeks ago.\n\nLucas, this is a good one to learn the batch. Amira can help.",
+    "team": "policy_systems",
+    "component": "policy_admin",
+    "status": "Closed",
+    "priority": "High",
+    "reporter": "p003",
+    "assignee": "p025",
+    "approver": "",
+    "created": "2026-04-27",
+    "updated": "2026-05-22",
+    "resolved": "2026-05-22",
+    "labels": [
+      "renewal-batch"
+    ],
+    "comments": [
+      {
+        "author": "p025",
+        "date": "2026-05-06",
+        "text": "ok so the batch checks a flag called has_pending_change. the flag is set when an endorsement starts and should be cleared when it's done. it is only cleared when the endorsement is done from the Policy Admin screen, not when it comes from the Broker Portal. so every broker endorsement leaves the flag on forever??"
+      },
+      {
+        "author": "p025",
+        "date": "2026-05-22",
+        "text": "Fixed: the flag is now cleared for all endorsements, and I cleared it for the 4,112 policies where it was stuck. The batch of 17 May renewed everything. I wrote what I learned in my notes page."
+      }
+    ]
+  },
+  {
+    "id": "POL-193",
+    "type": "Task",
+    "summary": "Extract the pre-2019 policies of the regulator's sample",
+    "description": "The regulator asked for the full history of 250 policies from its yearly sample. 61 of them were issued before 2019, so their full history is in the Legacy Policy System.\n\nDeadline given by compliance: 15 December 2026.\n\nGérald used to do these extractions. Nobody has done one since he left.",
+    "team": "policy_systems",
+    "component": "legacy_policy_system",
+    "status": "Open",
+    "priority": "Medium",
+    "reporter": "p003",
+    "assignee": "",
+    "approver": "",
+    "created": "2026-05-19",
+    "updated": "2026-09-30",
+    "resolved": "",
+    "labels": [
+      "legacy",
+      "compliance"
+    ],
+    "comments": [
+      {
+        "author": "p013",
+        "date": "2026-06-03",
+        "text": "I can read the legacy tables that were copied to the Policy Database in 2019, but the history before 2015 was never copied. It only exists on the mainframe."
+      },
+      {
+        "author": "p003",
+        "date": "2026-09-30",
+        "text": "Still no assignee. Who has access to the mainframe today? If nobody does, we need to ask infrastructure for a temporary account, and find Gérald's notes."
+      }
+    ]
+  },
+  {
+    "id": "PRC-74",
+    "type": "Task",
+    "summary": "Update the flood-zone decline rule after the spring floods",
+    "description": "The floods of April showed that our flood map is out of date. We insured 140 homes last year in streets that were under water this spring.\n\nSamuel, please update the rule that declines new home policies in flood zones:\n- use the province's 2026 flood map\n- the rule works by postal code today. Check whether that is still precise enough\n- existing customers are not affected: the rule is for new policies only\n\nI approve the change before it goes live.",
+    "team": "pricing_underwriting",
+    "component": "underwriting_rules",
+    "status": "Closed",
+    "priority": "High",
+    "reporter": "p005",
+    "assignee": "p021",
+    "approver": "p005",
+    "created": "2026-05-04",
+    "updated": "2026-05-21",
+    "resolved": "2026-05-21",
+    "labels": [
+      "underwriting",
+      "flood"
+    ],
+    "comments": [
+      {
+        "author": "p021",
+        "date": "2026-05-13",
+        "text": "The 2026 map adds 212 postal codes to the high-risk list and removes 31. A full postal code is precise enough in towns. In the country it is not: one rural postal code can cover both a riverbank and a hill. For 18 rural codes, I suggest \"send to an underwriter\" instead of \"decline\"."
+      },
+      {
+        "author": "p005",
+        "date": "2026-05-20",
+        "text": "Approved, including the 18 rural codes sent to an underwriter."
+      },
+      {
+        "author": "p021",
+        "date": "2026-05-21",
+        "text": "Live since this morning. Tested on last year's 140 flooded homes: 131 would now be declined or sent to an underwriter."
+      }
+    ]
+  },
+  {
+    "id": "PRC-88",
+    "type": "Bug",
+    "summary": "Quotes fail with \"territory not found\" for new Quebec postal codes",
+    "description": "Three brokers called this morning. They can't get a car or home quote for clients in some new housing developments north of Montreal. The Broker Portal shows \"We could not price this risk\".\n\nIn our logs the Pricing Engine answers:\n\n    422 TERRITORY_NOT_FOUND postal_code=J7S 0B4\n\nIt seems to happen only with postal codes that start with J7S or J5P. Other J7 and J5 codes work.\n\nBrokers are sending these clients to competitors. Please treat as urgent.",
+    "team": "pricing_underwriting",
+    "component": "pricing_engine",
+    "status": "Reopened",
+    "priority": "High",
+    "reporter": "p008",
+    "assignee": "p010",
+    "approver": "",
+    "created": "2026-09-08",
+    "updated": "2026-10-28",
+    "resolved": "",
+    "labels": [
+      "postal-codes",
+      "rating-tables"
+    ],
+    "comments": [
+      {
+        "author": "p010",
+        "date": "2026-09-08",
+        "text": "Confirmed. J7S and J5P are new forward sortation areas (the first three characters of a postal code). The postal service added them in its August update. Our territory table only knows the areas that existed when rating tables 2026.2 were built, so the lookup finds nothing and the engine rejects the quote. The fix is in PRC-91."
+      },
+      {
+        "author": "p010",
+        "date": "2026-09-11",
+        "text": "Fixed with rating tables 2026.3: both areas are mapped to territory QC-14. Quotes for J7S 0B4 and J5P 1A2 work in production. Resolving."
+      },
+      {
+        "author": "p008",
+        "date": "2026-10-19",
+        "text": "Reopening. Same error again today, this time for G3P and J6G codes. Two brokers so far."
+      },
+      {
+        "author": "p010",
+        "date": "2026-10-20",
+        "text": "Two more new areas, from the October postal update. I will add them today as an emergency table change, but we cannot keep doing this by hand every month. PRC-95 changes the engine so that an unknown area gets a fallback territory instead of an error."
+      },
+      {
+        "author": "p005",
+        "date": "2026-10-20",
+        "text": "Approuvé pour les deux nouveaux secteurs, avec la même logique que dans PRC-91. Karim, même chose pour le journal des tables."
+      },
+      {
+        "author": "p010",
+        "date": "2026-10-28",
+        "text": "G3P and J6G have been mapped since 21 October (tables 2026.3.1). I am keeping this open until PRC-95 is released, so that nobody thinks the problem is gone."
+      }
+    ]
+  },
+  {
+    "id": "PRC-91",
+    "type": "Task",
+    "summary": "Add the new Quebec postal code areas to the territory table (rating tables 2026.3)",
+    "description": "Follows PRC-88.\n\nChange to the territory table:\n\n    area  province  territory  note\n    J7S   QC        QC-14      new, same territory as J7J and J7N around it\n    J5P   QC        QC-14      new, same territory as J5L next to it\n\nWhy QC-14: both areas are new streets inside neighbourhoods that are already in QC-14. There is no claims history for them yet, so we use the territory around them. To review when we have 12 months of data.\n\nChecklist from the mapping page:\n- [x] rows added in staging\n- [x] 20 test quotes per area, compared by hand\n- [x] approval of the team lead\n- [x] release as tables 2026.3",
+    "team": "pricing_underwriting",
+    "component": "pricing_engine",
+    "status": "Closed",
+    "priority": "High",
+    "reporter": "p010",
+    "assignee": "p010",
+    "approver": "p005",
+    "created": "2026-09-08",
+    "updated": "2026-09-11",
+    "resolved": "2026-09-11",
+    "labels": [
+      "postal-codes",
+      "rating-tables"
+    ],
+    "comments": [
+      {
+        "author": "p005",
+        "date": "2026-09-10",
+        "text": "Approuvé. D'accord pour QC-14 en attendant les données. Karim, ajoute une ligne dans le journal des tables pour l'audit, s'il te plaît."
+      },
+      {
+        "author": "p010",
+        "date": "2026-09-11",
+        "text": "Released as 2026.3 at 07:40. Audit log line added."
+      }
+    ]
+  },
+  {
+    "id": "PRC-95",
+    "type": "Story",
+    "summary": "Use a fallback territory when a postal code area is unknown, instead of rejecting the quote",
+    "description": "Problem: every time the postal service adds an area, the engine rejects quotes until someone adds a row by hand (PRC-88, twice in six weeks).\n\nProposal\n1. If the area (the first three characters) is unknown, use the territory of the nearest known area with the same first two characters.\n2. Mark the quote with territory_source = \"fallback\", so that underwriting can see it.\n3. Send one alert a day with the unknown areas, so that we still add them properly.\n\nNot in scope: postal codes that do not exist at all. Those must still be rejected, with a clear message (\"unknown postal code\") instead of TERRITORY_NOT_FOUND.\n\nOpen question for Nathalie: is a fallback price acceptable to the actuaries, or do we need a loading on top?",
+    "team": "pricing_underwriting",
+    "component": "pricing_engine",
+    "status": "In Progress",
+    "priority": "Medium",
+    "reporter": "p010",
+    "assignee": "p010",
+    "approver": "",
+    "created": "2026-10-20",
+    "updated": "2026-10-29",
+    "resolved": "",
+    "labels": [
+      "postal-codes"
+    ],
+    "comments": [
+      {
+        "author": "p005",
+        "date": "2026-10-22",
+        "text": "Les actuaires acceptent le repli sans majoration pendant 60 jours au maximum par secteur. Après, il faut une vraie ligne dans la table."
+      },
+      {
+        "author": "p010",
+        "date": "2026-10-29",
+        "text": "Rules 1 and 2 are coded and in staging. The daily alert is next."
+      }
+    ]
+  },
+  {
+    "id": "DIG-141",
+    "type": "Bug",
+    "summary": "Traductions manquantes sur la page de paiement",
+    "description": "Sur la page de paiement en français, trois éléments sont encore en anglais :\n\n- le bouton « Pay now »\n- le message d'erreur « Card declined »\n- le courriel de confirmation (l'objet et la première ligne)\n\nC'est bloquant pour le lancement de Portail 2026.",
+    "team": "digital_channels",
+    "component": "customer_portal",
+    "status": "Closed",
+    "priority": "High",
+    "reporter": "p008",
+    "assignee": "p016",
+    "approver": "",
+    "created": "2026-03-09",
+    "updated": "2026-03-13",
+    "resolved": "2026-03-13",
+    "labels": [
+      "portail-2026",
+      "traduction"
+    ],
+    "comments": [
+      {
+        "author": "p016",
+        "date": "2026-03-10",
+        "text": "Trouvé. Le bouton et le message viennent du module de paiement, qui a son propre fichier de traduction (payment.fr.json), et personne ne l'avait rempli. Le courriel, lui, est un gabarit à part."
+      },
+      {
+        "author": "p016",
+        "date": "2026-03-13",
+        "text": "Corrigé et en ligne. J'ai ajouté le module de paiement et les gabarits de courriel dans le guide de traduction, pour que ça n'arrive plus."
+      }
+    ]
+  },
+  {
+    "id": "DIG-156",
+    "type": "Task",
+    "summary": "Glossaire FR/EN : choisir entre « réclamation » et « sinistre »",
+    "description": "Dans le portail, on écrit parfois « réclamation », parfois « sinistre », parfois « demande d'indemnité » pour le même mot anglais (claim). Les clients s'y perdent, et le centre d'appels aussi.\n\nÀ faire :\n- lister tous les écrans où le mot apparaît (il y en a 47)\n- choisir un seul terme avec le service à la clientèle\n- mettre à jour le glossaire et les fichiers de traduction",
+    "team": "digital_channels",
+    "component": "customer_portal",
+    "status": "Closed",
+    "priority": "Medium",
+    "reporter": "p016",
+    "assignee": "p016",
+    "approver": "",
+    "created": "2026-05-05",
+    "updated": "2026-05-29",
+    "resolved": "2026-05-29",
+    "labels": [
+      "portail-2026",
+      "traduction"
+    ],
+    "comments": [
+      {
+        "author": "p016",
+        "date": "2026-05-21",
+        "text": "Décision prise avec le service à la clientèle : « réclamation » partout dans le portail. « Sinistre » reste seulement dans les documents de police, parce que c'est le terme du contrat."
+      },
+      {
+        "author": "p016",
+        "date": "2026-05-29",
+        "text": "Les 47 écrans sont à jour, et le glossaire aussi."
+      }
+    ]
+  },
+  {
+    "id": "DIG-163",
+    "type": "Task",
+    "summary": "Review the French wording of the new claim form",
+    "description": "Before the launch of 15 June, the French text of the new claim form needs a review by someone who did not write it.\n\nPlease check, screen by screen:\n- that the wording follows the glossary (\"réclamation\", not \"sinistre\")\n- that the help texts fit on a phone screen\n- the tone: we say \"vous\", never \"tu\"\n\nSophie, this one is for you: a fresh pair of eyes.",
+    "team": "digital_channels",
+    "component": "customer_portal",
+    "status": "Closed",
+    "priority": "Medium",
+    "reporter": "p008",
+    "assignee": "p026",
+    "approver": "",
+    "created": "2026-06-01",
+    "updated": "2026-06-10",
+    "resolved": "2026-06-10",
+    "labels": [
+      "portail-2026",
+      "traduction"
+    ],
+    "comments": [
+      {
+        "author": "p026",
+        "date": "2026-06-10",
+        "text": "Done, 9 screens reviewed. I changed 14 strings, mostly help texts that were too long for a phone. Two English words were left on the photo upload screen (\"Browse\" and \"Upload\"), now fixed. The list of changes is attached for Marc-André."
+      }
+    ]
+  },
+  {
+    "id": "DIG-170",
+    "type": "Bug",
+    "summary": "The language switch goes back to English after login",
+    "description": "A broker in Quebec City reports that the Broker Portal shows English after every login, even though he chose French.\n\n- The choice is kept during the session\n- It is lost at the next login\n- The Customer Portal does not have this problem\n\nSmall, but our French-speaking brokers see it every morning.",
+    "team": "digital_channels",
+    "component": "broker_portal",
+    "status": "Closed",
+    "priority": "Low",
+    "reporter": "p008",
+    "assignee": "p008",
+    "approver": "",
+    "created": "2026-07-20",
+    "updated": "2026-08-07",
+    "resolved": "2026-08-07",
+    "labels": [
+      "broker-portal"
+    ],
+    "comments": [
+      {
+        "author": "p008",
+        "date": "2026-08-07",
+        "text": "The language was saved in the browser only, and the login page clears it. It is now saved in the broker's profile. Released yesterday."
+      }
+    ]
+  },
+  {
+    "id": "DIG-178",
+    "type": "Bug",
+    "summary": "Formulaire d'adresse : le code postal est refusé s'il contient une espace",
+    "description": "En testant le nouveau formulaire de changement d'adresse sur téléphone, j'ai remarqué ceci :\n\n- « H2X 1Y4 » (avec une espace) : refusé, avec le message « Code postal invalide »\n- « H2X1Y4 » (sans espace) : accepté\n\nLa plupart des gens écrivent leur code postal avec une espace. Sur certains appareils, le clavier du téléphone en ajoute même une automatiquement.",
+    "team": "digital_channels",
+    "component": "customer_portal",
+    "status": "Closed",
+    "priority": "Medium",
+    "reporter": "p026",
+    "assignee": "p016",
+    "approver": "",
+    "created": "2026-09-15",
+    "updated": "2026-09-18",
+    "resolved": "2026-09-18",
+    "labels": [
+      "formulaires"
+    ],
+    "comments": [
+      {
+        "author": "p016",
+        "date": "2026-09-16",
+        "text": "Bien vu. La validation du formulaire n'acceptait que six caractères collés. Rien à voir avec le moteur de tarification : la demande ne se rend même pas jusque-là."
+      },
+      {
+        "author": "p016",
+        "date": "2026-09-18",
+        "text": "Corrigé : on accepte l'espace, le tiret et les minuscules, et on enregistre toujours le code dans le même format. En ligne ce matin."
+      }
+    ]
+  },
+  {
+    "id": "DAT-52",
+    "type": "Task",
+    "summary": "Recalibrate the v2 score threshold after the false-positive spike",
+    "description": "The claims centre is complaining. In August, 11% of new claims were flagged for a fraud review, against 4% normally. Most of the flagged claims are hail damage from the storm of 14 August, and they are fine.\n\nTom, can you look at the threshold before the investigators drown?",
+    "team": "data_analytics",
+    "component": "fraud_scoring_model",
+    "status": "Closed",
+    "priority": "High",
+    "reporter": "p015",
+    "assignee": "p011",
+    "approver": "",
+    "created": "2025-09-22",
+    "updated": "2025-10-09",
+    "resolved": "2025-10-09",
+    "labels": [
+      "fraud-model"
+    ],
+    "comments": [
+      {
+        "author": "p011",
+        "date": "2025-09-25",
+        "text": "it's not the threshold per se. feature claim_cluster_7d fires on any geo cluster, storm or not. with a cat event you get hundreds of legit claims in the same area in 48h. precision at the 0.62 cutoff drops from 0.41 to 0.09 on august data."
+      },
+      {
+        "author": "p011",
+        "date": "2025-10-09",
+        "text": "shipped: (1) cutoff 0.62 -> 0.64, (2) claim_cluster_7d is zeroed when the claim has a cat event code. flag rate back to 4.3% on september. recall on confirmed fraud basically flat (0.71 vs 0.72). the proper fix is retraining with event features, that's for v3."
+      }
+    ]
+  },
+  {
+    "id": "DAT-60",
+    "type": "Task",
+    "summary": "Hand over the fraud scoring model to Priya",
+    "description": "Tom is leaving us at the end of March. Priya takes over the fraud scoring model.\n\nBefore he goes:\n- walk Priya through the training code and the nightly scoring job\n- list everything that only Tom knows (there is a lot)\n- make sure Priya has all the access she needs\n- Priya runs one retraining on her own while Tom is still here",
+    "team": "data_analytics",
+    "component": "fraud_scoring_model",
+    "status": "Closed",
+    "priority": "High",
+    "reporter": "p015",
+    "assignee": "p011",
+    "approver": "",
+    "created": "2026-02-02",
+    "updated": "2026-03-20",
+    "resolved": "2026-03-20",
+    "labels": [
+      "fraud-model",
+      "handover"
+    ],
+    "comments": [
+      {
+        "author": "p011",
+        "date": "2026-02-20",
+        "text": "3 sessions done with priya. the bits my design notes leave open (where the claims centre keeps the cat event spreadsheet, what the two hardcoded paths must point to) are now in her notes, not only in my head."
+      },
+      {
+        "author": "p011",
+        "date": "2026-03-20",
+        "text": "priya ran the v3 retraining (DAT-67) end to end without me. she has access to everything. the model is hers. closing."
+      }
+    ]
+  },
+  {
+    "id": "DAT-67",
+    "type": "Story",
+    "summary": "Retrain the fraud scoring model with the claims up to 2025 (version 3)",
+    "description": "Goal: a version 3 of the fraud scoring model that handles weather events, so that a storm no longer floods the investigators (see DAT-52).\n\nScope\n- Training data: claims opened from 2022 to 2025, with the result of the investigation\n- New features: the event code, and the number of claims in the same area during the event\n- Removed: claim_cluster_7d, which caused the false alerts\n\nDone when\n- The flag rate stays between 3% and 5% on the data of the August 2025 storm\n- Recall on confirmed fraud is not lower than version 2 (0.71)\n- The model overview and the runbook are written",
+    "team": "data_analytics",
+    "component": "fraud_scoring_model",
+    "status": "Closed",
+    "priority": "High",
+    "reporter": "p015",
+    "assignee": "p023",
+    "approver": "",
+    "created": "2026-02-16",
+    "updated": "2026-04-20",
+    "resolved": "2026-04-20",
+    "labels": [
+      "fraud-model"
+    ],
+    "comments": [
+      {
+        "author": "p023",
+        "date": "2026-03-18",
+        "text": "The first full retraining is finished, with Tom watching but not helping. Results on the 2025 hold-out data: flag rate 4.1%, recall 0.74, precision 0.44."
+      },
+      {
+        "author": "p023",
+        "date": "2026-04-20",
+        "text": "Version 3 has been live since this morning. Version 2 keeps running in shadow mode for 30 days. The overview and runbook page is published."
+      }
+    ]
+  },
+  {
+    "id": "DAT-70",
+    "type": "Bug",
+    "summary": "Nightly fraud feature job fails when the claims export is late",
+    "description": "The nightly scoring job starts at 01:30. It expects the claims export file from Claims Platform, which should arrive at 23:00.\n\nFour times in April, the file arrived after 01:30. The job then fails without an alert, and the claims of that day get no fraud score until someone notices.\n\nExpected: the job waits for the file, or it alerts us.",
+    "team": "data_analytics",
+    "component": "fraud_scoring_model",
+    "status": "Closed",
+    "priority": "Medium",
+    "reporter": "p023",
+    "assignee": "p020",
+    "approver": "",
+    "created": "2026-05-04",
+    "updated": "2026-05-22",
+    "resolved": "2026-05-22",
+    "labels": [
+      "fraud-model",
+      "nightly-jobs"
+    ],
+    "comments": [
+      {
+        "author": "p020",
+        "date": "2026-05-07",
+        "text": "Two changes in the feature pipeline:\n1. The job now waits up to 3 hours for the file, and alerts the data team channel after 30 minutes.\n2. Claims without a score are picked up by the next run.\nIn production since last night."
+      },
+      {
+        "author": "p020",
+        "date": "2026-05-22",
+        "text": "The fraud job now reads the Claims API directly (CLM-245), so the export file is no longer needed for scoring. Three weeks without a missed night. Closing."
+      }
+    ]
+  },
+  {
+    "id": "DAT-73",
+    "type": "Task",
+    "summary": "Weekly drift report for the fraud score",
+    "description": "Version 3 was trained on claims up to 2025. If the claims change (new kinds of fraud, a new product, a storm), the scores slowly become wrong and nobody sees it.\n\nA weekly report, every Monday:\n- the flag rate of the week, against the 3% to 5% band\n- the distribution of the scores, against the training data\n- the share of flagged claims that the investigators confirmed\n\nAn alert when the flag rate leaves the band two weeks in a row.",
+    "team": "data_analytics",
+    "component": "fraud_scoring_model",
+    "status": "Closed",
+    "priority": "Low",
+    "reporter": "p023",
+    "assignee": "p023",
+    "approver": "",
+    "created": "2026-06-08",
+    "updated": "2026-07-02",
+    "resolved": "2026-07-02",
+    "labels": [
+      "fraud-model",
+      "monitoring"
+    ],
+    "comments": [
+      {
+        "author": "p023",
+        "date": "2026-07-02",
+        "text": "The report has run for three Mondays. It is linked from the runbook. No alert so far."
+      }
+    ]
+  },
+  {
+    "id": "DAT-81",
+    "type": "Bug",
+    "summary": "The warehouse has had no policy endorsements since June",
+    "description": "To prepare the quarterly pricing review, I compare the premium of each policy at the start of the quarter and today. For the third quarter so far (1 July to 21 August), the difference is zero for every policy, which cannot be right.\n\nThe table policy_endorsement has no rows after 14 June 2026. Before that date, there are about 900 a day.",
+    "team": "data_analytics",
+    "component": "data_warehouse",
+    "status": "In Progress",
+    "priority": "Medium",
+    "reporter": "p021",
+    "assignee": "p020",
+    "approver": "",
+    "created": "2026-08-24",
+    "updated": "2026-10-15",
+    "resolved": "",
+    "labels": [
+      "warehouse",
+      "nightly-jobs"
+    ],
+    "comments": [
+      {
+        "author": "p020",
+        "date": "2026-08-26",
+        "text": "Confirmed. On 15 June the nightly load was moved to the new scheduler, and the endorsement step was left out of the new job definition. The job still ends in green, so nobody was alerted."
+      },
+      {
+        "author": "p020",
+        "date": "2026-10-15",
+        "text": "The step has been back in the job since 27 August. I am reloading the missing endorsements month by month: June and July are done, and August is running. I am leaving this open until August is loaded and Samuel has checked his numbers."
+      }
+    ]
+  },
+  {
+    "id": "INF-198",
+    "type": "Bug",
+    "summary": "The build agents run out of disk space every Monday",
+    "description": "For the third Monday in a row, the first builds of the week fail with \"No space left on device\" on build agents 2 and 4.\n\n- It fixes itself when someone cleans the agents by hand\n- Our release of the Policy API was delayed by half a day today\n\nCan the cleanup be automatic?",
+    "team": "infrastructure_security",
+    "component": "deployment_pipeline",
+    "status": "Closed",
+    "priority": "Medium",
+    "reporter": "p014",
+    "assignee": "p019",
+    "approver": "",
+    "created": "2026-01-12",
+    "updated": "2026-01-23",
+    "resolved": "2026-01-23",
+    "labels": [
+      "pipeline"
+    ],
+    "comments": [
+      {
+        "author": "p019",
+        "date": "2026-01-14",
+        "text": "tl;dr: the weekend security scan pulls every container image we own and never cleans up. Monday morning = full disks. I'm adding a cleanup at the end of the scan."
+      },
+      {
+        "author": "p019",
+        "date": "2026-01-23",
+        "text": "Monday the 19th was clean. I also doubled the disks on agents 2 and 4, because why not. Closing."
+      }
+    ]
+  },
+  {
+    "id": "INF-204",
+    "type": "Task",
+    "summary": "Private network link between the data centre and the cloud for the Policy Database migration",
+    "description": "For the migration we need to copy about 1.4 TB from the data centre to the cloud, then keep both sides in sync until the cutover.\n\nNeeds\n- A private link, not the public internet\n- At least 1 Gbps\n- Only the two database servers on our side may use it\n\nThe plan is a first dry run in June.",
+    "team": "infrastructure_security",
+    "component": "policy_database",
+    "status": "Closed",
+    "priority": "High",
+    "reporter": "p013",
+    "assignee": "p022",
+    "approver": "",
+    "created": "2026-01-14",
+    "updated": "2026-03-06",
+    "resolved": "2026-03-06",
+    "labels": [
+      "policy-db-migration",
+      "network"
+    ],
+    "comments": [
+      {
+        "author": "p022",
+        "date": "2026-01-16",
+        "text": "Circuit ordered from the carrier. Delivery date they gave: 2 March."
+      },
+      {
+        "author": "p022",
+        "date": "2026-03-06",
+        "text": "Link is up. 1 Gbps, encrypted, two routes. The firewall rule allows only poldb-01 and poldb-02 to reach the cloud subnet. Measured 870 Mbps on a 50 GB test copy."
+      }
+    ]
+  },
+  {
+    "id": "INF-219",
+    "type": "Task",
+    "summary": "Dry run 1 of the Policy Database cutover",
+    "description": "Action item from the steering committee of 18 March 2026.\n\nObjective: rehearse the full cutover on a copy of production, and measure how long each step takes.\n\nOwner: Wei Zhang\nSupport: Fatima Rahimi (network), Amira Khalil (Policy API checks)\nTarget date: week of 15 June 2026\n\nPlease attach the timings to this ticket for the next steering committee.",
+    "team": "infrastructure_security",
+    "component": "policy_database",
+    "status": "Closed",
+    "priority": "High",
+    "reporter": "p017",
+    "assignee": "p013",
+    "approver": "",
+    "created": "2026-06-02",
+    "updated": "2026-06-19",
+    "resolved": "2026-06-19",
+    "labels": [
+      "policy-db-migration"
+    ],
+    "comments": [
+      {
+        "author": "p013",
+        "date": "2026-06-19",
+        "text": "Dry run done on 17 June.\n\n    step                   planned  actual\n    stop writes            0:10     0:08\n    final sync             0:45     1:32\n    switch connections     0:20     0:25\n    checks (Policy API)    0:30     0:41\n    total                  1:45     2:46\n\nIt works, but the final sync takes twice the plan. One hour over is too much for a Saturday night window. The details are in the runbook."
+      },
+      {
+        "author": "p017",
+        "date": "2026-06-19",
+        "text": "Thank you Wei. Added to the agenda of the next steering committee."
+      }
+    ]
+  },
+  {
+    "id": "INF-225",
+    "type": "Bug",
+    "summary": "Sign-in loops on the shared workstations of the claims centre",
+    "description": "Since Friday, adjusters on the shared workstations in Laval cannot sign in to the Workbench.\n\n- They enter their password and the code from their phone\n- The page comes back to the sign-in screen, again and again\n- Their own laptops work\n- 14 shared workstations, used by the evening shift\n\nThe evening shift is working on paper.",
+    "team": "infrastructure_security",
+    "component": "single_sign_on",
+    "status": "Closed",
+    "priority": "High",
+    "reporter": "p007",
+    "assignee": "p019",
+    "approver": "",
+    "created": "2026-07-13",
+    "updated": "2026-07-24",
+    "resolved": "2026-07-24",
+    "labels": [
+      "sso"
+    ],
+    "comments": [
+      {
+        "author": "p019",
+        "date": "2026-07-14",
+        "text": "tl;dr: clocks. The shared workstations are 7 minutes late, and since last week's update Single Sign-On refuses a sign-in when the clock is off by more than 5. Time sync was disabled on that workstation image, nobody knows why. Fixed by hand on the 14 machines tonight."
+      },
+      {
+        "author": "p019",
+        "date": "2026-07-24",
+        "text": "Workstation image rebuilt with time sync on, and all 14 reinstalled. I added the clock thing to the login problems page."
+      }
+    ]
+  },
+  {
+    "id": "INF-231",
+    "type": "Bug",
+    "summary": "Dry run 2 failed: the copy to the cloud is 40 minutes behind",
+    "description": "Dry run 2 on 15 September was stopped at step 2.\n\n- At 22:00 the cloud copy was 41 minutes behind the data centre\n- The runbook allows 5 minutes at most before we stop writes\n- During the day the delay is under 1 minute. It grows from 20:00, when the nightly renewal batch starts\n\nWith this delay, the cutover of 26 September is not possible.",
+    "team": "infrastructure_security",
+    "component": "policy_database",
+    "status": "Closed",
+    "priority": "Critical",
+    "reporter": "p013",
+    "assignee": "p022",
+    "approver": "",
+    "created": "2026-09-16",
+    "updated": "2026-10-09",
+    "resolved": "2026-10-09",
+    "labels": [
+      "policy-db-migration"
+    ],
+    "comments": [
+      {
+        "author": "p022",
+        "date": "2026-09-18",
+        "text": "The link is not the problem: it runs at 30% during the batch. The cloud side applies changes with one worker, and the renewal batch writes faster than one worker can apply."
+      },
+      {
+        "author": "p022",
+        "date": "2026-10-09",
+        "text": "Changed the sync to 8 parallel workers and gave the cloud database faster disks. Three nights in a row with the batch running: worst delay 2 min 10 s. Good enough for the 5-minute rule. Closing."
+      },
+      {
+        "author": "p013",
+        "date": "2026-10-09",
+        "text": "Confirmed on my side. I will update the runbook next week."
+      }
+    ]
+  },
+  {
+    "id": "INF-240",
+    "type": "Task",
+    "summary": "Add a manual approval step before production releases of Policy Admin",
+    "description": "After the cutover of the Policy Database, we want no surprise release of Policy Admin for a few weeks.\n\nRequest: from 16 November to 31 December, every production release of Policy Admin waits for a manual approval from me or from Amira.\n\nOther systems are not concerned.",
+    "team": "infrastructure_security",
+    "component": "deployment_pipeline",
+    "status": "In Progress",
+    "priority": "Medium",
+    "reporter": "p003",
+    "assignee": "p022",
+    "approver": "",
+    "created": "2026-10-13",
+    "updated": "2026-10-27",
+    "resolved": "",
+    "labels": [
+      "pipeline",
+      "policy-db-migration"
+    ],
+    "comments": [
+      {
+        "author": "p022",
+        "date": "2026-10-27",
+        "text": "Alexandre is on another project this month, so I took this one. First time I touch the pipeline config. The approval step works in the test pipeline. Still to do: limit it to Policy Admin and to the dates."
+      }
+    ]
+  }
+]

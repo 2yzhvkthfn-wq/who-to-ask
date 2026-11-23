@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Who to ask: page mockup</title>
+<!--
+  A drawing of the "Who to ask" page. It is a guide for the look only.
+
+  - Two states are drawn: (1) the page after a question, (2) the empty page.
+  - Every name, ticket, date, and sentence in it is made-up sample text.
+    None of it is data of the project.
+  - It is plain HTML and CSS so that the look is easy to read: the layout,
+    the order of the parts, the colors, and the spacing.
+  - It uses the computer's own font and loads nothing from the internet.
+-->
+<style>
+:root {
+  --ground: #F5F6F8;        /* the page behind everything */
+  --surface: #FFFFFF;       /* cards, boxes, buttons */
+  --text: #1B1F24;
+  --text-soft: #4B5563;     /* labels, job titles */
+  --steps: #5B6470;         /* the small grey step lines */
+  --border: #DDE1E6;
+  --border-strong: #C9CED6;
+  --accent: #1D4ED8;        /* the one accent color */
+  --accent-tint: #EEF2FB;
+  --accent-tint-border: #C7D3F2;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--text);
+  font-family: system-ui, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* One column, like a simple chat */
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+h1 { margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -0.01em; }
+.intro { margin: 0; color: var(--text-soft); }
+
+/* The two optional boxes: name and team */
+.boxes { display: flex; flex-wrap: wrap; gap: 16px; }
+.field { flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 14px; font-weight: 500; }
+.optional { font-weight: 400; color: var(--text-soft); }
+input[type="text"] {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: var(--surface);
+  font: inherit;
+  color: inherit;
+}
+
+/* Who is speaking */
+.who { font-size: 13px; font-weight: 500; color: var(--text-soft); }
+.you { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+.you p {
+  margin: 0;
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #FFFFFF;
+}
+
+/* The agent's question, with choices to click */
+.agent-question { display: flex; flex-direction: column; gap: 10px; }
+.agent-question p { margin: 0; font-weight: 500; }
+.choices { display: flex; flex-wrap: wrap; gap: 12px; }
+.choice {
+  flex: 1 1 260px;
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 14px;
+  border: 2px solid var(--border-strong);
+  border-radius: 10px;
+  background: var(--surface);
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.choice.chosen { border-color: var(--accent); background: var(--accent-tint); }
+.choice .name { font-weight: 600; }
+.choice .mark { font-weight: 500; color: var(--accent); }
+.choice .about { font-size: 14px; color: var(--text-soft); }
+
+/* The small grey step lines */
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--steps);
+}
+
+/* The note about people who were removed */
+.note {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--accent-tint-border);
+  border-radius: 10px;
+  background: var(--accent-tint);
+  font-size: 15px;
+}
+
+/* One card per person */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.card-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.card h2 { margin: 0; font-size: 19px; font-weight: 600; }
+.role { font-size: 14px; color: var(--text-soft); }
+.away {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #ECEEF1;
+  color: #2F3742;
+  font-size: 13px;
+  font-weight: 500;
+}
+.why { margin: 0; }
+.part { display: flex; flex-direction: column; gap: 6px; }
+.part-title {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-soft);
+}
+.evidence { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 14.5px; }
+.message { margin: 0; padding: 12px 14px; border-radius: 8px; background: var(--ground); font-size: 15px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* Buttons and button-like links */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn.primary { background: var(--accent); color: #FFFFFF; }
+.btn.secondary { background: var(--surface); color: var(--accent); }
+
+/* The question box at the bottom */
+.ask { display: flex; gap: 10px; align-items: flex-end; }
+.ask .field { flex: 1; }
+.ask input[type="text"] { height: 48px; padding: 0 14px; }
+.ask .btn { height: 48px; padding: 0 22px; }
+
+/* The example questions of the empty page */
+.examples { display: flex; flex-direction: column; gap: 10px; }
+.examples-title { font-size: 14px; font-weight: 500; }
+.example {
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  background: var(--surface);
+  font: inherit;
+  color: var(--accent);
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Not part of the page: the labels between the two drawings */
+.mockup-label {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 14px 20px 0;
+  border-top: 2px dashed var(--border-strong);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+.mockup-label.first { border-top: 0; }
+</style>
+</head>
+<body>
+
+<!-- ============ DRAWING 1 of 2: the page after a question ============ -->
+<p class="mockup-label first">Drawing 1 of 2: the page after a question (sample text)</p>
+
+<main class="page">
+
+  <header>
+    <h1>Who to ask</h1>
+    <p class="intro">Ask a work question. The agent finds the right colleague at Tamberly.</p>
+  </header>
+
+  <div class="boxes">
+    <div class="field">
+      <label for="name-1">Your name <span class="optional">(optional)</span></label>
+      <input id="name-1" type="text" value="Alex">
+    </div>
+    <div class="field">
+      <label for="team-1">Your team <span class="optional">(optional)</span></label>
+      <input id="team-1" type="text" value="Pricing">
+    </div>
+  </div>
+
+  <div class="you">
+    <span class="who">You</span>
+    <p>Who can help me get access to the API?</p>
+  </div>
+
+  <div class="agent-question">
+    <span class="who">Agent</span>
+    <p>Which system do you mean?</p>
+    <div class="choices">
+      <button type="button" class="choice chosen" aria-pressed="true">
+        <span class="name">Claims API <span class="mark">· your choice</span></span>
+        <span class="about">Gives other systems access to claims data.</span>
+      </button>
+      <button type="button" class="choice" aria-pressed="false">
+        <span class="name">Policy API</span>
+        <span class="about">Gives other systems access to policy data.</span>
+      </button>
+    </div>
+  </div>
+
+  <ul class="steps">
+    <li>· Understood: you need access to the Claims API</li>
+    <li>· Searched pages and tickets: 15 results</li>
+    <li>· Checked 15 results: 8 are about your question</li>
+    <li>· Ranked the people behind them: 4 people</li>
+    <li>· Checked with HR: removed 1 person who left and 1 person who opted out</li>
+  </ul>
+
+  <p class="note">Tom Walsh worked on this but no longer works at the company. 1 other person asked not to be suggested.</p>
+
+  <article class="card">
+    <div class="card-top">
+      <div>
+        <h2>1. Sophie Martin</h2>
+        <span class="role">Senior Developer · Claims Platform</span>
+      </div>
+      <span class="away">Out of office until 10 November 2026</span>
+    </div>
+    <p class="why">She wrote the access guide for the Claims API and handled the last access requests.</p>
+    <div class="part">
+      <span class="part-title">Evidence</span>
+      <ul class="evidence">
+        <li>Page: “Claims API: how to request access”, updated 14 October 2026</li>
+        <li>Ticket CLM-204: “Give the Broker Portal team access”, closed 2 October 2026</li>
+      </ul>
+    </div>
+    <div class="part">
+      <span class="part-title">Suggested message</span>
+      <p class="message">Hi Sophie, I'm Alex from Pricing. I need access to the Claims API for a pricing report. I saw you wrote the access guide. Could you tell me the first step? I see you're away until 10 November, so no rush. Thanks!</p>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="#">Send on Teams</a>
+      <a class="btn secondary" href="#">Send by email</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-top">
+      <div>
+        <h2>2. Nadia Benali</h2>
+        <span class="role">Developer · Claims Platform</span>
+      </div>
+    </div>
+    <p class="why">She set up the API keys for two teams this autumn.</p>
+    <div class="part">
+      <span class="part-title">Evidence</span>
+      <ul class="evidence">
+        <li>Ticket CLM-188: “Create API keys for the Customer Portal”, closed 18 September 2026</li>
+      </ul>
+    </div>
+    <div class="part">
+      <span class="part-title">Suggested message</span>
+      <p class="message">Hi Nadia, I'm Alex from Pricing. I need access to the Claims API for a pricing report. I saw you set up the keys for the Customer Portal. Is the process the same for my team? Thanks!</p>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="#">Send on Teams</a>
+      <a class="btn secondary" href="#">Send by email</a>
+    </div>
+  </article>
+
+  <div class="ask">
+    <div class="field">
+      <label for="question-1">Your question</label>
+      <input id="question-1" type="text" placeholder="Ask a follow-up, like “Who is her manager?”">
+    </div>
+    <button type="button" class="btn primary">Ask</button>
+  </div>
+
+</main>
+
+<!-- ============ DRAWING 2 of 2: the empty page ============ -->
+<p class="mockup-label">Drawing 2 of 2: the empty page, before any question (sample text)</p>
+
+<main class="page">
+
+  <header>
+    <h1>Who to ask</h1>
+    <p class="intro">Ask a work question. The agent finds the right colleague at Tamberly.</p>
+  </header>
+
+  <div class="boxes">
+    <div class="field">
+      <label for="name-2">Your name <span class="optional">(optional)</span></label>
+      <input id="name-2" type="text">
+    </div>
+    <div class="field">
+      <label for="team-2">Your team <span class="optional">(optional)</span></label>
+      <input id="team-2" type="text">
+    </div>
+  </div>
+
+  <div class="examples">
+    <span class="examples-title">Try one of these</span>
+    <button type="button" class="example">Who can help me get access to the Claims API?</button>
+    <button type="button" class="example">Who fixed the postal code bug?</button>
+    <button type="button" class="example">What does Hélène Dubois work on?</button>
+  </div>
+
+  <div class="ask">
+    <div class="field">
+      <label for="question-2">Your question</label>
+      <input id="question-2" type="text" placeholder="Ask a question…">
+    </div>
+    <button type="button" class="btn primary">Ask</button>
+  </div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "n": 17,
+  "kind": "question",
+  "sent": "Can you recommend a good poutine place near the office?",
+  "asked_at": "2026-11-22T20:50:11",
+  "seconds": 1.1,
+  "answer": {
+    "status": "off_topic",
+    "reason": "not_work",
+    "language": "en",
+    "message": "Sorry, I can't help with that. I only answer questions about work: tell me what you need help with, and I'll look for the right colleague to ask.",
+    "cards": [],
+    "level": "",
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: it is not about work",
+      "Declined the question"
+    ],
+    "thread_id": "3fbef95488e842f59d4242eb4e51ba18"
+  }
+}

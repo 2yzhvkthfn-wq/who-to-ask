@@ -1,0 +1,42 @@
+{
+  "n": 1,
+  "kind": "question",
+  "sent": "Adjusters keep telling me the Claims Workbench freezes when they try to pay a claim. Who should I talk to?",
+  "asked_at": "2026-11-22T17:36:10",
+  "seconds": 10.2,
+  "answer": {
+    "status": "nobody_found",
+    "reason": "",
+    "language": "en",
+    "message": "I found nobody to recommend for this question. You can try again with more details: the name of the system, the project, or what exactly you need.",
+    "cards": [],
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets for \"Claims Workbench\", \"freezes\", \"pay a claim\": 16 results",
+      "Checked 16 results: none is really about your question",
+      "Nothing was about your question: picked other search words",
+      "Searched again: 20 results",
+      "Checked 9 results: none is really about your question",
+      "Found nobody to recommend"
+    ],
+    "thread_id": "3638471976be462dbe0b5d2bb3ada19c"
+  }
+}

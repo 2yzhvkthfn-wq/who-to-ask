@@ -1,0 +1,67 @@
+{
+  "n": 6,
+  "kind": "question",
+  "sent": "The Policy API has been timing out all morning. Who should I contact?",
+  "asked_at": "2026-11-22T20:00:26",
+  "seconds": 7.1,
+  "answer": {
+    "status": "answered",
+    "reason": "",
+    "language": "en",
+    "message": "",
+    "cards": [
+      {
+        "id": "p014",
+        "name": "Amira Khalil",
+        "job_title": "Senior Developer",
+        "team": "Policy Systems",
+        "email": "amira.khalil@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Handled a ticket about Policy search timing out for brokers with large policy lists.",
+        "evidence": [
+          {
+            "id": "POL-152",
+            "title": "Policy search times out for brokers with more than 5,000 policies",
+            "source": "Jira",
+            "kind": "assigned",
+            "text": "handled POL-152: Policy search times out for brokers with more than 5,000 policies",
+            "date_text": "resolved 5 December 2025"
+          }
+        ],
+        "subject": "Policy API timeouts",
+        "message": "Hi Amira, I'm [your name] from [your team]. I'm trying to figure out why the Policy API has been timing out all morning. I saw you handled a ticket about Policy search timing out for brokers with large policy lists. How did you solve it? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=amira.khalil@tamberly.example&message=Hi%20Amira%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20figure%20out%20why%20the%20Policy%20API%20has%20been%20timing%20out%20all%20morning.%20I%20saw%20you%20handled%20a%20ticket%20about%20Policy%20search%20timing%20out%20for%20brokers%20with%20large%20policy%20lists.%20How%20did%20you%20solve%20it%3F%20Thank%20you%21",
+        "email_link": "mailto:amira.khalil@tamberly.example?subject=Policy%20API%20timeouts&body=Hi%20Amira%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20figure%20out%20why%20the%20Policy%20API%20has%20been%20timing%20out%20all%20morning.%20I%20saw%20you%20handled%20a%20ticket%20about%20Policy%20search%20timing%20out%20for%20brokers%20with%20large%20policy%20lists.%20How%20did%20you%20solve%20it%3F%20Thank%20you%21"
+      }
+    ],
+    "level": "exact",
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets for \"Policy API\", \"timing out\", \"all morning\": 19 results",
+      "Checked 19 results: 1 is really about your question",
+      "Found 1 person behind these pages and tickets",
+      "Removed: nobody",
+      "Wrote the card of 1 person"
+    ],
+    "thread_id": "bef69c04157849cbbecbd76e32ee41d8"
+  }
+}

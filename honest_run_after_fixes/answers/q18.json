@@ -1,0 +1,38 @@
+{
+  "n": 18,
+  "kind": "question",
+  "sent": "I need help. Who should I ask?",
+  "asked_at": "2026-11-22T20:50:12",
+  "seconds": 1.1,
+  "answer": {
+    "status": "nobody_found",
+    "reason": "",
+    "language": "en",
+    "message": "What do you need help with? Tell me the system, the project, or the problem, and I'll look for the right person.",
+    "cards": [],
+    "level": "",
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: it does not say what you need help with",
+      "Searched nothing, and asked what you need"
+    ],
+    "thread_id": "83ae463e27e540619654bb620c08aac7"
+  }
+}

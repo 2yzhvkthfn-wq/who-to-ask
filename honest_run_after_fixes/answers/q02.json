@@ -1,0 +1,91 @@
+{
+  "n": 2,
+  "kind": "question",
+  "sent": "Our quotes for customers in Gatineau have come out far too expensive since Monday. Who looks after the rating tables?",
+  "asked_at": "2026-11-22T20:48:43",
+  "seconds": 7.1,
+  "answer": {
+    "status": "answered",
+    "reason": "",
+    "language": "en",
+    "message": "",
+    "cards": [
+      {
+        "id": "p005",
+        "name": "Nathalie Côté",
+        "job_title": "Team Lead",
+        "team": "Pricing & Underwriting",
+        "email": "nathalie.cote@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Approved the update adding Quebec postal code areas to the rating tables.",
+        "evidence": [
+          {
+            "id": "PRC-91",
+            "title": "Add the new Quebec postal code areas to the territory table (rating tables 2026.3)",
+            "source": "Jira",
+            "kind": "approved",
+            "text": "approved PRC-91: Add the new Quebec postal code areas to the territory table (rating tables 2026.3)",
+            "date_text": "resolved 11 September 2026"
+          }
+        ],
+        "subject": "Gatineau quote pricing",
+        "message": "Hi Nathalie, I'm [your name] from [your team]. I'm trying to understand why quotes in Gatineau have been so expensive since Monday. I saw you approved the update to the Quebec postal code areas in the rating tables. Could you tell me what changed for Gatineau? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=nathalie.cote@tamberly.example&message=Hi%20Nathalie%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20understand%20why%20quotes%20in%20Gatineau%20have%20been%20so%20expensive%20since%20Monday.%20I%20saw%20you%20approved%20the%20update%20to%20the%20Quebec%20postal%20code%20areas%20in%20the%20rating%20tables.%20Could%20you%20tell%20me%20what%20changed%20for%20Gatineau%3F%20Thank%20you%21",
+        "email_link": "mailto:nathalie.cote@tamberly.example?subject=Gatineau%20quote%20pricing&body=Hi%20Nathalie%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20understand%20why%20quotes%20in%20Gatineau%20have%20been%20so%20expensive%20since%20Monday.%20I%20saw%20you%20approved%20the%20update%20to%20the%20Quebec%20postal%20code%20areas%20in%20the%20rating%20tables.%20Could%20you%20tell%20me%20what%20changed%20for%20Gatineau%3F%20Thank%20you%21"
+      },
+      {
+        "id": "p010",
+        "name": "Karim Haddad",
+        "job_title": "Senior Developer",
+        "team": "Pricing & Underwriting",
+        "email": "karim.haddad@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Handled a ticket updating Quebec postal code areas in the rating tables.",
+        "evidence": [
+          {
+            "id": "PRC-91",
+            "title": "Add the new Quebec postal code areas to the territory table (rating tables 2026.3)",
+            "source": "Jira",
+            "kind": "assigned",
+            "text": "handled PRC-91: Add the new Quebec postal code areas to the territory table (rating tables 2026.3)",
+            "date_text": "resolved 11 September 2026"
+          }
+        ],
+        "subject": "Gatineau quote pricing",
+        "message": "Hi Karim, I'm [your name] from [your team]. I'm trying to understand why quotes for customers in Gatineau have been so expensive since Monday. I saw you handled an update to Quebec postal code areas in the rating tables. Could that update affect Gatineau quotes? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=karim.haddad@tamberly.example&message=Hi%20Karim%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20understand%20why%20quotes%20for%20customers%20in%20Gatineau%20have%20been%20so%20expensive%20since%20Monday.%20I%20saw%20you%20handled%20an%20update%20to%20Quebec%20postal%20code%20areas%20in%20the%20rating%20tables.%20Could%20that%20update%20affect%20Gatineau%20quotes%3F%20Thank%20you%21",
+        "email_link": "mailto:karim.haddad@tamberly.example?subject=Gatineau%20quote%20pricing&body=Hi%20Karim%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20understand%20why%20quotes%20for%20customers%20in%20Gatineau%20have%20been%20so%20expensive%20since%20Monday.%20I%20saw%20you%20handled%20an%20update%20to%20Quebec%20postal%20code%20areas%20in%20the%20rating%20tables.%20Could%20that%20update%20affect%20Gatineau%20quotes%3F%20Thank%20you%21"
+      }
+    ],
+    "level": "exact",
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets: 19 results",
+      "Checked 19 results: 1 is really about your question",
+      "Found 2 people behind these pages and tickets",
+      "Removed: nobody",
+      "Wrote the cards of 2 people"
+    ],
+    "thread_id": "b751373df5c5482991d226d0d2963079"
+  }
+}

@@ -1,0 +1,31 @@
+
+Question: legacy policy system won't open any policy from 2017, it just shows a blank page. need someone to look at it
+
+Steps:
+   Read your question: you are looking for someone who can help
+   Searched pages and tickets for "legacy policy system", "open", "policy from 2017", "blank page": 15 results
+   Checked 15 results: none is really about your question
+   Nothing was about your question: picked other search words
+   Searched again: 17 results
+   Checked 6 results: none is really about your question
+   Nothing matched your exact question: took the 3 pages and tickets about Legacy Policy System instead
+   Found 2 people behind these pages and tickets
+   Removed: 1 person who left the company
+   Wrote the card of 1 person
+
+I found no ticket or page about this exact question. Here is who works on Legacy Policy System: a
+good place to start. Gérald Fontaine wrote "Système patrimonial des polices : notes d'exploitation"
+and handled POL-118, but no longer works at the company.
+
+1. Daniel Morin, Team Lead, Policy Systems
+   Email: daniel.morin@tamberly.example
+   Why: Made the decision recorded in the legacy policy system meeting minutes.
+   Evidence: "Legacy Policy System: minutes of the decision meeting, 12 February 2026" (Confluence)
+
+   Suggested message:
+   "Hi Daniel, I'm [your name] from [your team]. I'm trying to get the legacy policy system to open
+    policies from 2017, but I only see a blank page. I saw you made a decision recorded in the
+    system's meeting minutes. Have you seen this issue before, or know who I should ask? Thank you!"
+
+   [Send on Teams] https://teams.microsoft.com/l/chat/0/0?users=daniel.morin@tamberly.example&message=Hi%20Daniel%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20get%20the%20legacy%20policy%20system%20to%20open%20policies%20from%202017%2C%20but%20I%20only%20see%20a%20blank%20page.%20I%20saw%20you%20made%20a%20decision%20recorded%20in%20the%20system%27s%20meeting%20minutes.%20Have%20you%20seen%20this%20issue%20before%2C%20or%20know%20who%20I%20should%20ask%3F%20Thank%20you%21
+   [Send by email] mailto:daniel.morin@tamberly.example?subject=Help%20with%20blank%20policy%20pages&body=Hi%20Daniel%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20get%20the%20legacy%20policy%20system%20to%20open%20policies%20from%202017%2C%20but%20I%20only%20see%20a%20blank%20page.%20I%20saw%20you%20made%20a%20decision%20recorded%20in%20the%20system%27s%20meeting%20minutes.%20Have%20you%20seen%20this%20issue%20before%2C%20or%20know%20who%20I%20should%20ask%3F%20Thank%20you%21

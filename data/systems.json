@@ -1,0 +1,98 @@
+[
+  {
+    "id": "claims_api",
+    "name": "Claims API",
+    "team": "claims_platform",
+    "description": "Lets other internal systems read and update claim data."
+  },
+  {
+    "id": "claims_workbench",
+    "name": "Claims Workbench",
+    "team": "claims_platform",
+    "description": "The app that claims adjusters use to review, assess, and pay claims."
+  },
+  {
+    "id": "claims_intake",
+    "name": "Claims Intake",
+    "team": "claims_platform",
+    "description": "Receives new claims from the Customer Portal, the phone line, and brokers, and opens the claim file."
+  },
+  {
+    "id": "policy_api",
+    "name": "Policy API",
+    "team": "policy_systems",
+    "description": "Lets other internal systems read policy and coverage data."
+  },
+  {
+    "id": "policy_database",
+    "name": "Policy Database",
+    "team": "policy_systems",
+    "description": "The main database of policies, coverages, and policy changes."
+  },
+  {
+    "id": "policy_admin",
+    "name": "Policy Admin",
+    "team": "policy_systems",
+    "description": "The app that staff use to issue, change, renew, and cancel policies."
+  },
+  {
+    "id": "legacy_policy_system",
+    "name": "Legacy Policy System",
+    "team": "policy_systems",
+    "description": "The old policy system. It is read-only and being retired, and it still holds the policies issued before 2019."
+  },
+  {
+    "id": "pricing_engine",
+    "name": "Pricing Engine",
+    "team": "pricing_underwriting",
+    "description": "Calculates the price (the premium) of a quote or a renewal from rating tables, such as the prices by region."
+  },
+  {
+    "id": "underwriting_rules",
+    "name": "Underwriting Rules",
+    "team": "pricing_underwriting",
+    "description": "The automatic rules that accept or decline a new policy request, or send it to a person for review."
+  },
+  {
+    "id": "customer_portal",
+    "name": "Customer Portal",
+    "team": "digital_channels",
+    "description": "The website where customers see their policies, pay, and report a claim, in French and English."
+  },
+  {
+    "id": "broker_portal",
+    "name": "Broker Portal",
+    "team": "digital_channels",
+    "description": "The website where insurance brokers get quotes and manage their clients' policies."
+  },
+  {
+    "id": "fraud_scoring_model",
+    "name": "Fraud Scoring Model",
+    "team": "data_analytics",
+    "description": "A model that gives each new claim a fraud-risk score."
+  },
+  {
+    "id": "data_warehouse",
+    "name": "Data Warehouse",
+    "team": "data_analytics",
+    "description": "The central store of policy and claims data used for reports and analysis."
+  },
+  {
+    "id": "cloud_platform",
+    "name": "Cloud Platform",
+    "team": "infrastructure_security",
+    "description": "The company's cloud environment: accounts, networks, and servers."
+  },
+  {
+    "id": "deployment_pipeline",
+    "name": "Deployment Pipeline",
+    "team": "infrastructure_security",
+    "description": "Builds, tests, and releases the code of every team."
+  },
+  {
+    "id": "single_sign_on",
+    "name": "Single Sign-On",
+    "team": "infrastructure_security",
+    "description": "The employee login for internal tools, with multi-factor authentication."
+  }
+]

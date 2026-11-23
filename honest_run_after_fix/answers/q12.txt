@@ -1,0 +1,17 @@
+
+Question: Which tickets did Nadia Benali work on?
+
+Steps:
+   Read your question: it is about a colleague
+   Looked in the directory: 1 person has that name
+   Prepared the card from the directory
+
+I have no tickets or pages to show for Nadia Benali.
+
+Nadia Benali, Developer, Claims Platform
+   Manager: Hélène Dubois
+   Email: nadia.benali@tamberly.example
+   Languages: French, English
+
+   [Open a Teams chat] https://teams.microsoft.com/l/chat/0/0?users=nadia.benali@tamberly.example
+   [Write an email] mailto:nadia.benali@tamberly.example

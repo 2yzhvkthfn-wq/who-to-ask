@@ -1,0 +1,153 @@
+{
+  "n": 6,
+  "kind": "question",
+  "sent": "Claims sent from the Customer Portal are not showing up in Claims Intake. Who can help me find which side is broken?",
+  "asked_at": "2026-11-22T20:49:16",
+  "seconds": 12.0,
+  "answer": {
+    "status": "answered",
+    "reason": "",
+    "language": "en",
+    "message": "",
+    "cards": [
+      {
+        "id": "p016",
+        "name": "Marc-André Gagnon",
+        "job_title": "Developer",
+        "team": "Digital Channels",
+        "email": "marc-andre.gagnon@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Wrote a guide on Customer Portal translation and handled tickets about portal wording and forms.",
+        "evidence": [
+          {
+            "id": "pg012",
+            "title": "Guide de traduction du portail client",
+            "source": "Confluence",
+            "kind": "wrote",
+            "text": "wrote \"Guide de traduction du portail client\"",
+            "date_text": "updated 25 August 2026"
+          },
+          {
+            "id": "DIG-141",
+            "title": "Traductions manquantes sur la page de paiement",
+            "source": "Jira",
+            "kind": "assigned",
+            "text": "handled DIG-141: Traductions manquantes sur la page de paiement",
+            "date_text": "resolved 13 March 2026"
+          },
+          {
+            "id": "DIG-156",
+            "title": "Glossaire FR/EN : choisir entre « réclamation » et « sinistre »",
+            "source": "Jira",
+            "kind": "assigned",
+            "text": "handled DIG-156: Glossaire FR/EN : choisir entre « réclamation » et « sinistre »",
+            "date_text": "resolved 29 May 2026"
+          },
+          {
+            "id": "DIG-178",
+            "title": "Formulaire d'adresse : le code postal est refusé s'il contient une espace",
+            "source": "Jira",
+            "kind": "assigned",
+            "text": "handled DIG-178: Formulaire d'adresse : le code postal est refusé s'il contient une espace",
+            "date_text": "resolved 18 September 2026"
+          }
+        ],
+        "subject": "Claims missing from intake",
+        "message": "Hi Marc-André, I'm [your name] from [your team]. I'm trying to find out why claims sent from the Customer Portal aren't showing up in Claims Intake, and which side might be broken. I saw you wrote a guide on Customer Portal translation. Have you seen this kind of issue before, or know who I should ask? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=marc-andre.gagnon@tamberly.example&message=Hi%20Marc-Andr%C3%A9%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20why%20claims%20sent%20from%20the%20Customer%20Portal%20aren%27t%20showing%20up%20in%20Claims%20Intake%2C%20and%20which%20side%20might%20be%20broken.%20I%20saw%20you%20wrote%20a%20guide%20on%20Customer%20Portal%20translation.%20Have%20you%20seen%20this%20kind%20of%20issue%20before%2C%20or%20know%20who%20I%20should%20ask%3F%20Thank%20you%21",
+        "email_link": "mailto:marc-andre.gagnon@tamberly.example?subject=Claims%20missing%20from%20intake&body=Hi%20Marc-Andr%C3%A9%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20why%20claims%20sent%20from%20the%20Customer%20Portal%20aren%27t%20showing%20up%20in%20Claims%20Intake%2C%20and%20which%20side%20might%20be%20broken.%20I%20saw%20you%20wrote%20a%20guide%20on%20Customer%20Portal%20translation.%20Have%20you%20seen%20this%20kind%20of%20issue%20before%2C%20or%20know%20who%20I%20should%20ask%3F%20Thank%20you%21"
+      },
+      {
+        "id": "p007",
+        "name": "Hélène Dubois",
+        "job_title": "Team Lead",
+        "team": "Claims Platform",
+        "email": "helene.dubois@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Handled a ticket about setting up a weekly triage rota for the Claims Intake backlog.",
+        "evidence": [
+          {
+            "id": "pg027",
+            "title": "Claims Platform team meeting: minutes, 10 September 2026",
+            "source": "Confluence",
+            "kind": "decided",
+            "text": "made the decision recorded in \"Claims Platform team meeting: minutes, 10 September 2026\"",
+            "date_text": "meeting of 10 September 2026"
+          },
+          {
+            "id": "CLM-296",
+            "title": "Set up a weekly triage rota for the Claims Intake backlog",
+            "source": "Jira",
+            "kind": "assigned",
+            "text": "handled CLM-296: Set up a weekly triage rota for the Claims Intake backlog",
+            "date_text": "updated 26 October 2026"
+          }
+        ],
+        "subject": "Claims not reaching intake",
+        "message": "Hi Hélène, I'm [your name] from [your team]. I'm trying to find out why claims sent from the Customer Portal aren't showing up in Claims Intake. I saw you handled a ticket about the Claims Intake backlog. Have you seen this before, or know who I should ask? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=helene.dubois@tamberly.example&message=Hi%20H%C3%A9l%C3%A8ne%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20why%20claims%20sent%20from%20the%20Customer%20Portal%20aren%27t%20showing%20up%20in%20Claims%20Intake.%20I%20saw%20you%20handled%20a%20ticket%20about%20the%20Claims%20Intake%20backlog.%20Have%20you%20seen%20this%20before%2C%20or%20know%20who%20I%20should%20ask%3F%20Thank%20you%21",
+        "email_link": "mailto:helene.dubois@tamberly.example?subject=Claims%20not%20reaching%20intake&body=Hi%20H%C3%A9l%C3%A8ne%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20why%20claims%20sent%20from%20the%20Customer%20Portal%20aren%27t%20showing%20up%20in%20Claims%20Intake.%20I%20saw%20you%20handled%20a%20ticket%20about%20the%20Claims%20Intake%20backlog.%20Have%20you%20seen%20this%20before%2C%20or%20know%20who%20I%20should%20ask%3F%20Thank%20you%21"
+      },
+      {
+        "id": "p008",
+        "name": "Catherine Leblanc",
+        "job_title": "Team Lead",
+        "team": "Digital Channels",
+        "email": "catherine.leblanc@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Made a decision recorded in the digital channels team meeting minutes.",
+        "evidence": [
+          {
+            "id": "pg022",
+            "title": "Réunion d'équipe Canaux numériques : compte rendu du 4 juin 2026",
+            "source": "Confluence",
+            "kind": "decided",
+            "text": "made the decision recorded in \"Réunion d'équipe Canaux numériques : compte rendu du 4 juin 2026\"",
+            "date_text": "meeting of 4 June 2026"
+          }
+        ],
+        "subject": "Claims intake issue",
+        "message": "Hi Catherine, I'm [your name] from [your team]. I'm trying to find out why claims sent from the Customer Portal aren't showing up in Claims Intake and which side is broken. I saw you made a decision recorded in the digital channels team meeting minutes. Do you know where I should look or who else to ask? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=catherine.leblanc@tamberly.example&message=Hi%20Catherine%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20why%20claims%20sent%20from%20the%20Customer%20Portal%20aren%27t%20showing%20up%20in%20Claims%20Intake%20and%20which%20side%20is%20broken.%20I%20saw%20you%20made%20a%20decision%20recorded%20in%20the%20digital%20channels%20team%20meeting%20minutes.%20Do%20you%20know%20where%20I%20should%20look%20or%20who%20else%20to%20ask%3F%20Thank%20you%21",
+        "email_link": "mailto:catherine.leblanc@tamberly.example?subject=Claims%20intake%20issue&body=Hi%20Catherine%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20why%20claims%20sent%20from%20the%20Customer%20Portal%20aren%27t%20showing%20up%20in%20Claims%20Intake%20and%20which%20side%20is%20broken.%20I%20saw%20you%20made%20a%20decision%20recorded%20in%20the%20digital%20channels%20team%20meeting%20minutes.%20Do%20you%20know%20where%20I%20should%20look%20or%20who%20else%20to%20ask%3F%20Thank%20you%21"
+      }
+    ],
+    "level": "system",
+    "person_card": {},
+    "choices": [],
+    "note": "I found no ticket or page about this exact question. Here is who works on Customer Portal and Claims Intake: a good place to start. Étienne Lavoie handled CLM-188, but no longer works at the company. 1 person opted out of being found.",
+    "removed_left": [
+      "p009"
+    ],
+    "removed_opted_out": 1,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets: 18 results",
+      "Checked 18 results: none is really about your question",
+      "Nothing was about your question: picked other search words",
+      "Searched again: 16 results",
+      "Checked 9 results: none is really about your question",
+      "Nothing matched your exact question: took the 10 pages and tickets about Customer Portal, Claims Intake instead",
+      "Found 6 people behind these pages and tickets",
+      "Removed: 1 person who left the company, 1 person who opted out",
+      "Wrote the cards of 3 people"
+    ],
+    "thread_id": "8124f155f7e947d18aecfc1ddb303f31"
+  }
+}

@@ -1,0 +1,1138 @@
+[
+  {
+    "stem": "c01_r1",
+    "n": 1,
+    "run": 1,
+    "status": "answered",
+    "level": "system",
+    "language": "en",
+    "named_systems": "policy_database",
+    "cards": [
+      {
+        "id": "p004",
+        "name": "Isabelle Roy",
+        "evidence": [
+          "pg009",
+          "pg011",
+          "pg019",
+          "pg029"
+        ]
+      },
+      {
+        "id": "p013",
+        "name": "Wei Zhang",
+        "evidence": [
+          "pg023",
+          "INF-219",
+          "POL-164"
+        ]
+      },
+      {
+        "id": "p022",
+        "name": "Fatima Rahimi",
+        "evidence": [
+          "INF-204",
+          "INF-231"
+        ]
+      }
+    ],
+    "note": "I found no ticket or page about this exact question. Here is who works on Policy Database: a good place to start.",
+    "seconds": 13.7,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c01_r2",
+    "n": 1,
+    "run": 2,
+    "status": "answered",
+    "level": "system",
+    "language": "en",
+    "named_systems": "policy_database",
+    "cards": [
+      {
+        "id": "p004",
+        "name": "Isabelle Roy",
+        "evidence": [
+          "pg009",
+          "pg011",
+          "pg019",
+          "pg029"
+        ]
+      },
+      {
+        "id": "p013",
+        "name": "Wei Zhang",
+        "evidence": [
+          "pg023",
+          "INF-219",
+          "POL-164"
+        ]
+      },
+      {
+        "id": "p022",
+        "name": "Fatima Rahimi",
+        "evidence": [
+          "INF-204",
+          "INF-231"
+        ]
+      }
+    ],
+    "note": "I found no ticket or page about this exact question. Here is who works on Policy Database: a good place to start.",
+    "seconds": 12.1,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c01_r3",
+    "n": 1,
+    "run": 3,
+    "status": "answered",
+    "level": "system",
+    "language": "en",
+    "named_systems": "policy_database",
+    "cards": [
+      {
+        "id": "p004",
+        "name": "Isabelle Roy",
+        "evidence": [
+          "pg009",
+          "pg011",
+          "pg019",
+          "pg029"
+        ]
+      },
+      {
+        "id": "p013",
+        "name": "Wei Zhang",
+        "evidence": [
+          "pg023",
+          "INF-219",
+          "POL-164"
+        ]
+      },
+      {
+        "id": "p022",
+        "name": "Fatima Rahimi",
+        "evidence": [
+          "INF-204",
+          "INF-231"
+        ]
+      }
+    ],
+    "note": "I found no ticket or page about this exact question. Here is who works on Policy Database: a good place to start.",
+    "seconds": 14.2,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c01_r4",
+    "n": 1,
+    "run": 4,
+    "status": "answered",
+    "level": "system",
+    "language": "en",
+    "named_systems": "policy_database",
+    "cards": [
+      {
+        "id": "p004",
+        "name": "Isabelle Roy",
+        "evidence": [
+          "pg009",
+          "pg011",
+          "pg019",
+          "pg029"
+        ]
+      },
+      {
+        "id": "p013",
+        "name": "Wei Zhang",
+        "evidence": [
+          "pg023",
+          "INF-219",
+          "POL-164"
+        ]
+      },
+      {
+        "id": "p022",
+        "name": "Fatima Rahimi",
+        "evidence": [
+          "INF-204",
+          "INF-231"
+        ]
+      }
+    ],
+    "note": "I found no ticket or page about this exact question. Here is who works on Policy Database: a good place to start.",
+    "seconds": 12.9,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c01_r5",
+    "n": 1,
+    "run": 5,
+    "status": "answered",
+    "level": "system",
+    "language": "en",
+    "named_systems": "policy_database",
+    "cards": [
+      {
+        "id": "p004",
+        "name": "Isabelle Roy",
+        "evidence": [
+          "pg009",
+          "pg011",
+          "pg019",
+          "pg029"
+        ]
+      },
+      {
+        "id": "p013",
+        "name": "Wei Zhang",
+        "evidence": [
+          "pg023",
+          "INF-219",
+          "POL-164"
+        ]
+      },
+      {
+        "id": "p022",
+        "name": "Fatima Rahimi",
+        "evidence": [
+          "INF-204",
+          "INF-231"
+        ]
+      }
+    ],
+    "note": "I found no ticket or page about this exact question. Here is who works on Policy Database: a good place to start.",
+    "seconds": 11.4,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c02_r1",
+    "n": 2,
+    "run": 1,
+    "status": "answered",
+    "level": "exact",
+    "language": "en",
+    "named_systems": "fraud_scoring_model",
+    "cards": [
+      {
+        "id": "p023",
+        "name": "Priya Patel",
+        "evidence": [
+          "pg020",
+          "DAT-67"
+        ]
+      }
+    ],
+    "note": "Tom Walsh wrote \"Fraud Scoring Model v2 - design notes\" and handled DAT-52, but no longer works at the company.",
+    "seconds": 7.0,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c02_r2",
+    "n": 2,
+    "run": 2,
+    "status": "answered",
+    "level": "exact",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [
+      {
+        "id": "p023",
+        "name": "Priya Patel",
+        "evidence": [
+          "pg020"
+        ]
+      }
+    ],
+    "note": "Tom Walsh handled DAT-52, but no longer works at the company.",
+    "seconds": 6.2,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c02_r3",
+    "n": 2,
+    "run": 3,
+    "status": "answered",
+    "level": "exact",
+    "language": "en",
+    "named_systems": "fraud_scoring_model",
+    "cards": [
+      {
+        "id": "p023",
+        "name": "Priya Patel",
+        "evidence": [
+          "pg020"
+        ]
+      }
+    ],
+    "note": "Tom Walsh handled DAT-52, but no longer works at the company.",
+    "seconds": 6.6,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c02_r4",
+    "n": 2,
+    "run": 4,
+    "status": "answered",
+    "level": "exact",
+    "language": "en",
+    "named_systems": "fraud_scoring_model",
+    "cards": [
+      {
+        "id": "p023",
+        "name": "Priya Patel",
+        "evidence": [
+          "pg020"
+        ]
+      }
+    ],
+    "note": "Tom Walsh handled DAT-52, but no longer works at the company.",
+    "seconds": 6.7,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c02_r5",
+    "n": 2,
+    "run": 5,
+    "status": "answered",
+    "level": "exact",
+    "language": "en",
+    "named_systems": "fraud_scoring_model",
+    "cards": [
+      {
+        "id": "p023",
+        "name": "Priya Patel",
+        "evidence": [
+          "pg020"
+        ]
+      }
+    ],
+    "note": "Tom Walsh handled DAT-52, but no longer works at the company.",
+    "seconds": 5.9,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c03_r1",
+    "n": 3,
+    "run": 1,
+    "status": "answered",
+    "level": "exact",
+    "language": "fr",
+    "named_systems": "pricing_engine",
+    "cards": [
+      {
+        "id": "p010",
+        "name": "Karim Haddad",
+        "evidence": [
+          "PRC-88"
+        ]
+      }
+    ],
+    "note": "",
+    "seconds": 6.9,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c03_r2",
+    "n": 3,
+    "run": 2,
+    "status": "answered",
+    "level": "exact",
+    "language": "fr",
+    "named_systems": "pricing_engine",
+    "cards": [
+      {
+        "id": "p010",
+        "name": "Karim Haddad",
+        "evidence": [
+          "pg005",
+          "PRC-88"
+        ]
+      }
+    ],
+    "note": "",
+    "seconds": 7.5,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c03_r3",
+    "n": 3,
+    "run": 3,
+    "status": "answered",
+    "level": "exact",
+    "language": "fr",
+    "named_systems": "pricing_engine",
+    "cards": [
+      {
+        "id": "p010",
+        "name": "Karim Haddad",
+        "evidence": [
+          "pg005",
+          "PRC-88",
+          "PRC-95"
+        ]
+      }
+    ],
+    "note": "",
+    "seconds": 8.0,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c03_r4",
+    "n": 3,
+    "run": 4,
+    "status": "answered",
+    "level": "exact",
+    "language": "fr",
+    "named_systems": "pricing_engine",
+    "cards": [
+      {
+        "id": "p010",
+        "name": "Karim Haddad",
+        "evidence": [
+          "pg005",
+          "PRC-88"
+        ]
+      }
+    ],
+    "note": "",
+    "seconds": 7.2,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c03_r5",
+    "n": 3,
+    "run": 5,
+    "status": "answered",
+    "level": "exact",
+    "language": "fr",
+    "named_systems": "pricing_engine",
+    "cards": [
+      {
+        "id": "p010",
+        "name": "Karim Haddad",
+        "evidence": [
+          "pg005",
+          "PRC-88"
+        ]
+      }
+    ],
+    "note": "",
+    "seconds": 7.4,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c04_r1",
+    "n": 4,
+    "run": 1,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 10.8,
+    "passed": false,
+    "problems": [
+      "nobody_found, and the data has 3 tickets and pages on that system"
+    ]
+  },
+  {
+    "stem": "c04_r2",
+    "n": 4,
+    "run": 2,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 10.1,
+    "passed": false,
+    "problems": [
+      "nobody_found, and the data has 3 tickets and pages on that system"
+    ]
+  },
+  {
+    "stem": "c04_r3",
+    "n": 4,
+    "run": 3,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 8.2,
+    "passed": false,
+    "problems": [
+      "nobody_found, and the data has 3 tickets and pages on that system"
+    ]
+  },
+  {
+    "stem": "c04_r4",
+    "n": 4,
+    "run": 4,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 12.3,
+    "passed": false,
+    "problems": [
+      "nobody_found, and the data has 3 tickets and pages on that system"
+    ]
+  },
+  {
+    "stem": "c04_r5",
+    "n": 4,
+    "run": 5,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 9.5,
+    "passed": false,
+    "problems": [
+      "nobody_found, and the data has 3 tickets and pages on that system"
+    ]
+  },
+  {
+    "stem": "c05_r1",
+    "n": 5,
+    "run": 1,
+    "status": "answered",
+    "level": "system",
+    "language": "en",
+    "named_systems": "legacy_policy_system",
+    "cards": [
+      {
+        "id": "p003",
+        "name": "Daniel Morin",
+        "evidence": [
+          "pg016"
+        ]
+      }
+    ],
+    "note": "I found no ticket or page about this exact question. Here is who works on Legacy Policy System: a good place to start. Gérald Fontaine wrote \"Système patrimonial des polices : notes d'exploitation\" and handled POL-118, but no longer works at the company.",
+    "seconds": 8.6,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c05_r2",
+    "n": 5,
+    "run": 2,
+    "status": "answered",
+    "level": "system",
+    "language": "en",
+    "named_systems": "legacy_policy_system",
+    "cards": [
+      {
+        "id": "p003",
+        "name": "Daniel Morin",
+        "evidence": [
+          "pg016"
+        ]
+      }
+    ],
+    "note": "I found no ticket or page about this exact question. Here is who works on Legacy Policy System: a good place to start. Gérald Fontaine wrote \"Système patrimonial des polices : notes d'exploitation\" and handled POL-118, but no longer works at the company.",
+    "seconds": 11.8,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c05_r3",
+    "n": 5,
+    "run": 3,
+    "status": "answered",
+    "level": "system",
+    "language": "en",
+    "named_systems": "legacy_policy_system",
+    "cards": [
+      {
+        "id": "p003",
+        "name": "Daniel Morin",
+        "evidence": [
+          "pg016"
+        ]
+      }
+    ],
+    "note": "I found no ticket or page about this exact question. Here is who works on Legacy Policy System: a good place to start. Gérald Fontaine wrote \"Système patrimonial des polices : notes d'exploitation\" and handled POL-118, but no longer works at the company.",
+    "seconds": 9.9,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c05_r4",
+    "n": 5,
+    "run": 4,
+    "status": "answered",
+    "level": "system",
+    "language": "en",
+    "named_systems": "legacy_policy_system",
+    "cards": [
+      {
+        "id": "p003",
+        "name": "Daniel Morin",
+        "evidence": [
+          "pg016"
+        ]
+      }
+    ],
+    "note": "I found no ticket or page about this exact question. Here is who works on Legacy Policy System: a good place to start. Gérald Fontaine wrote \"Système patrimonial des polices : notes d'exploitation\" and handled POL-118, but no longer works at the company.",
+    "seconds": 9.9,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c05_r5",
+    "n": 5,
+    "run": 5,
+    "status": "answered",
+    "level": "system",
+    "language": "en",
+    "named_systems": "legacy_policy_system",
+    "cards": [
+      {
+        "id": "p003",
+        "name": "Daniel Morin",
+        "evidence": [
+          "pg016"
+        ]
+      }
+    ],
+    "note": "I found no ticket or page about this exact question. Here is who works on Legacy Policy System: a good place to start. Gérald Fontaine wrote \"Système patrimonial des polices : notes d'exploitation\" and handled POL-118, but no longer works at the company.",
+    "seconds": 9.5,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c06_r1",
+    "n": 6,
+    "run": 1,
+    "status": "answered",
+    "level": "exact",
+    "language": "en",
+    "named_systems": "policy_api",
+    "cards": [
+      {
+        "id": "p014",
+        "name": "Amira Khalil",
+        "evidence": [
+          "POL-152"
+        ]
+      }
+    ],
+    "note": "",
+    "seconds": 6.8,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c06_r2",
+    "n": 6,
+    "run": 2,
+    "status": "answered",
+    "level": "exact",
+    "language": "en",
+    "named_systems": "policy_api",
+    "cards": [
+      {
+        "id": "p014",
+        "name": "Amira Khalil",
+        "evidence": [
+          "POL-152"
+        ]
+      }
+    ],
+    "note": "",
+    "seconds": 7.1,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c06_r3",
+    "n": 6,
+    "run": 3,
+    "status": "answered",
+    "level": "exact",
+    "language": "en",
+    "named_systems": "policy_api",
+    "cards": [
+      {
+        "id": "p014",
+        "name": "Amira Khalil",
+        "evidence": [
+          "POL-152"
+        ]
+      }
+    ],
+    "note": "",
+    "seconds": 7.0,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c06_r4",
+    "n": 6,
+    "run": 4,
+    "status": "answered",
+    "level": "exact",
+    "language": "en",
+    "named_systems": "policy_api",
+    "cards": [
+      {
+        "id": "p014",
+        "name": "Amira Khalil",
+        "evidence": [
+          "POL-152"
+        ]
+      }
+    ],
+    "note": "",
+    "seconds": 6.6,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c06_r5",
+    "n": 6,
+    "run": 5,
+    "status": "answered",
+    "level": "exact",
+    "language": "en",
+    "named_systems": "policy_api",
+    "cards": [
+      {
+        "id": "p014",
+        "name": "Amira Khalil",
+        "evidence": [
+          "POL-152"
+        ]
+      }
+    ],
+    "note": "",
+    "seconds": 6.5,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c07_r1",
+    "n": 7,
+    "run": 1,
+    "status": "answered",
+    "level": "system",
+    "language": "en",
+    "named_systems": "cloud_platform",
+    "cards": [
+      {
+        "id": "p022",
+        "name": "Fatima Rahimi",
+        "evidence": [
+          "pg007"
+        ]
+      }
+    ],
+    "note": "I found no ticket or page about this exact question. Here is who works on Cloud Platform: a good place to start.",
+    "seconds": 11.2,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c07_r2",
+    "n": 7,
+    "run": 2,
+    "status": "answered",
+    "level": "system",
+    "language": "en",
+    "named_systems": "cloud_platform",
+    "cards": [
+      {
+        "id": "p022",
+        "name": "Fatima Rahimi",
+        "evidence": [
+          "pg007"
+        ]
+      }
+    ],
+    "note": "I found no ticket or page about this exact question. Here is who works on Cloud Platform: a good place to start.",
+    "seconds": 13.1,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c07_r3",
+    "n": 7,
+    "run": 3,
+    "status": "answered",
+    "level": "system",
+    "language": "en",
+    "named_systems": "cloud_platform",
+    "cards": [
+      {
+        "id": "p022",
+        "name": "Fatima Rahimi",
+        "evidence": [
+          "pg007"
+        ]
+      }
+    ],
+    "note": "I found no ticket or page about this exact question. Here is who works on Cloud Platform: a good place to start.",
+    "seconds": 11.7,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c07_r4",
+    "n": 7,
+    "run": 4,
+    "status": "answered",
+    "level": "system",
+    "language": "en",
+    "named_systems": "cloud_platform",
+    "cards": [
+      {
+        "id": "p022",
+        "name": "Fatima Rahimi",
+        "evidence": [
+          "pg007"
+        ]
+      }
+    ],
+    "note": "I found no ticket or page about this exact question. Here is who works on Cloud Platform: a good place to start.",
+    "seconds": 10.1,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c07_r5",
+    "n": 7,
+    "run": 5,
+    "status": "answered",
+    "level": "system",
+    "language": "en",
+    "named_systems": "cloud_platform",
+    "cards": [
+      {
+        "id": "p022",
+        "name": "Fatima Rahimi",
+        "evidence": [
+          "pg007"
+        ]
+      }
+    ],
+    "note": "I found no ticket or page about this exact question. Here is who works on Cloud Platform: a good place to start.",
+    "seconds": 10.1,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c08_r1",
+    "n": 8,
+    "run": 1,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 9.6,
+    "passed": false,
+    "problems": [
+      "nobody_found, and the data has 2 tickets and pages on that system"
+    ]
+  },
+  {
+    "stem": "c08_r2",
+    "n": 8,
+    "run": 2,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 9.5,
+    "passed": false,
+    "problems": [
+      "nobody_found, and the data has 2 tickets and pages on that system"
+    ]
+  },
+  {
+    "stem": "c08_r3",
+    "n": 8,
+    "run": 3,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 8.9,
+    "passed": false,
+    "problems": [
+      "nobody_found, and the data has 2 tickets and pages on that system"
+    ]
+  },
+  {
+    "stem": "c08_r4",
+    "n": 8,
+    "run": 4,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 9.5,
+    "passed": false,
+    "problems": [
+      "nobody_found, and the data has 2 tickets and pages on that system"
+    ]
+  },
+  {
+    "stem": "c08_r5",
+    "n": 8,
+    "run": 5,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 8.8,
+    "passed": false,
+    "problems": [
+      "nobody_found, and the data has 2 tickets and pages on that system"
+    ]
+  },
+  {
+    "stem": "c09_r1",
+    "n": 9,
+    "run": 1,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 9.9,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c09_r2",
+    "n": 9,
+    "run": 2,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 9.7,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c09_r3",
+    "n": 9,
+    "run": 3,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 9.1,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c09_r4",
+    "n": 9,
+    "run": 4,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 8.6,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c09_r5",
+    "n": 9,
+    "run": 5,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 10.2,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c10_r1",
+    "n": 10,
+    "run": 1,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 9.5,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c10_r2",
+    "n": 10,
+    "run": 2,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 10.3,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c10_r3",
+    "n": 10,
+    "run": 3,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 10.7,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c10_r4",
+    "n": 10,
+    "run": 4,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 10.3,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c10_r5",
+    "n": 10,
+    "run": 5,
+    "status": "nobody_found",
+    "level": "",
+    "language": "en",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 10.0,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c11_r1",
+    "n": 11,
+    "run": 1,
+    "status": "nobody_found",
+    "level": "",
+    "language": "fr",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 8.2,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c11_r2",
+    "n": 11,
+    "run": 2,
+    "status": "nobody_found",
+    "level": "",
+    "language": "fr",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 8.4,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c11_r3",
+    "n": 11,
+    "run": 3,
+    "status": "nobody_found",
+    "level": "",
+    "language": "fr",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 8.4,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c11_r4",
+    "n": 11,
+    "run": 4,
+    "status": "nobody_found",
+    "level": "",
+    "language": "fr",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 7.3,
+    "passed": true,
+    "problems": []
+  },
+  {
+    "stem": "c11_r5",
+    "n": 11,
+    "run": 5,
+    "status": "nobody_found",
+    "level": "",
+    "language": "fr",
+    "named_systems": "(none)",
+    "cards": [],
+    "note": "",
+    "seconds": 7.5,
+    "passed": true,
+    "problems": []
+  }
+]

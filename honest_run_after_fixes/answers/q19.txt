@@ -1,0 +1,15 @@
+
+Question: Does Karim Haddad speak French?
+
+Steps:
+   Read your question: it is about a colleague
+   Looked in the directory: 1 person has that name
+   Prepared the card from the directory
+
+Karim Haddad, Senior Developer, Pricing & Underwriting
+   Manager: Nathalie Côté
+   Email: karim.haddad@tamberly.example
+   Languages: French, English
+
+   [Open a Teams chat] https://teams.microsoft.com/l/chat/0/0?users=karim.haddad@tamberly.example
+   [Write an email] mailto:karim.haddad@tamberly.example

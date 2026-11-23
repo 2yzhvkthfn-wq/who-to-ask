@@ -1,0 +1,23 @@
+
+Question: my build is stuck in the deployement pipeline since 2 hrs, who do i ping??
+
+Steps:
+   Read your question: you are looking for someone who can help
+   Searched pages and tickets for "build", "stuck", "deployement pipeline", "2 hrs": 17 results
+   Checked 17 results: 2 are really about your question
+   Found 1 person behind these pages and tickets
+   Removed: nobody
+   Wrote the card of 1 person
+
+1. Alexandre Bergeron, DevOps Engineer, Infrastructure & Security
+   Email: alexandre.bergeron@tamberly.example
+   Why: Wrote the guide on how the deployment pipeline works and handled a build agent issue.
+   Evidence: "Deployment Pipeline: how a release works" (Confluence), INF-198 (Jira)
+
+   Suggested message:
+   "Hi Alexandre, I'm [your name] from [your team]. My build has been stuck in the deployment
+    pipeline for two hours. I saw you wrote the guide on how a release works. Where should I start
+    to get it moving? Thank you!"
+
+   [Send on Teams] https://teams.microsoft.com/l/chat/0/0?users=alexandre.bergeron@tamberly.example&message=Hi%20Alexandre%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20My%20build%20has%20been%20stuck%20in%20the%20deployment%20pipeline%20for%20two%20hours.%20I%20saw%20you%20wrote%20the%20guide%20on%20how%20a%20release%20works.%20Where%20should%20I%20start%20to%20get%20it%20moving%3F%20Thank%20you%21
+   [Send by email] mailto:alexandre.bergeron@tamberly.example?subject=Help%20with%20a%20stuck%20build&body=Hi%20Alexandre%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20My%20build%20has%20been%20stuck%20in%20the%20deployment%20pipeline%20for%20two%20hours.%20I%20saw%20you%20wrote%20the%20guide%20on%20how%20a%20release%20works.%20Where%20should%20I%20start%20to%20get%20it%20moving%3F%20Thank%20you%21

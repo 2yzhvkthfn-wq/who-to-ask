@@ -1,0 +1,44 @@
+[
+  {
+    "id": "claims_platform",
+    "name": "Claims Platform",
+    "jira_key": "CLM",
+    "description": "Builds and runs the systems used to receive, handle, and pay claims."
+  },
+  {
+    "id": "policy_systems",
+    "name": "Policy Systems",
+    "jira_key": "POL",
+    "description": "Builds and runs the systems that hold and manage insurance policies."
+  },
+  {
+    "id": "pricing_underwriting",
+    "name": "Pricing & Underwriting",
+    "jira_key": "PRC",
+    "description": "Builds the systems that set prices and decide which risks the company accepts."
+  },
+  {
+    "id": "digital_channels",
+    "name": "Digital Channels",
+    "jira_key": "DIG",
+    "description": "Builds the websites that customers and brokers use."
+  },
+  {
+    "id": "data_analytics",
+    "name": "Data & Analytics",
+    "jira_key": "DAT",
+    "description": "Runs the company's data, reports, and prediction models."
+  },
+  {
+    "id": "infrastructure_security",
+    "name": "Infrastructure & Security",
+    "jira_key": "INF",
+    "description": "Runs the cloud, the release tools, and employee sign-in, and looks after IT security."
+  },
+  {
+    "id": "technology_office",
+    "name": "Technology Office",
+    "jira_key": "TEC",
+    "description": "Technology leadership, architecture, and project coordination across all teams."
+  }
+]

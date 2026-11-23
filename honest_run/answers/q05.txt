@@ -1,0 +1,13 @@
+
+Question: Salut, qui s'occupe du Broker Portal ? J'ai un courtier qui can't log in depuis ce matin.
+
+Steps:
+   Read your question: you are looking for someone who can help
+   Searched pages and tickets for "Broker Portal", "can't log in", "depuis ce matin": 21 results
+   Checked 21 results: none is really about your question
+   Nothing was about your question: picked other search words
+   Searched again: 16 results
+   Checked 2 results: none is really about your question
+   Found nobody to recommend
+
+Je n'ai trouvé personne à vous recommander pour cette question. Vous pouvez réessayer avec plus de précisions : le nom du système, le projet, ou ce dont vous avez besoin exactement.

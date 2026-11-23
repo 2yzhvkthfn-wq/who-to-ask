@@ -1,0 +1,8 @@
+
+Question: I need help. Who should I ask?
+
+Steps:
+   Read your question: it does not say what you need help with
+   Searched nothing, and asked what you need
+
+What do you need help with? Tell me the system, the project, or the problem, and I'll look for the right person.

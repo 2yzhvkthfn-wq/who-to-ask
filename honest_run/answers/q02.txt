@@ -1,0 +1,37 @@
+
+Question: Our quotes for customers in Gatineau have come out far too expensive since Monday. Who looks after the rating tables?
+
+Steps:
+   Read your question: you are looking for someone who can help
+   Searched pages and tickets for "quotes", "Gatineau", "far too expensive", "since Monday", "rating tables": 19 results
+   Checked 19 results: 1 is really about your question
+   Found 2 people behind these pages and tickets
+   Removed: nobody
+   Wrote the cards of 2 people
+
+1. Nathalie Côté, Team Lead, Pricing & Underwriting
+   Email: nathalie.cote@tamberly.example
+   Why: Approved the update adding Quebec postal code areas to the rating tables.
+   Evidence: PRC-91 (Jira)
+
+   Suggested message:
+   "Hi Nathalie, I'm [your name] from [your team]. I'm trying to understand why quotes for customers
+    in Gatineau have been so expensive since Monday. I saw you approved the update to the Quebec
+    postal code areas in the rating tables. Could you tell me what changed for Gatineau? Thank you!"
+
+   [Send on Teams] https://teams.microsoft.com/l/chat/0/0?users=nathalie.cote@tamberly.example&message=Hi%20Nathalie%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20understand%20why%20quotes%20for%20customers%20in%20Gatineau%20have%20been%20so%20expensive%20since%20Monday.%20I%20saw%20you%20approved%20the%20update%20to%20the%20Quebec%20postal%20code%20areas%20in%20the%20rating%20tables.%20Could%20you%20tell%20me%20what%20changed%20for%20Gatineau%3F%20Thank%20you%21
+   [Send by email] mailto:nathalie.cote@tamberly.example?subject=Gatineau%20quote%20pricing&body=Hi%20Nathalie%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20understand%20why%20quotes%20for%20customers%20in%20Gatineau%20have%20been%20so%20expensive%20since%20Monday.%20I%20saw%20you%20approved%20the%20update%20to%20the%20Quebec%20postal%20code%20areas%20in%20the%20rating%20tables.%20Could%20you%20tell%20me%20what%20changed%20for%20Gatineau%3F%20Thank%20you%21
+
+2. Karim Haddad, Senior Developer, Pricing & Underwriting
+   Email: karim.haddad@tamberly.example
+   Why: Handled a ticket adding new Quebec postal code areas to the territory table.
+   Evidence: PRC-91 (Jira)
+
+   Suggested message:
+   "Hi Karim, I'm [your name] from [your team]. I'm trying to understand why quotes for customers in
+    Gatineau have been so expensive since Monday. I saw you handled a ticket adding Quebec postal
+    code areas to the territory table. Could you help me check whether the Gatineau area was
+    affected? Thank you!"
+
+   [Send on Teams] https://teams.microsoft.com/l/chat/0/0?users=karim.haddad@tamberly.example&message=Hi%20Karim%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20understand%20why%20quotes%20for%20customers%20in%20Gatineau%20have%20been%20so%20expensive%20since%20Monday.%20I%20saw%20you%20handled%20a%20ticket%20adding%20Quebec%20postal%20code%20areas%20to%20the%20territory%20table.%20Could%20you%20help%20me%20check%20whether%20the%20Gatineau%20area%20was%20affected%3F%20Thank%20you%21
+   [Send by email] mailto:karim.haddad@tamberly.example?subject=Gatineau%20quote%20pricing&body=Hi%20Karim%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20understand%20why%20quotes%20for%20customers%20in%20Gatineau%20have%20been%20so%20expensive%20since%20Monday.%20I%20saw%20you%20handled%20a%20ticket%20adding%20Quebec%20postal%20code%20areas%20to%20the%20territory%20table.%20Could%20you%20help%20me%20check%20whether%20the%20Gatineau%20area%20was%20affected%3F%20Thank%20you%21

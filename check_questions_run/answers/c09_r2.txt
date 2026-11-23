@@ -1,0 +1,13 @@
+
+Question: The time-off request tool rejects my vacation dates. Who should I talk to?
+
+Steps:
+   Read your question: you are looking for someone who can help
+   Searched pages and tickets for "time-off request tool", "rejects", "vacation dates": 18 results
+   Checked 18 results: none is really about your question
+   Nothing was about your question: picked other search words
+   Searched again for "leave request", "annual leave", "holiday booking", "date validation": 19 results
+   Checked 10 results: none is really about your question
+   Found nobody to recommend
+
+I found nobody to recommend for this question. You can try again with more details: the name of the system, the project, or what exactly you need.

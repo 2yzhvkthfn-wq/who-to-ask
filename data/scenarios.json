@@ -1,0 +1,437 @@
+[
+  {
+    "id": "s01",
+    "scenario": 1,
+    "checked_at": "M3b",
+    "tests": "A colleague who opted out never appears anywhere. A colleague who left is not recommended, and the note names him.",
+    "turns": [
+      {
+        "question": "Who can help me get access to the Claims API?",
+        "expected": {
+          "status": "answered",
+          "language": "en",
+          "question_type": "help",
+          "people": ["p012", "p006", "p024"],
+          "forbidden_people": ["p018", "p009", "p007"],
+          "removed_left": ["p009"],
+          "removed_opted_out": 1,
+          "out_of_office": {"p012": "2026-11-10"},
+          "evidence": ["pg008", "pg002", "CLM-212", "CLM-226", "CLM-239", "CLM-245", "CLM-268", "CLM-301"],
+          "no_person": [
+            {"id": "CLM-318", "why": "It is a Claims API access request, but it has no assignee and no approver yet."}
+          ],
+          "near_misses": [
+            {"id": "pg004", "why": "It explains how to get access to the Policy API, not to the Claims API."},
+            {"id": "POL-176", "why": "It is an access request for the Policy API."},
+            {"id": "pg027", "why": "It is a meeting of the team that owns the Claims API, but it is about Claims Intake."},
+            {"id": "pg020", "why": "It is about the fraud model. It only says that its nightly job reads the Claims API."},
+            {"id": "CLM-233", "why": "It is a bug in the Claims API, not about getting access."},
+            {"id": "pg026", "why": "It is about signing in. Its last lines only say to ask the team that owns a system."}
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "s02",
+    "scenario": 2,
+    "checked_at": "M3b",
+    "tests": "Jira and Confluence working together.",
+    "turns": [
+      {
+        "question": "Our pricing engine rejects some new Quebec postal codes. Who should I talk to?",
+        "expected": {
+          "status": "answered",
+          "language": "en",
+          "question_type": "help",
+          "people": ["p010"],
+          "forbidden_people": [],
+          "removed_left": [],
+          "removed_opted_out": 0,
+          "out_of_office": {},
+          "evidence": ["pg005", "PRC-88", "PRC-91", "PRC-95"],
+          "near_misses": [
+            {"id": "pg021", "why": "It is the underwriting rule that declines known postal codes in flood zones, not the Pricing Engine."},
+            {"id": "PRC-74", "why": "It updates the flood-zone rule. Nothing is rejected by the Pricing Engine."},
+            {"id": "DIG-178", "why": "The portal's address form refused a postal code with a space. The Pricing Engine never saw it."},
+            {"id": "pg018", "why": "It lists the tables of the Data Warehouse. It only says that rejected quotes are not stored."},
+            {"id": "pg013", "why": "They are running notes of the data team. The new postal code areas are one line in them."},
+            {"id": "CLM-212", "why": "The Pricing Engine asks for access to the Claims API. Nothing is about postal codes."}
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "s03",
+    "scenario": 3,
+    "checked_at": "M3b",
+    "tests": "Only the person who decided is shown. The coordinator who organized every meeting and wrote the agendas must not appear, and neither do the people who did the work.",
+    "turns": [
+      {
+        "question": "Who decided to move the policy database to the cloud?",
+        "expected": {
+          "status": "answered",
+          "language": "en",
+          "question_type": "decided",
+          "people": ["p004"],
+          "no_other_people": true,
+          "forbidden_people": ["p017"],
+          "removed_left": [],
+          "removed_opted_out": 0,
+          "evidence": ["pg011", "pg009", "pg023", "POL-164", "INF-204", "INF-219", "INF-231"],
+          "optional_evidence": ["pg019", "pg029"],
+          "no_person": [
+            {"id": "pg010", "why": "It is the agenda of the meeting where the decision was made. Writing an agenda counts for nothing."},
+            {"id": "pg028", "why": "It is an agenda. It lists options for a date, but it decides nothing."}
+          ],
+          "near_misses": [
+            {"id": "pg016", "why": "It is another decision, by another person: retiring the Legacy Policy System."}
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "s04",
+    "scenario": 4,
+    "checked_at": "M3b",
+    "tests": "A French question, French pages, and an answer in French.",
+    "turns": [
+      {
+        "question": "Qui peut m'aider avec la traduction du portail client ?",
+        "expected": {
+          "status": "answered",
+          "language": "fr",
+          "question_type": "help",
+          "people": ["p016"],
+          "forbidden_people": [],
+          "removed_left": [],
+          "removed_opted_out": 0,
+          "evidence": ["pg012", "DIG-141", "DIG-156", "DIG-163"],
+          "optional_evidence": ["pg022"],
+          "near_misses": [
+            {"id": "DIG-170", "why": "It is about the language switch of the Broker Portal, not the Customer Portal."},
+            {"id": "DIG-178", "why": "It is a bug in the address form, not a translation problem."},
+            {"id": "CLM-226", "why": "It is written in French and names the Customer Portal, but it is an access request to the Claims API."},
+            {"id": "POL-176", "why": "It is written in French and names the Customer Portal, but it is an access request to the Policy API."},
+            {"id": "pg025", "why": "It is about the Broker Portal. It only mentions a language bug that was fixed."}
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "s05",
+    "scenario": 5,
+    "checked_at": "M3b",
+    "tests": "The former owner left the company (the HR file says so) and must not be recommended.",
+    "turns": [
+      {
+        "question": "Who knows the fraud scoring model?",
+        "expected": {
+          "status": "answered",
+          "language": "en",
+          "question_type": "help",
+          "people": ["p023"],
+          "forbidden_people": ["p011"],
+          "removed_left": ["p011"],
+          "removed_opted_out": 0,
+          "evidence": ["pg020", "pg003", "DAT-52", "DAT-60", "DAT-67", "DAT-70", "DAT-73"],
+          "optional_evidence": ["pg013", "CLM-254"],
+          "near_misses": [
+            {"id": "CLM-245", "why": "It is an access request to the Claims API for the fraud job. It says nothing about the model."}
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "s06",
+    "scenario": 6,
+    "checked_at": "M3b",
+    "tests": "A question that is not about work gets the failsafe answer.",
+    "turns": [
+      {
+        "question": "What's the weather in Montreal today?",
+        "expected": {"status": "off_topic", "reason": "not_work"}
+      }
+    ]
+  },
+  {
+    "id": "s07",
+    "scenario": 7,
+    "checked_at": "M3b",
+    "tests": "A generic roadmap page exists, and its author must not be suggested.",
+    "turns": [
+      {
+        "question": "Who can help with our quantum computing roadmap?",
+        "expected": {
+          "status": "nobody_found",
+          "language": "en",
+          "forbidden_people": ["p002"],
+          "words_absent": ["quantum"],
+          "near_misses": [
+            {"id": "pg014", "why": "It is the general technology roadmap. It says nothing about quantum computing."},
+            {"id": "pg016", "why": "It only mentions the technology roadmap in one action item. It is about the Legacy Policy System."}
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "s08a",
+    "scenario": 8,
+    "checked_at": "M7",
+    "tests": "The agent asks which API instead of guessing. Here the user picks the Claims API.",
+    "turns": [
+      {
+        "question": "Who can help me with the API?",
+        "expected": {"status": "needs_details", "vague_word": "API", "choices_systems": ["claims_api", "policy_api"]}
+      },
+      {
+        "question": "The Claims API",
+        "expected": {
+          "status": "answered",
+          "language": "en",
+          "question_type": "help",
+          "people": ["p012", "p006", "p024"],
+          "forbidden_people": ["p018", "p009", "p007"],
+          "removed_left": ["p009"],
+          "removed_opted_out": 1,
+          "out_of_office": {"p012": "2026-11-10"},
+          "evidence": ["pg008", "pg002", "CLM-212", "CLM-226", "CLM-233", "CLM-239", "CLM-245", "CLM-268", "CLM-301"],
+          "no_person": [
+            {"id": "CLM-318", "why": "It is a Claims API access request, but it has no assignee and no approver yet."}
+          ],
+          "near_misses": [
+            {"id": "pg004", "why": "It is the guide of the Policy API."},
+            {"id": "POL-176", "why": "It is an access request for the Policy API."},
+            {"id": "pg027", "why": "It is a meeting of the team that owns the Claims API, but it is about Claims Intake."},
+            {"id": "pg020", "why": "It is about the fraud model. It only says that its nightly job reads the Claims API."},
+            {"id": "DAT-70", "why": "It is a bug in the fraud job. The Claims API is only where the job now reads its data."},
+            {"id": "pg026", "why": "It is about signing in. Its last lines only say to ask the team that owns a system."}
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "s08b",
+    "scenario": 8,
+    "checked_at": "M7",
+    "tests": "The same vague question, when the user picks the Policy API: it has its own people.",
+    "turns": [
+      {
+        "question": "Who can help me with the API?",
+        "expected": {"status": "needs_details", "vague_word": "API", "choices_systems": ["claims_api", "policy_api"]}
+      },
+      {
+        "question": "The Policy API",
+        "expected": {
+          "status": "answered",
+          "language": "en",
+          "question_type": "help",
+          "people": ["p014"],
+          "forbidden_people": [],
+          "removed_left": [],
+          "removed_opted_out": 0,
+          "evidence": ["pg004", "POL-131", "POL-152", "POL-176"],
+          "optional_evidence": ["pg015"],
+          "near_misses": [
+            {"id": "pg008", "why": "It is the access guide of the Claims API."},
+            {"id": "pg023", "why": "It is the migration runbook of the Policy Database. The Policy API is only checked at the end."},
+            {"id": "INF-219", "why": "It is a dry run of the Policy Database cutover. The Policy API is only named for its checks."}
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "s09a",
+    "scenario": 9,
+    "checked_at": "M6",
+    "tests": "The person lookup: the manager comes from the directory, and she is not one of the people recommended in scenario 1.",
+    "turns": [
+      {
+        "question": "Who is Sophie Martin's manager?",
+        "expected": {"status": "person", "subject": "p012", "relation": "manager", "card": "p007", "not_in_cards_of": "s01"}
+      }
+    ]
+  },
+  {
+    "id": "s09b",
+    "scenario": 9,
+    "checked_at": "M6",
+    "tests": "Memory for follow-ups: \"her\" is the first person shown in the last answer.",
+    "turns": [
+      {
+        "question": "Who can help me get access to the Claims API?",
+        "expected": {"same_as": "s01"}
+      },
+      {
+        "question": "And who's her manager?",
+        "expected": {"status": "person", "subject": "p012", "relation": "manager", "card": "p007", "not_in_cards_of": "s01"}
+      }
+    ]
+  },
+  {
+    "id": "s10",
+    "scenario": 10,
+    "checked_at": "M6",
+    "tests": "Work information is answered from the data, and a personal question is refused.",
+    "turns": [
+      {
+        "question": "What's Hélène Dubois's work phone?",
+        "expected": {"status": "person", "card": "p007", "must_show": ["work_phone"]}
+      },
+      {
+        "question": "Why is Sophie Martin away?",
+        "expected": {"status": "off_topic", "reason": "personal", "about": "p012", "is_away": true}
+      }
+    ]
+  },
+  {
+    "id": "s11a",
+    "scenario": 11,
+    "checked_at": "M6",
+    "tests": "Someone who left: only \"no longer works at the company\", with no date and no contact details.",
+    "turns": [
+      {
+        "question": "Does Tom Walsh still work here?",
+        "expected": {"status": "person", "card": "p011", "says_only_left": true}
+      }
+    ]
+  },
+  {
+    "id": "s11b",
+    "scenario": 11,
+    "checked_at": "M6",
+    "tests": "Someone who opted out: the directory fields only, never their tickets or pages.",
+    "turns": [
+      {
+        "question": "Who is Nadia Benali?",
+        "expected": {"status": "person", "card": "p018", "directory_only": true}
+      }
+    ]
+  },
+  {
+    "id": "s12",
+    "scenario": 12,
+    "checked_at": "M7",
+    "tests": "Two people share a first name, so the agent asks which one instead of guessing.",
+    "turns": [
+      {
+        "question": "Tell me about Sophie.",
+        "expected": {"status": "needs_details", "first_name": "Sophie", "choices_people": ["p012", "p026"]}
+      },
+      {
+        "question": "Sophie Nguyen",
+        "expected": {"status": "person", "card": "p026"}
+      }
+    ]
+  },
+  {
+    "id": "s13",
+    "scenario": 13,
+    "checked_at": "M6",
+    "tests": "\"What does she work on?\": the same evidence as the expert road, read from the person to their tickets and pages, grouped by system.",
+    "turns": [
+      {
+        "question": "What does Hélène Dubois work on?",
+        "expected": {
+          "status": "person",
+          "card": "p007",
+          "systems": ["claims_workbench", "claims_intake"],
+          "work": ["pg017", "CLM-279", "pg027", "CLM-296"],
+          "no_work_on": ["claims_api"]
+        }
+      }
+    ]
+  },
+  {
+    "id": "s14",
+    "scenario": 14,
+    "checked_at": "M3b",
+    "tests": "A \"did\" question: Jira counts first. The team lead who reported the bug and reopened it must not appear. A second postal code bug, in the Customer Portal, may be kept by `verify` without changing the first card. The task that fixed the bug (`PRC-91`) only says that it follows the bug's ticket: `verify` reads each ticket alone, so it may miss it.",
+    "turns": [
+      {
+        "question": "Who fixed the postal code bug?",
+        "expected": {
+          "status": "answered",
+          "language": "en",
+          "question_type": "did",
+          "people": ["p010"],
+          "forbidden_people": ["p008"],
+          "removed_left": [],
+          "removed_opted_out": 0,
+          "out_of_office": {},
+          "evidence": ["PRC-88"],
+          "optional_evidence": ["PRC-91", "PRC-95", "pg005", "DIG-178"],
+          "near_misses": [
+            {"id": "PRC-74", "why": "It updates the flood-zone rule of underwriting. It is a planned change, not a bug."},
+            {"id": "pg021", "why": "It explains the rule that declines known postal codes in flood zones. Nothing was broken, and nothing was fixed."},
+            {"id": "CLM-245", "why": "It is an access request to the Claims API. The postal code is only one of the fields the fraud job reads."},
+            {"id": "pg013", "why": "They are running notes of the data team. The new postal code areas are one line in them."},
+            {"id": "pg018", "why": "It lists the tables of the Data Warehouse. It only says how postal codes are stored."}
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "s15",
+    "scenario": 15,
+    "checked_at": "M3b",
+    "tests": "A \"decided\" question with no recorded decision gets \"nobody found\". The developer who did the work must not appear: doing the work is not deciding it.",
+    "turns": [
+      {
+        "question": "Who decided to show the fraud score in the Claims Workbench?",
+        "expected": {
+          "status": "nobody_found",
+          "language": "en",
+          "question_type": "decided",
+          "says_no_decision": true,
+          "forbidden_people": ["p024"],
+          "evidence": ["CLM-254"],
+          "optional_evidence": ["pg020", "pg013"],
+          "near_misses": [
+            {"id": "pg027", "why": "It is a meeting of the team that owns the Claims Workbench. Its decision is about the Claims Intake backlog, and the fraud score is never mentioned."}
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "demo",
+    "scenario": 0,
+    "checked_at": "M7",
+    "tests": "The path of the demo video, from the vague question to the personal question.",
+    "turns": [
+      {
+        "question": "Who can help me get access to the API?",
+        "expected": {"status": "needs_details", "vague_word": "API", "choices_systems": ["claims_api", "policy_api"]}
+      },
+      {
+        "question": "The Claims API",
+        "expected": {"same_as": "s08a"}
+      },
+      {
+        "question": "Sophie is away. Who's her manager?",
+        "expected": {"status": "person", "subject": "p012", "relation": "manager", "card": "p007", "not_in_cards_of": "s08a"}
+      },
+      {
+        "question": "What does she work on?",
+        "expected": {"same_as": "s13"}
+      },
+      {
+        "question": "What's Hélène's work phone?",
+        "expected": {"status": "person", "card": "p007", "must_show": ["work_phone"]}
+      },
+      {
+        "question": "Why is Sophie away?",
+        "expected": {"status": "off_topic", "reason": "personal", "about": "p012", "is_away": true}
+      }
+    ]
+  }
+]

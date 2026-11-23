@@ -1,0 +1,167 @@
+{
+  "n": 1,
+  "kind": "question",
+  "sent": "The Policy Database is very slow since last night, and saving a policy change takes minutes. Who should I talk to?",
+  "asked_at": "2026-11-22T19:59:39",
+  "seconds": 12.1,
+  "answer": {
+    "status": "answered",
+    "reason": "",
+    "language": "en",
+    "message": "",
+    "cards": [
+      {
+        "id": "p004",
+        "name": "Isabelle Roy",
+        "job_title": "Chief Architect",
+        "team": "Technology Office",
+        "email": "isabelle.roy@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Wrote a Confluence page about where the Policy Database should run after 2027 and made decisions recorded in its migration steering committee minutes.",
+        "evidence": [
+          {
+            "id": "pg009",
+            "title": "Options paper: where should the Policy Database run after 2027?",
+            "source": "Confluence",
+            "kind": "wrote",
+            "text": "wrote \"Options paper: where should the Policy Database run after 2027?\"",
+            "date_text": "updated 10 November 2025"
+          },
+          {
+            "id": "pg011",
+            "title": "Architecture Review Board: minutes, 13 November 2025",
+            "source": "Confluence",
+            "kind": "decided",
+            "text": "made the decision recorded in \"Architecture Review Board: minutes, 13 November 2025\"",
+            "date_text": "meeting of 13 November 2025"
+          },
+          {
+            "id": "pg019",
+            "title": "Policy Database migration: steering committee minutes, 18 March 2026",
+            "source": "Confluence",
+            "kind": "decided",
+            "text": "made the decision recorded in \"Policy Database migration: steering committee minutes, 18 March 2026\"",
+            "date_text": "meeting of 18 March 2026"
+          },
+          {
+            "id": "pg029",
+            "title": "Policy Database migration: steering committee minutes, 23 September 2026",
+            "source": "Confluence",
+            "kind": "decided",
+            "text": "made the decision recorded in \"Policy Database migration: steering committee minutes, 23 September 2026\"",
+            "date_text": "meeting of 23 September 2026"
+          }
+        ],
+        "subject": "Help with Policy Database slowness",
+        "message": "Hi Isabelle, I'm [your name] from [your team]. I'm trying to find who to talk to about the Policy Database being very slow since last night and policy changes taking minutes to save. I saw you wrote a page about where the Policy Database should run after 2027. Do you know who I should ask about this? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=isabelle.roy@tamberly.example&message=Hi%20Isabelle%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20who%20to%20talk%20to%20about%20the%20Policy%20Database%20being%20very%20slow%20since%20last%20night%20and%20policy%20changes%20taking%20minutes%20to%20save.%20I%20saw%20you%20wrote%20a%20page%20about%20where%20the%20Policy%20Database%20should%20run%20after%202027.%20Do%20you%20know%20who%20I%20should%20ask%20about%20this%3F%20Thank%20you%21",
+        "email_link": "mailto:isabelle.roy@tamberly.example?subject=Help%20with%20Policy%20Database%20slowness&body=Hi%20Isabelle%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20who%20to%20talk%20to%20about%20the%20Policy%20Database%20being%20very%20slow%20since%20last%20night%20and%20policy%20changes%20taking%20minutes%20to%20save.%20I%20saw%20you%20wrote%20a%20page%20about%20where%20the%20Policy%20Database%20should%20run%20after%202027.%20Do%20you%20know%20who%20I%20should%20ask%20about%20this%3F%20Thank%20you%21"
+      },
+      {
+        "id": "p013",
+        "name": "Wei Zhang",
+        "job_title": "Database Administrator",
+        "team": "Policy Systems",
+        "email": "wei.zhang@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Wrote the Policy Database migration runbook and handled tickets about its cutover and endorsement data.",
+        "evidence": [
+          {
+            "id": "pg023",
+            "title": "Policy Database migration runbook (draft)",
+            "source": "Confluence",
+            "kind": "wrote",
+            "text": "wrote \"Policy Database migration runbook (draft)\"",
+            "date_text": "updated 14 October 2026"
+          },
+          {
+            "id": "INF-219",
+            "title": "Dry run 1 of the Policy Database cutover",
+            "source": "Jira",
+            "kind": "assigned",
+            "text": "handled INF-219: Dry run 1 of the Policy Database cutover",
+            "date_text": "resolved 19 June 2026"
+          },
+          {
+            "id": "POL-164",
+            "title": "Clean up orphaned endorsement rows before the cloud migration",
+            "source": "Jira",
+            "kind": "assigned",
+            "text": "handled POL-164: Clean up orphaned endorsement rows before the cloud migration",
+            "date_text": "resolved 20 February 2026"
+          }
+        ],
+        "subject": "Policy Database slowness",
+        "message": "Hi Wei, I'm [your name] from [your team]. I'm trying to find who to talk to about the Policy Database being slow and policy changes taking minutes to save. I saw you wrote the migration runbook. Have you seen this before, or know who I should ask? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=wei.zhang@tamberly.example&message=Hi%20Wei%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20who%20to%20talk%20to%20about%20the%20Policy%20Database%20being%20slow%20and%20policy%20changes%20taking%20minutes%20to%20save.%20I%20saw%20you%20wrote%20the%20migration%20runbook.%20Have%20you%20seen%20this%20before%2C%20or%20know%20who%20I%20should%20ask%3F%20Thank%20you%21",
+        "email_link": "mailto:wei.zhang@tamberly.example?subject=Policy%20Database%20slowness&body=Hi%20Wei%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20who%20to%20talk%20to%20about%20the%20Policy%20Database%20being%20slow%20and%20policy%20changes%20taking%20minutes%20to%20save.%20I%20saw%20you%20wrote%20the%20migration%20runbook.%20Have%20you%20seen%20this%20before%2C%20or%20know%20who%20I%20should%20ask%3F%20Thank%20you%21"
+      },
+      {
+        "id": "p022",
+        "name": "Fatima Rahimi",
+        "job_title": "Cloud Engineer",
+        "team": "Infrastructure & Security",
+        "email": "fatima.rahimi@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Handled Jira tickets about the Policy Database cloud migration and a delayed cloud copy.",
+        "evidence": [
+          {
+            "id": "INF-204",
+            "title": "Private network link between the data centre and the cloud for the Policy Database migration",
+            "source": "Jira",
+            "kind": "assigned",
+            "text": "handled INF-204: Private network link between the data centre and the cloud for the Policy Database migration",
+            "date_text": "resolved 6 March 2026"
+          },
+          {
+            "id": "INF-231",
+            "title": "Dry run 2 failed: the copy to the cloud is 40 minutes behind",
+            "source": "Jira",
+            "kind": "assigned",
+            "text": "handled INF-231: Dry run 2 failed: the copy to the cloud is 40 minutes behind",
+            "date_text": "resolved 9 October 2026"
+          }
+        ],
+        "subject": "Policy database slowness",
+        "message": "Hi Fatima, I'm [your name] from [your team]. I'm trying to find out who to talk to about the Policy Database being slow and policy changes taking minutes to save. I saw you handled a ticket about the database migration to the cloud. Have you seen this before, or know who else I should ask? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=fatima.rahimi@tamberly.example&message=Hi%20Fatima%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20who%20to%20talk%20to%20about%20the%20Policy%20Database%20being%20slow%20and%20policy%20changes%20taking%20minutes%20to%20save.%20I%20saw%20you%20handled%20a%20ticket%20about%20the%20database%20migration%20to%20the%20cloud.%20Have%20you%20seen%20this%20before%2C%20or%20know%20who%20else%20I%20should%20ask%3F%20Thank%20you%21",
+        "email_link": "mailto:fatima.rahimi@tamberly.example?subject=Policy%20database%20slowness&body=Hi%20Fatima%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20who%20to%20talk%20to%20about%20the%20Policy%20Database%20being%20slow%20and%20policy%20changes%20taking%20minutes%20to%20save.%20I%20saw%20you%20handled%20a%20ticket%20about%20the%20database%20migration%20to%20the%20cloud.%20Have%20you%20seen%20this%20before%2C%20or%20know%20who%20else%20I%20should%20ask%3F%20Thank%20you%21"
+      }
+    ],
+    "level": "system",
+    "person_card": {},
+    "choices": [],
+    "note": "I found no ticket or page about this exact question. Here is who works on Policy Database: a good place to start.",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets: 21 results",
+      "Checked 21 results: none is really about your question",
+      "Nothing was about your question: picked other search words",
+      "Searched again: 19 results",
+      "Checked 11 results: none is really about your question",
+      "Nothing matched your exact question: took the 9 pages and tickets about Policy Database instead",
+      "Found 3 people behind these pages and tickets",
+      "Removed: nobody",
+      "Wrote the cards of 3 people"
+    ],
+    "thread_id": "6b71aa647746481b97fe1c666c44f012"
+  }
+}

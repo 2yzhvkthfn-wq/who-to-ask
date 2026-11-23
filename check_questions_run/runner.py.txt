@@ -1,0 +1,41 @@
+"""Ask each check question several times through the real agent, each time in a new conversation.
+
+It builds on the runner of the honest test (m9_runner.py, in the same folder): the same way of asking,
+and the same three files per answer. It lives outside the project, and it changes no project file.
+
+Run it from the project folder:
+    python m_check_runner.py QUESTIONS_JSON OUT_DIR RUNS
+
+The questions are asked in rounds: every question once, then every question again, and so on. So the tries
+of one question are spread over the whole run. An answer that is already saved is never asked again.
+"""
+
+import json
+import sys
+from pathlib import Path
+
+import m9_runner as base
+
+
+def main() -> None:
+    sys.stdout.reconfigure(encoding="utf-8")
+    questions = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+    out_dir, runs = Path(sys.argv[2]), int(sys.argv[3])
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    # One file name per question and per try: c03_r2 is the second try of question 3
+    asks = [(f"c{entry['n']:02d}_r{run}", entry) for run in range(1, runs + 1) for entry in questions]
+    already = [stem for stem, _ in asks if (out_dir / f"{stem}.json").exists()]
+    if already:
+        sys.exit(f"Already asked: {already}. Nothing was asked.")
+
+    workflow = base.build_agent(out_dir)
+    try:
+        for stem, entry in asks:
+            base.ask(workflow, out_dir, stem, entry["n"], entry["question"])
+    finally:
+        base.finish(workflow, out_dir)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,29 @@
+# Pinned to the versions installed on 2026-11-20 (M0, M1), 2026-11-21 (M2, M4, M5, M6), and 2026-11-22 (M8).
+# M0: settings and logging.
+pydantic-settings==2.16.3
+loguru==0.8.0
+# M1: page headers (YAML) and tests.
+PyYAML==6.0.4
+pytest==9.2.0
+# M2: the graph (LangGraph), the OpenAI chat model and embeddings (LangChain), and keyword search (BM25).
+# LangSmith comes with langchain-core, so tracing needs nothing more.
+langgraph==1.2.24
+langchain-core==1.8.4
+langchain-openai==1.8.5
+rank-bm25==0.2.2
+# M4: the MongoDB driver (PyMongo). The company data lives in MongoDB, and data/ is its seed source.
+pymongo==4.20.1
+# M5: the API (FastAPI) and the server that runs it (uvicorn). FastAPI brings Starlette, which it is built on.
+# The tests of the API use FastAPI's TestClient. It needs httpx2, which the openai package already brings.
+fastapi==0.165.0
+uvicorn==0.54.0
+# M6: the memory of the conversations. LangGraph's saver for Postgres, and psycopg, the Postgres driver it uses,
+# with its pool of connections. "binary" brings psycopg's own copy of the Postgres client library,
+# so nothing else has to be installed on Windows.
+langgraph-checkpoint-postgres==3.2.1
+psycopg[binary]==3.3.9
+psycopg-pool==3.3.3
+# M8: the MCP server. This is the official MCP library for Python (its version 2 renamed FastMCP to MCPServer).
+# It brings the packages it needs itself: jsonschema, PyJWT, cryptography, sse-starlette, pywin32, and a few more.
+# Its optional command-line tools (the "cli" extra) are not installed: nothing here uses them.
+mcp==2.3.0

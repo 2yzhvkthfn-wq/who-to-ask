@@ -1,0 +1,25 @@
+# Secrets and private notes: never commit these
+.env
+HANDOFF.md
+CLAUDE.md
+PROJECT.md
+PROGRESS.md
+
+# Python
+venv/
+__pycache__/
+.pytest_cache/
+
+# The page (frontend/): the packages that npm installs, and the built page
+node_modules/
+frontend/dist/
+
+# Created when the app runs
+*.log
+chroma_db/
+
+# Claude Code: personal settings for this machine
+.claude/settings.local.json
+
+honest_run*/answers/*_log.txt
+check_questions_run/answers/*_log.txt

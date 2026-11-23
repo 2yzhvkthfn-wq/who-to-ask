@@ -1,0 +1,60 @@
+
+Question: The Policy Database is very slow since last night, and saving a policy change takes minutes. Who should I talk to?
+
+Steps:
+   Read your question: you are looking for someone who can help
+   Searched pages and tickets: 21 results
+   Checked 21 results: none is really about your question
+   Nothing was about your question: picked other search words
+   Searched again: 17 results
+   Checked 7 results: none is really about your question
+   Nothing matched your exact question: took the 9 pages and tickets about Policy Database instead
+   Found 3 people behind these pages and tickets
+   Removed: nobody
+   Wrote the cards of 3 people
+
+I found no ticket or page about this exact question. Here is who works on Policy Database: a good
+place to start.
+
+1. Isabelle Roy, Chief Architect, Technology Office
+   Email: isabelle.roy@tamberly.example
+   Why: Wrote a Confluence page about where the Policy Database should run after 2027 and made
+   decisions recorded in its migration steering committee minutes.
+   Evidence: "Options paper: where should the Policy Database run after 2027?", "Architecture Review Board: minutes, 13 November 2025", "Policy Database migration: steering committee minutes, 18 March 2026", "Policy Database migration: steering committee minutes, 23 September 2026" (Confluence)
+
+   Suggested message:
+   "Hi Isabelle, I'm [your name] from [your team]. I'm trying to find who to talk to because the
+    Policy Database has been very slow since last night, and saving a policy change takes minutes. I
+    saw you wrote a page about where the Policy Database should run after 2027. Have you seen this
+    kind of slowdown before, or know who else I should ask? Thank you!"
+
+   [Send on Teams] https://teams.microsoft.com/l/chat/0/0?users=isabelle.roy@tamberly.example&message=Hi%20Isabelle%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20who%20to%20talk%20to%20because%20the%20Policy%20Database%20has%20been%20very%20slow%20since%20last%20night%2C%20and%20saving%20a%20policy%20change%20takes%20minutes.%20I%20saw%20you%20wrote%20a%20page%20about%20where%20the%20Policy%20Database%20should%20run%20after%202027.%20Have%20you%20seen%20this%20kind%20of%20slowdown%20before%2C%20or%20know%20who%20else%20I%20should%20ask%3F%20Thank%20you%21
+   [Send by email] mailto:isabelle.roy@tamberly.example?subject=Help%20with%20Policy%20Database%20slowness&body=Hi%20Isabelle%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20who%20to%20talk%20to%20because%20the%20Policy%20Database%20has%20been%20very%20slow%20since%20last%20night%2C%20and%20saving%20a%20policy%20change%20takes%20minutes.%20I%20saw%20you%20wrote%20a%20page%20about%20where%20the%20Policy%20Database%20should%20run%20after%202027.%20Have%20you%20seen%20this%20kind%20of%20slowdown%20before%2C%20or%20know%20who%20else%20I%20should%20ask%3F%20Thank%20you%21
+
+2. Wei Zhang, Database Administrator, Policy Systems
+   Email: wei.zhang@tamberly.example
+   Why: Wrote the Policy Database migration runbook and handled tickets about its cutover and data
+   cleanup.
+   Evidence: "Policy Database migration runbook (draft)" (Confluence), INF-219, POL-164 (Jira)
+
+   Suggested message:
+   "Hi Wei, I'm [your name] from [your team]. I'm trying to find who to talk to about the Policy
+    Database being slow and policy changes taking minutes to save. I saw you wrote the migration
+    runbook. Have you seen this before, or know who I should ask? Thank you!"
+
+   [Send on Teams] https://teams.microsoft.com/l/chat/0/0?users=wei.zhang@tamberly.example&message=Hi%20Wei%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20who%20to%20talk%20to%20about%20the%20Policy%20Database%20being%20slow%20and%20policy%20changes%20taking%20minutes%20to%20save.%20I%20saw%20you%20wrote%20the%20migration%20runbook.%20Have%20you%20seen%20this%20before%2C%20or%20know%20who%20I%20should%20ask%3F%20Thank%20you%21
+   [Send by email] mailto:wei.zhang@tamberly.example?subject=Policy%20Database%20slowness&body=Hi%20Wei%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20who%20to%20talk%20to%20about%20the%20Policy%20Database%20being%20slow%20and%20policy%20changes%20taking%20minutes%20to%20save.%20I%20saw%20you%20wrote%20the%20migration%20runbook.%20Have%20you%20seen%20this%20before%2C%20or%20know%20who%20I%20should%20ask%3F%20Thank%20you%21
+
+3. Fatima Rahimi, Cloud Engineer, Infrastructure & Security
+   Email: fatima.rahimi@tamberly.example
+   Why: Handled Jira tickets about the Policy Database cloud migration and a delayed cloud copy.
+   Evidence: INF-204, INF-231 (Jira)
+
+   Suggested message:
+   "Hi Fatima, I'm [your name] from [your team]. I'm trying to find out who to talk to about the
+    Policy Database running slowly and policy changes taking minutes to save. I saw you handled a
+    ticket about a delayed cloud copy. Have you seen this before, or know who else I should ask?
+    Thank you!"
+
+   [Send on Teams] https://teams.microsoft.com/l/chat/0/0?users=fatima.rahimi@tamberly.example&message=Hi%20Fatima%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20who%20to%20talk%20to%20about%20the%20Policy%20Database%20running%20slowly%20and%20policy%20changes%20taking%20minutes%20to%20save.%20I%20saw%20you%20handled%20a%20ticket%20about%20a%20delayed%20cloud%20copy.%20Have%20you%20seen%20this%20before%2C%20or%20know%20who%20else%20I%20should%20ask%3F%20Thank%20you%21
+   [Send by email] mailto:fatima.rahimi@tamberly.example?subject=Policy%20Database%20slowness&body=Hi%20Fatima%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20who%20to%20talk%20to%20about%20the%20Policy%20Database%20running%20slowly%20and%20policy%20changes%20taking%20minutes%20to%20save.%20I%20saw%20you%20handled%20a%20ticket%20about%20a%20delayed%20cloud%20copy.%20Have%20you%20seen%20this%20before%2C%20or%20know%20who%20else%20I%20should%20ask%3F%20Thank%20you%21

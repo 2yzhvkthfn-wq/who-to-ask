@@ -1,0 +1,42 @@
+{
+  "n": 18,
+  "kind": "question",
+  "sent": "I need help. Who should I ask?",
+  "asked_at": "2026-11-22T17:37:40",
+  "seconds": 8.3,
+  "answer": {
+    "status": "nobody_found",
+    "reason": "",
+    "language": "en",
+    "message": "I found nobody to recommend for this question. You can try again with more details: the name of the system, the project, or what exactly you need.",
+    "cards": [],
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets: 18 results",
+      "Checked 18 results: none is really about your question",
+      "Nothing was about your question: picked other search words",
+      "Searched again for \"help request\", \"assistance\", \"demande d'aide\", \"besoin d'assistance\": 16 results",
+      "Checked 11 results: none is really about your question",
+      "Found nobody to recommend"
+    ],
+    "thread_id": "215604628c04462db6df48c08857badf"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "n": 7,
+  "kind": "question",
+  "sent": "Who can help me with the portal?",
+  "asked_at": "2026-11-22T20:49:28",
+  "seconds": 1.3,
+  "answer": {
+    "status": "needs_details",
+    "reason": "",
+    "language": "en",
+    "message": "Several systems fit your question. Which one do you mean?",
+    "cards": [],
+    "level": "",
+    "person_card": {},
+    "choices": [
+      {
+        "id": "customer_portal",
+        "name": "Customer Portal",
+        "detail": "The website where customers see their policies, pay, and report a claim, in French and English."
+      },
+      {
+        "id": "broker_portal",
+        "name": "Broker Portal",
+        "detail": "The website where insurance brokers get quotes and manage their clients' policies."
+      }
+    ],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: it could be about 2 systems"
+    ],
+    "thread_id": "45afdc38d3ac4990b4d86cc833064105"
+  }
+}

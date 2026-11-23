@@ -1,0 +1,39 @@
+{
+  "n": 11,
+  "kind": "question",
+  "sent": "Who is Zoltan Kovacs's manager?",
+  "asked_at": "2026-11-22T19:17:36",
+  "seconds": 1.3,
+  "answer": {
+    "status": "nobody_found",
+    "reason": "",
+    "language": "en",
+    "message": "I found no one by that name in the directory. Check the spelling, or give me the full name.",
+    "cards": [],
+    "level": "",
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: it is about a colleague",
+      "Looked in the directory: nobody has that name",
+      "Could not tell which person you mean"
+    ],
+    "thread_id": "6be3496ff7f14e8da488aa3fdf144ff2"
+  }
+}

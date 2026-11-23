@@ -1,0 +1,11 @@
+
+Question: Who can help me with the portal?
+
+Steps:
+   Read your question: it could be about 2 systems
+
+Several systems fit your question. Which one do you mean?
+   1. Customer Portal (The website where customers see their policies, pay, and report a claim, in
+      French and English.)
+   2. Broker Portal (The website where insurance brokers get quotes and manage their clients'
+      policies.)

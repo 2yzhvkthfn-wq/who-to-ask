@@ -1,0 +1,13 @@
+
+Question: Claims sent from the Customer Portal are not showing up in Claims Intake. Who can help me find which side is broken?
+
+Steps:
+   Read your question: you are looking for someone who can help
+   Searched pages and tickets: 18 results
+   Checked 18 results: none is really about your question
+   Nothing was about your question: picked other search words
+   Searched again for "claim submission", "claims integration", "portal submissions", "intake feed": 17 results
+   Checked 5 results: none is really about your question
+   Found nobody to recommend
+
+I found nobody to recommend for this question. You can try again with more details: the name of the system, the project, or what exactly you need.

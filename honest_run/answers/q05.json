@@ -1,0 +1,42 @@
+{
+  "n": 5,
+  "kind": "question",
+  "sent": "Salut, qui s'occupe du Broker Portal ? J'ai un courtier qui can't log in depuis ce matin.",
+  "asked_at": "2026-11-22T17:36:42",
+  "seconds": 9.1,
+  "answer": {
+    "status": "nobody_found",
+    "reason": "",
+    "language": "fr",
+    "message": "Je n'ai trouvé personne à vous recommander pour cette question. Vous pouvez réessayer avec plus de précisions : le nom du système, le projet, ou ce dont vous avez besoin exactement.",
+    "cards": [],
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Courriel",
+      "why": "Pourquoi",
+      "evidence": "Références",
+      "message": "Message suggéré",
+      "teams": "Envoyer sur Teams",
+      "send_email": "Envoyer par courriel",
+      "manager": "Gestionnaire",
+      "languages": "Langues",
+      "work_phone": "Téléphone au travail",
+      "open_teams": "Ouvrir une conversation Teams",
+      "write_email": "Écrire un courriel"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets for \"Broker Portal\", \"can't log in\", \"depuis ce matin\": 21 results",
+      "Checked 21 results: none is really about your question",
+      "Nothing was about your question: picked other search words",
+      "Searched again: 16 results",
+      "Checked 2 results: none is really about your question",
+      "Found nobody to recommend"
+    ],
+    "thread_id": "0126bd2c09814d3b94e7eb109f8467ca"
+  }
+}

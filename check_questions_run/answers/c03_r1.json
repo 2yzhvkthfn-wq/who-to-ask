@@ -1,0 +1,67 @@
+{
+  "n": 3,
+  "kind": "question",
+  "sent": "Le moteur de tarification renvoie une erreur chaque fois qu'un courtier demande une soumission auto. Qui peut m'aider ?",
+  "asked_at": "2026-11-22T19:58:17",
+  "seconds": 6.9,
+  "answer": {
+    "status": "answered",
+    "reason": "",
+    "language": "fr",
+    "message": "",
+    "cards": [
+      {
+        "id": "p010",
+        "name": "Karim Haddad",
+        "job_title": "Senior Developer",
+        "team": "Pricing & Underwriting",
+        "email": "karim.haddad@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "A traité un billet sur les erreurs de soumission liées aux nouveaux codes postaux du Québec.",
+        "evidence": [
+          {
+            "id": "PRC-88",
+            "title": "Quotes fail with \"territory not found\" for new Quebec postal codes",
+            "source": "Jira",
+            "kind": "assigned",
+            "text": "a traité PRC-88 : Quotes fail with \"territory not found\" for new Quebec postal codes",
+            "date_text": "mise à jour le 28 octobre 2026"
+          }
+        ],
+        "subject": "Erreur de soumission auto",
+        "message": "Bonjour Karim, je suis [votre nom], de l'équipe [votre équipe]. J'ai une question sur l'erreur que le moteur de tarification renvoie pour les soumissions auto. J'ai vu que vous avez traité un problème lié aux nouveaux codes postaux du Québec. Comment avez-vous résolu cette erreur ? Merci !",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=karim.haddad@tamberly.example&message=Bonjour%20Karim%2C%20je%20suis%20%5Bvotre%20nom%5D%2C%20de%20l%27%C3%A9quipe%20%5Bvotre%20%C3%A9quipe%5D.%20J%27ai%20une%20question%20sur%20l%27erreur%20que%20le%20moteur%20de%20tarification%20renvoie%20pour%20les%20soumissions%20auto.%20J%27ai%20vu%20que%20vous%20avez%20trait%C3%A9%20un%20probl%C3%A8me%20li%C3%A9%20aux%20nouveaux%20codes%20postaux%20du%20Qu%C3%A9bec.%20Comment%20avez-vous%20r%C3%A9solu%20cette%20erreur%20%3F%20Merci%20%21",
+        "email_link": "mailto:karim.haddad@tamberly.example?subject=Erreur%20de%20soumission%20auto&body=Bonjour%20Karim%2C%20je%20suis%20%5Bvotre%20nom%5D%2C%20de%20l%27%C3%A9quipe%20%5Bvotre%20%C3%A9quipe%5D.%20J%27ai%20une%20question%20sur%20l%27erreur%20que%20le%20moteur%20de%20tarification%20renvoie%20pour%20les%20soumissions%20auto.%20J%27ai%20vu%20que%20vous%20avez%20trait%C3%A9%20un%20probl%C3%A8me%20li%C3%A9%20aux%20nouveaux%20codes%20postaux%20du%20Qu%C3%A9bec.%20Comment%20avez-vous%20r%C3%A9solu%20cette%20erreur%20%3F%20Merci%20%21"
+      }
+    ],
+    "level": "exact",
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Courriel",
+      "why": "Pourquoi",
+      "evidence": "Références",
+      "message": "Message suggéré",
+      "teams": "Envoyer sur Teams",
+      "send_email": "Envoyer par courriel",
+      "manager": "Gestionnaire",
+      "languages": "Langues",
+      "work_phone": "Téléphone au travail",
+      "open_teams": "Ouvrir une conversation Teams",
+      "write_email": "Écrire un courriel"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets for \"moteur de tarification\", \"renvoie une erreur\", \"soumission auto\": 17 results",
+      "Checked 17 results: 1 is really about your question",
+      "Found 1 person behind these pages and tickets",
+      "Removed: nobody",
+      "Wrote the card of 1 person"
+    ],
+    "thread_id": "e5bfb0b0c12a45f2b8c9234b6e701af5"
+  }
+}

@@ -1,0 +1,37 @@
+
+Question: Who owns the renewal process in Policy Admin?
+
+Steps:
+   Read your question: you are looking for someone who did the work
+   Searched pages and tickets for "renewal process", "Policy Admin": 15 results
+   Checked 15 results: 2 are really about your question
+   Found 2 people behind these pages and tickets
+   Removed: nobody
+   Wrote the cards of 2 people
+
+1. Daniel Morin, Team Lead, Policy Systems
+   Email: daniel.morin@tamberly.example
+   Why: Wrote the guide on how the overnight renewal batch works.
+   Evidence: "Renouvellements : fonctionnement du lot de nuit" (Confluence)
+
+   Suggested message:
+   "Hi Daniel, I'm [your name] from [your team]. I'm trying to find out how the renewal process
+    works in Policy Admin. I saw you wrote the guide on the overnight renewal batch. Can you point
+    me to where ownership is explained? Thank you!"
+
+   [Send on Teams] https://teams.microsoft.com/l/chat/0/0?users=daniel.morin@tamberly.example&message=Hi%20Daniel%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20how%20the%20renewal%20process%20works%20in%20Policy%20Admin.%20I%20saw%20you%20wrote%20the%20guide%20on%20the%20overnight%20renewal%20batch.%20Can%20you%20point%20me%20to%20where%20ownership%20is%20explained%3F%20Thank%20you%21
+   [Send by email] mailto:daniel.morin@tamberly.example?subject=Policy%20Admin%20renewal%20ownership&body=Hi%20Daniel%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20how%20the%20renewal%20process%20works%20in%20Policy%20Admin.%20I%20saw%20you%20wrote%20the%20guide%20on%20the%20overnight%20renewal%20batch.%20Can%20you%20point%20me%20to%20where%20ownership%20is%20explained%3F%20Thank%20you%21
+
+2. Lucas Pelletier, Developer, Policy Systems
+   Email: lucas.pelletier@tamberly.example
+   Why: Wrote a Confluence page with notes that may help clarify the renewal process in Policy
+   Admin.
+   Evidence: "Notes" (Confluence)
+
+   Suggested message:
+   "Hi Lucas, I'm [your name] from [your team]. I'm trying to find out who owns the renewal process
+    in Policy Admin. I saw you wrote a Confluence page with notes. Do those notes explain where
+    renewal ownership sits? Thank you!"
+
+   [Send on Teams] https://teams.microsoft.com/l/chat/0/0?users=lucas.pelletier@tamberly.example&message=Hi%20Lucas%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20who%20owns%20the%20renewal%20process%20in%20Policy%20Admin.%20I%20saw%20you%20wrote%20a%20Confluence%20page%20with%20notes.%20Do%20those%20notes%20explain%20where%20renewal%20ownership%20sits%3F%20Thank%20you%21
+   [Send by email] mailto:lucas.pelletier@tamberly.example?subject=Policy%20Admin%20renewal%20ownership&body=Hi%20Lucas%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%27m%20trying%20to%20find%20out%20who%20owns%20the%20renewal%20process%20in%20Policy%20Admin.%20I%20saw%20you%20wrote%20a%20Confluence%20page%20with%20notes.%20Do%20those%20notes%20explain%20where%20renewal%20ownership%20sits%3F%20Thank%20you%21

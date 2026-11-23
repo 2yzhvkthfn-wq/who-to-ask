@@ -1,0 +1,71 @@
+{
+  "n": 7,
+  "kind": "question",
+  "sent": "I can't reach any server in our test network on the cloud platform since the weekend. Who looks after that?",
+  "asked_at": "2026-11-22T20:04:03",
+  "seconds": 10.1,
+  "answer": {
+    "status": "answered",
+    "reason": "",
+    "language": "en",
+    "message": "",
+    "cards": [
+      {
+        "id": "p022",
+        "name": "Fatima Rahimi",
+        "job_title": "Cloud Engineer",
+        "team": "Infrastructure & Security",
+        "email": "fatima.rahimi@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "Wrote the Confluence page on cloud platform landing zones and naming rules.",
+        "evidence": [
+          {
+            "id": "pg007",
+            "title": "Cloud Platform: landing zone and naming rules",
+            "source": "Confluence",
+            "kind": "wrote",
+            "text": "wrote \"Cloud Platform: landing zone and naming rules\"",
+            "date_text": "updated 21 April 2026"
+          }
+        ],
+        "subject": "Help with test network access",
+        "message": "Hi Fatima, I'm [your name] from [your team]. I can't reach any servers in our test network on the cloud platform and want to find out who looks after it. I saw you wrote the page on cloud platform landing zones and naming rules. Have you seen this before, or know who I should ask? Thank you!",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=fatima.rahimi@tamberly.example&message=Hi%20Fatima%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%20can%27t%20reach%20any%20servers%20in%20our%20test%20network%20on%20the%20cloud%20platform%20and%20want%20to%20find%20out%20who%20looks%20after%20it.%20I%20saw%20you%20wrote%20the%20page%20on%20cloud%20platform%20landing%20zones%20and%20naming%20rules.%20Have%20you%20seen%20this%20before%2C%20or%20know%20who%20I%20should%20ask%3F%20Thank%20you%21",
+        "email_link": "mailto:fatima.rahimi@tamberly.example?subject=Help%20with%20test%20network%20access&body=Hi%20Fatima%2C%20I%27m%20%5Byour%20name%5D%20from%20%5Byour%20team%5D.%20I%20can%27t%20reach%20any%20servers%20in%20our%20test%20network%20on%20the%20cloud%20platform%20and%20want%20to%20find%20out%20who%20looks%20after%20it.%20I%20saw%20you%20wrote%20the%20page%20on%20cloud%20platform%20landing%20zones%20and%20naming%20rules.%20Have%20you%20seen%20this%20before%2C%20or%20know%20who%20I%20should%20ask%3F%20Thank%20you%21"
+      }
+    ],
+    "level": "system",
+    "person_card": {},
+    "choices": [],
+    "note": "I found no ticket or page about this exact question. Here is who works on Cloud Platform: a good place to start.",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets for \"server\", \"test network\", \"cloud platform\", \"can't reach\", \"since the weekend\": 17 results",
+      "Checked 17 results: none is really about your question",
+      "Nothing was about your question: picked other search words",
+      "Searched again: 19 results",
+      "Checked 7 results: none is really about your question",
+      "Nothing matched your exact question: took the 1 page or ticket about Cloud Platform instead",
+      "Found 1 person behind these pages and tickets",
+      "Removed: nobody",
+      "Wrote the card of 1 person"
+    ],
+    "thread_id": "8637fee44a764e7084460ffddf83963a"
+  }
+}

@@ -1,0 +1,9 @@
+
+Question: Who is Zoltan Kovacs's manager?
+
+Steps:
+   Read your question: it is about a colleague
+   Looked in the directory: nobody has that name
+   Could not tell which person you mean
+
+I found no one by that name in the directory. Check the spelling, or give me the full name.

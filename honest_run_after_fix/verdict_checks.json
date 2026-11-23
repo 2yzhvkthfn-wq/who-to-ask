@@ -1,0 +1,62 @@
+{
+  "verify": [
+    {
+      "question": "q02",
+      "item": "PRC-91",
+      "yes": 20,
+      "runs": 20
+    },
+    {
+      "question": "q02",
+      "item": "PRC-88",
+      "yes": 8,
+      "runs": 20
+    },
+    {
+      "question": "q02",
+      "item": "PRC-95",
+      "yes": 0,
+      "runs": 20
+    },
+    {
+      "question": "q02",
+      "item": "pg005",
+      "yes": 0,
+      "runs": 20
+    },
+    {
+      "question": "q15",
+      "item": "POL-181",
+      "yes": 14,
+      "runs": 20
+    },
+    {
+      "question": "q18",
+      "item": "CLM-268",
+      "yes": 1,
+      "runs": 20
+    }
+  ],
+  "understand": [
+    {
+      "prompt": "before the change",
+      "types": {
+        "expert/did": 11,
+        "expert/help": 9
+      },
+      "named": {
+        "(none)": 20
+      }
+    },
+    {
+      "prompt": "today",
+      "types": {
+        "expert/help": 4,
+        "expert/did": 16
+      },
+      "named": {
+        "(none)": 20
+      }
+    }
+  ]
+}

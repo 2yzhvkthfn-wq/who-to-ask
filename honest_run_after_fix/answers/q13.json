@@ -1,0 +1,99 @@
+{
+  "n": 13,
+  "kind": "question",
+  "sent": "Qui peut m'expliquer pourquoi les règles de souscription refusent automatiquement certaines demandes d'assurance habitation ?",
+  "asked_at": "2026-11-22T19:17:39",
+  "seconds": 8.4,
+  "answer": {
+    "status": "answered",
+    "reason": "",
+    "language": "fr",
+    "message": "",
+    "cards": [
+      {
+        "id": "p021",
+        "name": "Samuel Okafor",
+        "job_title": "Pricing Analyst",
+        "team": "Pricing & Underwriting",
+        "email": "samuel.okafor@tamberly.example",
+        "out_of_office_until": "2026-11-04",
+        "out_of_office_text": "Absence du bureau jusqu'au 4 novembre 2026",
+        "why": "A rédigé une page sur les codes postaux en zone inondable et a traité un billet sur la règle de refus associée.",
+        "evidence": [
+          {
+            "id": "pg021",
+            "title": "Underwriting Rules: flood-zone postal codes",
+            "source": "Confluence",
+            "kind": "wrote",
+            "text": "a rédigé « Underwriting Rules: flood-zone postal codes »",
+            "date_text": "mise à jour le 22 mai 2026"
+          },
+          {
+            "id": "PRC-74",
+            "title": "Update the flood-zone decline rule after the spring floods",
+            "source": "Jira",
+            "kind": "assigned",
+            "text": "a traité PRC-74 : Update the flood-zone decline rule after the spring floods",
+            "date_text": "résolu le 21 mai 2026"
+          }
+        ],
+        "subject": "Règles de refus en habitation",
+        "message": "Bonjour Samuel, je suis [votre nom], de l'équipe [votre équipe]. Je cherche à comprendre pourquoi certaines demandes d'assurance habitation sont refusées automatiquement. J'ai vu que vous avez documenté les règles liées aux zones inondables et traité une mise à jour de la règle de refus. Pouvez-vous m'expliquer quels critères déclenchent ce refus ? Je vois que vous êtes à l'extérieur du bureau jusqu'au 4 novembre, alors rien ne presse. Merci !",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=samuel.okafor@tamberly.example&message=Bonjour%20Samuel%2C%20je%20suis%20%5Bvotre%20nom%5D%2C%20de%20l%27%C3%A9quipe%20%5Bvotre%20%C3%A9quipe%5D.%20Je%20cherche%20%C3%A0%20comprendre%20pourquoi%20certaines%20demandes%20d%27assurance%20habitation%20sont%20refus%C3%A9es%20automatiquement.%20J%27ai%20vu%20que%20vous%20avez%20document%C3%A9%20les%20r%C3%A8gles%20li%C3%A9es%20aux%20zones%20inondables%20et%20trait%C3%A9%20une%20mise%20%C3%A0%20jour%20de%20la%20r%C3%A8gle%20de%20refus.%20Pouvez-vous%20m%27expliquer%20quels%20crit%C3%A8res%20d%C3%A9clenchent%20ce%20refus%20%3F%20Je%20vois%20que%20vous%20%C3%AAtes%20%C3%A0%20l%27ext%C3%A9rieur%20du%20bureau%20jusqu%27au%204%20novembre%2C%20alors%20rien%20ne%20presse.%20Merci%20%21",
+        "email_link": "mailto:samuel.okafor@tamberly.example?subject=R%C3%A8gles%20de%20refus%20en%20habitation&body=Bonjour%20Samuel%2C%20je%20suis%20%5Bvotre%20nom%5D%2C%20de%20l%27%C3%A9quipe%20%5Bvotre%20%C3%A9quipe%5D.%20Je%20cherche%20%C3%A0%20comprendre%20pourquoi%20certaines%20demandes%20d%27assurance%20habitation%20sont%20refus%C3%A9es%20automatiquement.%20J%27ai%20vu%20que%20vous%20avez%20document%C3%A9%20les%20r%C3%A8gles%20li%C3%A9es%20aux%20zones%20inondables%20et%20trait%C3%A9%20une%20mise%20%C3%A0%20jour%20de%20la%20r%C3%A8gle%20de%20refus.%20Pouvez-vous%20m%27expliquer%20quels%20crit%C3%A8res%20d%C3%A9clenchent%20ce%20refus%20%3F%20Je%20vois%20que%20vous%20%C3%AAtes%20%C3%A0%20l%27ext%C3%A9rieur%20du%20bureau%20jusqu%27au%204%20novembre%2C%20alors%20rien%20ne%20presse.%20Merci%20%21"
+      },
+      {
+        "id": "p005",
+        "name": "Nathalie Côté",
+        "job_title": "Team Lead",
+        "team": "Pricing & Underwriting",
+        "email": "nathalie.cote@tamberly.example",
+        "out_of_office_until": "",
+        "out_of_office_text": "",
+        "why": "A approuvé la mise à jour d'une règle de refus liée aux zones inondables.",
+        "evidence": [
+          {
+            "id": "PRC-74",
+            "title": "Update the flood-zone decline rule after the spring floods",
+            "source": "Jira",
+            "kind": "approved",
+            "text": "a approuvé PRC-74 : Update the flood-zone decline rule after the spring floods",
+            "date_text": "résolu le 21 mai 2026"
+          }
+        ],
+        "subject": "Refus automatiques en habitation",
+        "message": "Bonjour Nathalie, je suis [votre nom], de l'équipe [votre équipe]. Je cherche à comprendre pourquoi certaines demandes d'assurance habitation sont refusées automatiquement. J'ai vu que vous avez approuvé une mise à jour de la règle liée aux zones inondables. Pouvez-vous m'expliquer ce qui déclenche ce refus ? Merci !",
+        "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=nathalie.cote@tamberly.example&message=Bonjour%20Nathalie%2C%20je%20suis%20%5Bvotre%20nom%5D%2C%20de%20l%27%C3%A9quipe%20%5Bvotre%20%C3%A9quipe%5D.%20Je%20cherche%20%C3%A0%20comprendre%20pourquoi%20certaines%20demandes%20d%27assurance%20habitation%20sont%20refus%C3%A9es%20automatiquement.%20J%27ai%20vu%20que%20vous%20avez%20approuv%C3%A9%20une%20mise%20%C3%A0%20jour%20de%20la%20r%C3%A8gle%20li%C3%A9e%20aux%20zones%20inondables.%20Pouvez-vous%20m%27expliquer%20ce%20qui%20d%C3%A9clenche%20ce%20refus%20%3F%20Merci%20%21",
+        "email_link": "mailto:nathalie.cote@tamberly.example?subject=Refus%20automatiques%20en%20habitation&body=Bonjour%20Nathalie%2C%20je%20suis%20%5Bvotre%20nom%5D%2C%20de%20l%27%C3%A9quipe%20%5Bvotre%20%C3%A9quipe%5D.%20Je%20cherche%20%C3%A0%20comprendre%20pourquoi%20certaines%20demandes%20d%27assurance%20habitation%20sont%20refus%C3%A9es%20automatiquement.%20J%27ai%20vu%20que%20vous%20avez%20approuv%C3%A9%20une%20mise%20%C3%A0%20jour%20de%20la%20r%C3%A8gle%20li%C3%A9e%20aux%20zones%20inondables.%20Pouvez-vous%20m%27expliquer%20ce%20qui%20d%C3%A9clenche%20ce%20refus%20%3F%20Merci%20%21"
+      }
+    ],
+    "level": "exact",
+    "person_card": {},
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Courriel",
+      "why": "Pourquoi",
+      "evidence": "Références",
+      "message": "Message suggéré",
+      "teams": "Envoyer sur Teams",
+      "send_email": "Envoyer par courriel",
+      "manager": "Gestionnaire",
+      "languages": "Langues",
+      "work_phone": "Téléphone au travail",
+      "open_teams": "Ouvrir une conversation Teams",
+      "write_email": "Écrire un courriel"
+    },
+    "steps": [
+      "Read your question: you are looking for someone who can help",
+      "Searched pages and tickets: 17 results",
+      "Checked 17 results: 2 are really about your question",
+      "Found 2 people behind these pages and tickets",
+      "Removed: nobody",
+      "Wrote the cards of 2 people"
+    ],
+    "thread_id": "9a0b6e5cc4d14f219097ecaa36dbef92"
+  }
+}

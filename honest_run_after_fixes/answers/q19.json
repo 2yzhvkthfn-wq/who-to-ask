@@ -1,0 +1,57 @@
+{
+  "n": 19,
+  "kind": "question",
+  "sent": "Does Karim Haddad speak French?",
+  "asked_at": "2026-11-22T20:50:13",
+  "seconds": 1.3,
+  "answer": {
+    "status": "person",
+    "reason": "",
+    "language": "en",
+    "message": "",
+    "cards": [],
+    "level": "",
+    "person_card": {
+      "id": "p010",
+      "name": "Karim Haddad",
+      "left": false,
+      "job_title": "Senior Developer",
+      "team": "Pricing & Underwriting",
+      "manager": "Nathalie Côté",
+      "email": "karim.haddad@tamberly.example",
+      "languages": [
+        "French",
+        "English"
+      ],
+      "work_phone": "",
+      "out_of_office_until": "",
+      "out_of_office_text": "",
+      "work": [],
+      "teams_link": "https://teams.microsoft.com/l/chat/0/0?users=karim.haddad@tamberly.example",
+      "email_link": "mailto:karim.haddad@tamberly.example"
+    },
+    "choices": [],
+    "note": "",
+    "removed_left": [],
+    "removed_opted_out": 0,
+    "labels": {
+      "email": "Email",
+      "why": "Why",
+      "evidence": "Evidence",
+      "message": "Suggested message",
+      "teams": "Send on Teams",
+      "send_email": "Send by email",
+      "manager": "Manager",
+      "languages": "Languages",
+      "work_phone": "Work phone",
+      "open_teams": "Open a Teams chat",
+      "write_email": "Write an email"
+    },
+    "steps": [
+      "Read your question: it is about a colleague",
+      "Looked in the directory: 1 person has that name",
+      "Prepared the card from the directory"
+    ],
+    "thread_id": "7091329eab484799a3778971257af1cf"
+  }
+}
