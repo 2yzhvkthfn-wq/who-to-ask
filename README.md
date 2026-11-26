@@ -8,7 +8,7 @@
 
 An internal "who should I ask?" assistant. You describe what you need help with, in English or in French, and an agent searches fake Jira, Confluence, Teams, and HR data to find the right colleagues. It is a portfolio prototype that I built to learn LangGraph. **All the data is fake.**
 
-[![Watch the demo video](https://img.shields.io/badge/Watch_the_demo_video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/lIEKEShEyoE)
+[![Watch the demo video](https://raster.shields.io/badge/Watch_the_demo_video-FF0000.png?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/lIEKEShEyoE)
 
 ---
 
